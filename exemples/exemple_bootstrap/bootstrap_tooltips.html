@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Tooltips Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tooltips avec Boostrap</h1>
+        <p>
+            Un tooltip nous permet de faire apparaitre une description quand la souris est 
+            <span class="text-bg-info" data-bs-toggle="tooltip" data-bs-title="Je suis un tooltip!">par dessus un mot</span>.
+        </p>
+        <p>
+            Ça peut aussi être sur un bouton, un span, un hyperlien, ...
+            <button type="button" 
+                    class="btn btn-secondary" 
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="top" 
+                    data-bs-title="Vous voyez ça marche!">
+                Cliquez sur moi!
+            </button>
+            L'important est d'initialisé le tout avec deux lignes de javascript et après on peut mettre le texte qu'on veut dans l'attribut <code>data-bs-title</code>
+        </p>
+    </div>
+    <div class="container">
+        <h1>Popover avec Boostrap</h1>
+        <p>
+           Si vous voulez afficher quelques choses de plus complexe comme un titre avec du texte. Il vous faut un popover!
+           Par contre, nous sommes limités par le javascript, alors on ne peut pas faire quelque chose de plus complexe.
+        </p>
+        <button type="button" 
+                class="btn btn-lg btn-danger" 
+                data-bs-toggle="popover" 
+                data-bs-title="Mon titre" 
+                data-bs-content="Je suis du contenu intéressant!">
+            Cliquez pour voir le popover
+        </button>
+    </div>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- C'est le seul javascript custom que vous pouvez mettre dans votre TP3 si vous utilisez les tooltips ou popover. -->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+    </script>
+</body>
+
+</html>

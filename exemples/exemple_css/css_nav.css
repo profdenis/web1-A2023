@@ -1,0 +1,49 @@
+
+#menubar {
+    text-align: center; /* for centering menu */
+    /*float: right; !* uncomment for vertical menu floating on the right *!*/
+    /*display: flex; !* block will use full width, flex will not use full width *!*/
+    /* make it sticky */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+ul.menulist {
+    position: relative;
+    overflow: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    border: 2px solid limegreen;
+    font-family: monospace;
+    font-size: 1.2em;
+    width: auto; /* for centering menu */
+    display: inline-block; /* for centering menu */
+}
+
+/*li.menuitem {*/
+ul.menulist li {
+    text-align: center;
+    float: left; /* comment out to make a vertical menu */
+}
+
+/*li.menuitem a {*/
+ul.menulist li a {
+    display: block;
+    color: limegreen;
+    font-weight: bolder;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+li.menuitem a.active {
+    background-color: limegreen;
+    color: white;
+}
+
+li.menuitem a:hover:not(.active) {
+    background-color: limegreen;
+    color: black;
+}

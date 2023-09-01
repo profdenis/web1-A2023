@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Icônes Bootstrap</title>
+    <style>
+        .anime-virus {
+            font-size: 32px;
+        }
+
+        .anime-virus:hover {
+            color: lime;
+            animation: flash 2s infinite;
+        }
+
+        @keyframes flash {
+            25% {
+                color: lime;
+            }
+
+            50% {
+                color: green;
+            }
+
+            75% {
+                color: lime;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+    </style>
+</head>
+
+<body class="m-3">
+    <h1><span class="bi bi-virus"></span> Icônes Bootstrap</h1>
+    <h2><span class="bi bi-virus"></span> Taille x 1,75</h2>
+    <h3><span class="bi bi-virus"></span> Taille x 1,5</h3>
+    <h4><span class="bi bi-virus"></span> Taille x 1,375</h4>
+    <h5><span class="bi bi-virus"></span> Taille x 1,25</h5>
+
+    <p>
+        Il faut aggrandir <i class="bi bi-zoom-in"></i> notre code pour mieux voir les <i class="bi bi-virus"></i>.
+    </p>
+
+    <h2>Icônes dans une liste</h2>
+    <ul>
+        <li><i class="bi bi-check-square"></i> Vérifier</li>
+        <li><i class="bi bi-clipboard"></i> Conserver</li>
+        <li><i class="bi bi-eraser"></i> Effacer</li>
+        <li><i class="bi bi-printer"></i> Imprimer</li>
+    </ul>
+
+    Cliquez sur moi! <span class="bi bi-virus anime-virus"></span>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="btn-group">
+                    <a class="btn btn-danger" href="#"><span class="bi bi-skip-backward"></span></a>
+                    <a class="btn btn-info" href="#"><span class="bi bi-skip-start"></span></a>
+                    <a class="btn btn-warning" href="#"><span class="bi bi-play"></span></a>
+                    <a class="btn btn-info" href="#"><span class="bi bi-forward"></span></a>
+                    <a class="btn btn-danger" href="#"><span class="bi bi-fast-forward"></span></a>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-danger" href="#"><span class="bi bi-pencil"></span></a>
+                    <a class="btn btn-info" href="#"><span class="bi bi-search"></span></a>
+                    <a class="btn btn-warning" href="#"><span class="bi bi-printer"></span></a>
+                    <a class="btn btn-success" href="#"><span class="bi bi-image"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <button class="btn btn-primary btn-lg"><span class="bi bi-person-circle"></span><br>Utilisateurs</button>
+        <button class="btn btn-dark btn-lg"><span class="bi bi-chat-text"></span><br>Commentaires</button>
+        <button class="btn btn-success btn-lg"><span class="bi bi-calendar"></span><br>Evénements</button>
+        <button class="btn btn-danger btn-lg"><span class="bi bi-cart"></span><br>Boutique</button>
+        <button class="btn btn-info btn-lg"><span class="bi bi-bell"></span><br>Messages</button>
+    </div>
+
+    <div class="mt-3">
+        <button class="btn btn-primary btn-lg rounded-circle"><span class="bi bi-person-circle"></span></button>
+        <button class="btn btn-dark btn-lg rounded-circle"><span class="bi bi-chat-text"></span></button>
+        <button class="btn btn-success btn-lg rounded-circle"><span class="bi bi-calendar"></span></button>
+        <button class="btn btn-danger btn-lg rounded-circle"><span class="bi bi-cart"></span></button>
+        <button class="btn btn-info btn-lg rounded-circle"><span class="bi bi-bell"></span></button>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row bg-danger">
+            <div class="col-4">
+                <img src="images/viking-1.jpg" class="rounded">
+            </div>
+            <div class="col-4">
+                <img src="images/viking-2.jpg" class="rounded-circle">
+            </div>
+            <div class="col-4">
+                <img src="images/viking-3.jpg" class="img-thumbnail">
+            </div>
+        </div>
+        <div class="row bg-warning">
+            <figure class="col-4 figure">
+                <img src="images/viking-1.jpg" class="rounded">
+                <figcaption class="figure-caption">Vikings!</figcaption>
+            </figure>
+            <figure class="col-4 figure">
+                <img src="images/viking-2.jpg" class="rounded">
+                <figcaption class="figure-caption text-center">Vikings!</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

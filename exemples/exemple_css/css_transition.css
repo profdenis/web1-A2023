@@ -1,0 +1,83 @@
+div {
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    background-color: lightgreen;
+    border: 2px solid black;
+    margin: 40px;
+}
+
+.ex-transition div {
+    font-size: 14px;
+}
+
+.ex-transition .simple {
+    /*** Pour la transition ***/
+    transition-property: font-size;
+    transition-duration: 3s;
+    transition-delay: 1s;
+}
+
+.ex-transition .simple:hover {
+    font-size: 28px;
+}
+
+.ex-transition .complexe {
+    /*** Pour la transition ***/
+    transition: width 2s, font-size 2s, background-color 2s, border 2s;
+}
+
+.ex-transition .complexe:hover {
+    font-size: 28px;
+    background-color: #FFFFFF;
+    width: 400px;
+    border: 4px dashed lightgreen;
+}
+
+.menu div {
+    font-size: 18px;
+    /*** Pour la transition ***/
+    transition-property: font-size;
+    transition-duration: 4s;
+    transition-delay: 2s;
+}
+
+.menu nav {
+    margin-left: 40px;
+}
+
+.menu a {
+    width: 100px;
+    border: 1px solid #fff;
+    border-radius: 18px;
+    outline: 0;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font: bold 12px Verdana;
+    color: #fff;
+    background-color: #333;
+    transition: all 1s ease-out;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: #333;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.menu .complexe {
+    margin-top: 20px;
+    background-size: cover;
+    /*** Pour la transition ***/
+    transition: width 2s, font-size 2s, background 4s, height 8s 2s;
+}
+
+.menu .complexe:hover {
+    font-size: 28px;
+    color: white;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/c/c2/La_Licorne_et_le_Loup.JPG');
+    width: 600px;
+    height: 600px;
+}

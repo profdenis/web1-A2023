@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap alignement</title>
+
+    <style>
+        .big-row { 
+            min-height: 150px;
+        }
+        [class*="col"] { 
+            padding: 0.5rem;
+        }
+    </style>  
+
+</head>
+
+<body>
+    <h1 class="text-center m-2">Alignement des éléments</h1>
+    <div class="container mb-4 text-center border border-2 border-primary">
+        <div class="row big-row align-items-start bg-info mb-4">
+            <div class="col text-bg-secondary">
+                align-items-start
+            </div>
+            <div class="col text-bg-secondary">
+                align-items-start
+            </div>
+        </div>
+        <div class="row big-row align-items-center bg-info mb-4">
+            <div class="col text-bg-secondary">
+                align-items-center
+            </div>
+            <div class="col text-bg-secondary">
+                align-items-center
+            </div>
+        </div>
+        <div class="row big-row align-items-end bg-info">
+            <div class="col text-bg-secondary">
+                align-items-end
+            </div>
+            <div class="col text-bg-secondary">
+                align-items-end
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center m-2">Alignement individuel</h2>
+    <div class="container text-center border border-2 border-primary">
+        <div class="row big-row bg-info">
+          <div class="col align-self-start text-bg-secondary">
+            align-self-start
+          </div>
+          <div class="col align-self-center text-bg-secondary">
+            align-self-center
+          </div>
+          <div class="col align-self-end text-bg-secondary">
+            align-self-end
+          </div>
+        </div>
+    </div>
+
+    <h2 class="text-center m-2">Alignement horizontal</h2>
+    <div class="container text-center border border-2 border-primary">
+        <div class="row justify-content-start bg-info mb-2">
+          <div class="col-4 text-bg-secondary">
+            justify-content-start
+          </div>
+          <div class="col-4 text-bg-secondary">
+            justify-content-start
+          </div>
+        </div>
+        <div class="row justify-content-center bg-info mb-2">
+          <div class="col-4 text-bg-secondary">
+            justify-content-center
+          </div>
+          <div class="col-4 text-bg-secondary">
+            justify-content-center
+          </div>
+        </div>
+        <div class="row justify-content-end bg-info mb-2">
+          <div class="col-4 text-bg-secondary">
+            justify-content-end
+          </div>
+          <div class="col-4 text-bg-secondary">
+            justify-content-end
+          </div>
+        </div>
+        <div class="row justify-content-around bg-info mb-2">
+          <div class="col-4 text-bg-secondary">
+            justify-content-around
+          </div>
+          <div class="col-4 text-bg-secondary">
+            justify-content-around
+          </div>
+        </div>
+        <div class="row justify-content-between bg-info">
+          <div class="col-4 text-bg-secondary">
+            justify-content-between
+          </div>
+          <div class="col-4 text-bg-secondary">
+            justify-content-between
+          </div>
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+.img-row img {
+    float: left;
+    width: 31.33%;
+    min-width: 300px;
+    max-width: 750px;
+    margin: 1%;
+}
+
+.spacer-div {
+    height: 20px;
+    float: none;
+    clear: both;
+    display: block;
+}
+
+.center-box, .float-box {
+    background-color: rgba(150, 200, 150, 0.8);
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.center-box img, .float-box img {
+    max-width: inherit;
+}
+
+
+.center-box, .center-div {
+    width: 90%;
+    margin: auto;
+}
+
+.center-box {
+    padding: 10px;
+}
+
+.float-box {
+    float: left;
+    width: 28%;
+    padding: 1%;
+    margin: 1%;
+    min-width: 200px;
+}
+
+.center {
+    text-align: center;
+    max-width: inherit;
+}

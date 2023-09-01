@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Alert Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Alertes avec Boostrap</h1>
+        <p>
+           Une alerte est parfaite pour avertir un utilisateur d'une mise à jour, d'une erreur ou d'un avertissement.
+           Généralement, c'est un traitement en cours ou une action qui lance l'alerte.
+           Comme nous sommes limités dans l'utilisation de javascript, l'alerte doit être présente par défaut.
+           De plus, les alertes sont parfaites avec les icônes.
+        </p>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-circle"></i> <strong>Je suis un avertissement</strong> Tu as surement oublié de faire le ménage!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <h4 class="alert-heading">
+                <i class="bi bi-exclamation-triangle"></i>
+                Alerte Alerte!
+            </h4>
+            <p>Tu passes trop de temps sur l'ordinateur <i class="bi bi-emoji-laughing"></i>.</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

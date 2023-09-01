@@ -1,0 +1,32 @@
+body {
+    background-image: url("https://yari-demos.prod.mdn.mozit.cloud/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds/firefox.png"), 
+                      url("https://www.w3schools.com/css/gradient_bg.png");
+    color: black;
+    background-repeat: no-repeat,repeat-x;
+    background-position: bottom right, top;
+ }
+
+.ex6 {
+    background-image: url("https://www.w3schools.com/css/img_tree.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+.ex7 {
+    background-image: url("https://www.w3schools.com/css/img_tree.png");
+    background-size: 100% 100%;
+}
+
+.ex8 {
+    background-image: url("https://www.w3schools.com/css/img_tree.png");
+    background-size: contain;
+}
+
+.ex9 {
+    background-image: url("https://www.w3schools.com/css/img_tree.png");
+    background-size: cover;
+}

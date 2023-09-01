@@ -1,0 +1,11 @@
+img { 
+    width: 100%; 
+}
+
+body { 
+    margin-top: 10px;
+}
+
+[class*="col"]{
+    border: 2px solid blue;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>420-1W1-DM Web 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="github.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">420-1W1-DM Web 1</h1>
+</header>
+<h2 id="système-de-couleur">Système de couleur</h2>
+<h3 id="rgb">RGB</h3>
+<p>Il existe plusieurs formulations pour écrire une couleur. En premier lieu, vous devez comprendre comment l’ordinateur affiche une couleur à écran. Pour le système informatique, un écran n’est ni plus ni moins qu’une grille de pixel. Chaque pixel est composé de trois couleurs (rouge, vert et bleu). Chaque couleur possède 256 intensités. Ainsi, un pixel va afficher un mélange de ces trois couleurs selon l’intensité de chacune. Il s’agit du système <strong>RGB</strong>. Ainsi, la couleur rouge « pure » aura une intensité de rouge de 255 (la valeur 0 compte comme une intensité donc [256 − 1 = 255] au maximum) tandis qu’intensité des deux autres sera de 0.</p>
+<h3 id="hexadécimale">Hexadécimale</h3>
+<p>Par la suite, il existe un autre système de couleur. Il s’agit du système hexadécimal. Les nombres hexadécimaux sont des nombres encodés sur une base 16 au lieu de 10. En gros, le système hexadécimal et RGB sont identiques. Il s’agit simplement du format d’encodage. Néanmoins, les nombres hexadécimaux sont plus faciles à comprendre pour le navigateur et il s’agit des codes utilisés dans le monde du web. Un peu plus bas, je vous ai ajouté un tableau comparatif (non exhaustif) entre les différents systèmes. La base 16 fonctionne comme suit : Tout les chiffres de 0 à 9 sont représenté par leur équivalent décimal, toutefois, les nombres de 10 à 15, sont représentés par les lettres de l’alphabet de A à F. Par la suite, une rajoutons une décimale, ainsi 16 devient 10, 17 devient 11, etc. Voici une courte liste de valeur de décimale à hexadécimale</p>
+<table>
+<thead>
+<tr class="header">
+<th>Décimale</th>
+<th>0</th>
+<th>1</th>
+<th>9</th>
+<th>10</th>
+<th>13</th>
+<th>15</th>
+<th>16</th>
+<th>25</th>
+<th>26</th>
+<th>50</th>
+<th>100</th>
+<th>150</th>
+<th>200</th>
+<th>255</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hexadécimale</td>
+<td>0</td>
+<td>1</td>
+<td>9</td>
+<td>A</td>
+<td>D</td>
+<td>F</td>
+<td>10</td>
+<td>19</td>
+<td>1A</td>
+<td>32</td>
+<td>64</td>
+<td>96</td>
+<td>C8</td>
+<td>FF</td>
+</tr>
+</tbody>
+</table>
+<p>Voici un <a href="https://sebastienguillon.com/test/javascript/convertisseur.html">convertisseur</a> pour vous aidez. Dans ce système, chaque couleur (rouge, vert et bleu) est représentée par deux chiffres dans l’ordre suivant Rouge-Vert-Blue. Ainsi, le nombre <code>#FF0000</code> représente 255 rouges, 0 vert et 0 bleu. Le nombre <code>#00FF00</code> représente 0 rouge, 255 vert et 0 bleu. Le nombre <code>#0000FF</code> représente 0rouge, 0 vert et 255 bleu.</p>
+<h3 id="noms">Noms</h3>
+<p>Il s’agit d’un système de convention des couleurs. Il s’agit du système que vous avons pris aujourd’hui. Je vous le recommande fortement dès que possible. Il s’agit d’une normalisation de certaines couleurs. Prenez par exemple la couleur <code>LawnGreen</code>. Grâce au système de nommage, vous êtes assuré que cette couleur sera la même d’une plateforme, d’un navigateur et d’une version à l’autre.</p>
+<h3 id="rgba">RGBA</h3>
+<p>Même système que le RGB, mais elle ajoute une quatrième valeur. Cette valeur, qui oscille entre 0 et 1, représente la transparence de la couleur. Lorsque nous avons un rouge « pure » qui s’affiche pleinement, sa valeur RGBA est <code>(255, 0, 0, 1)</code>. Si nous avons la valeur <code>(255, 0, 0, 0.5)</code>, alors le rouge sera à moitié transparent. De même si <code>(255, 0, 0, 0)</code>, la couleur sera complètement transparente.</p>
+<h3 id="tableau-de-comparaison">Tableau de comparaison</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Nom (français)</th>
+<th>Nom (normalisé)</th>
+<th>Valeur RGB</th>
+<th>hexadécimale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Noir</td>
+<td><code>black</code></td>
+<td>(0, 0, 0)</td>
+<td><code>#000000</code></td>
+</tr>
+<tr class="even">
+<td>Rouge</td>
+<td><code>red</code></td>
+<td>(255, 0, 0)</td>
+<td><code>#FF0000</code></td>
+</tr>
+<tr class="odd">
+<td>Rouge foncé</td>
+<td><code>darkred</code></td>
+<td>(139, 0, 0)</td>
+<td><code>#8B0000</code></td>
+</tr>
+<tr class="even">
+<td>Indigo</td>
+<td><code>indigo</code></td>
+<td>(75, 00, 130)</td>
+<td><code>#4B0082</code></td>
+</tr>
+<tr class="odd">
+<td>Vert lime</td>
+<td><code>limegreen</code></td>
+<td>(50, 205, 50)</td>
+<td><code>#32CD32</code></td>
+</tr>
+<tr class="even">
+<td>Blanc</td>
+<td><code>white</code></td>
+<td>(255, 255, 255)</td>
+<td><code>#FFFFFF</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="un-sélecteur-de-couleur">Un sélecteur de couleur</h3>
+<p>Pour vous aidez à choisir vos couleurs, prenez le sélecteur de couleur de <a href="https://www.w3schools.com/colors/colors_picker.asp">W3Schools.com</a>.</p>
+</body>
+</html>

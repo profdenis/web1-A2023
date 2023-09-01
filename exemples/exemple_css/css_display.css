@@ -1,0 +1,24 @@
+p {
+    display: inline;
+}
+
+.pclass1 {
+    background-color: cornflowerblue;
+}
+
+.pclass2 {
+    background-color: greenyellow;
+}
+
+.pclass3 {
+    background-color: palevioletred;
+}
+
+#pdiv {
+    border: darkolivegreen solid 5px;
+    padding: 20px;
+}
+
+span {
+    background-color: red;
+}

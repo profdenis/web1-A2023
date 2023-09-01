@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple Bootstrap Tableau</title>
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      caption {
+        text-align: center;
+        caption-side: top;
+      }
+    </style>
+</head>
+<body>
+    <table class="table table-bordered table-striped table-sm table-hover">
+        <caption>
+          Les grands Vikings
+        </caption>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Faits et accomplissement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bjorn Ironside</td>
+            <td>Bjorn Ironside était le fils de Ragnar Lodbrok. Il fit des raids en Angleterre, en Espagne, en France et en Italie.
+                À son retour, il partagea le royaume de son père avec son frère et devint roi de Suède.</td>
+          </tr>
+          <tr>
+            <td>Egil Skallagrmisson</td>
+            <td>Vivant dans les années 900, Egil Skallagrimson était un guerrier et poète viking islandais.</td>
+          </tr>
+          <tr>
+            <td>Eric Bloodaxe</td>
+            <td>Eric Bloodaxe était fils du premier roi de Norvège, Harald Fairhair. Il devint plus tard roi de Norvège, et gagna son nom en tuant tous ses frères sauf un.</td>
+          </tr>
+          <tr>
+            <td>Erik le rouge</td>
+            <td>Erik le Rouge était un guerrier viking norvégien du 10e siècle qui a fui la Norvège pour l'Islande après avoir été exilé pour homicide. Il a fondé une colonie dans le Groenland</td>
+          </tr>
+          <tr>
+            <td>Freydis Eirksdottir</td>
+            <td>Fille d'Eric le Rouge, Freydis est la preuve que les femmes vikings peuvent être des guerrières vikings tout aussi redoutables que les hommes. Elle aurait visité l'Amérique du Nord</td>
+          </tr>
+          <tr>
+            <td>Ragnar Lodbrok</td>
+            <td>Probablement le guerrier viking le plus célèbre, Ragnar Lodbrok a mené de nombreux raids sur la France et l'Angleterre au 9ème siècle.</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <div class="table-responsive-md mt-5">
+        <h2 class="text-center">Tableau avec couleur</h2>
+        <table class="table table-sm table-hover">
+          <caption>
+            <h3>Les grands Vikings</h3>
+          </caption>
+          <thead class="table-info">
+            <tr>
+              <th class="table-danger">Nom</th>
+              <th>Faits et accomplissement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-warning">Bjorn Ironside</td>
+              <td>Bjorn Ironside était le fils de Ragnar Lodbrok. Il fit des raids en Angleterre, en Espagne, en France et en Italie.
+                  À son retour, il partagea le royaume de son père avec son frère et devint roi de Suède.</td>
+            </tr>
+            <tr>
+              <td>Egil Skallagrmisson</td>
+              <td>Vivant dans les années 900, Egil Skallagrimson était un guerrier et poète viking islandais.</td>
+            </tr>
+            <tr class="table-active">
+              <td>Eric Bloodaxe</td>
+              <td>Eric Bloodaxe était fils du premier roi de Norvège, Harald Fairhair. Il devint plus tard roi de Norvège, et gagna son nom en tuant tous ses frères sauf un.</td>
+            </tr>
+            <tr>
+              <td>Erik le rouge</td>
+              <td class="table-success">Erik le Rouge était un guerrier viking norvégien du 10e siècle qui a fui la Norvège pour l'Islande après avoir été exilé pour homicide. Il a fondé une colonie dans le Groenland</td>
+            </tr>
+            <tr class="table-dark">
+              <td>Freydis Eirksdottir</td>
+              <td>Fille d'Eric le Rouge, Freydis est la preuve que les femmes vikings peuvent être des guerrières vikings tout aussi redoutables que les hommes. Elle aurait visité l'Amérique du Nord</td>
+            </tr>
+            <tr>
+              <td>Ragnar Lodbrok</td>
+              <td>Probablement le guerrier viking le plus célèbre, Ragnar Lodbrok a mené de nombreux raids sur la France et l'Angleterre au 9ème siècle.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive m-2 mt-5">
+        <h2 class="text-center">Tableau Responsive</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Titre de colonne</th>
+              <th>Titre de colonne</th>
+              <th>Titre de colonne</th>
+              <th>Titre de colonne</th>
+              <th>Titre de colonne</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Contenu de la cellule avec du texte</td>
+              <td>Contenu de la cellule avec du texte</td>
+              <td>Contenu de la cellule avec du texte</td>
+              <td>Contenu de la cellule avec du texte</td>
+              <td>Contenu de la cellule avec du texte</td>
+            </tr>
+            <tr>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+            </tr>
+            <tr>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+              <td>Contenu de la cellule</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>420-1W1-DM Web 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="github.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">420-1W1-DM Web 1</h1>
+</header>
+<h1 id="css-et-lintégration-du-style">CSS et l’intégration du style</h1>
+<ul>
+<li>Le HTML décrit la structure d’un document, tandis que le CSS décrit comment il devrait être affiché</li>
+<li>CSS est un langage qui décrit le style d’un document HTML</li>
+<li>CSS décrit comment un document HTML devrait être affiché</li>
+</ul>
+<h3 id="pourquoi-utiliser-le-css">Pourquoi utiliser le CSS ?</h3>
+<ul>
+<li>Le CSS est utilisé pour définir des styles pour nos pages web, incluant le design, l’agencement et les variations dans l’affichage sur des appareils et écrans différents.</li>
+<li>CSS sauve beaucoup de travail. Il peut contrôler l’agencement de plusieurs pages web d’un seul coup</li>
+</ul>
+<p>Mais comment on peut organiser le HTML pour faciliter l’utilisation du CSS?</p>
+<h2 id="le-pouvoir-des-catégories">Le pouvoir des catégories</h2>
+<p>Est-ce qu’il existe des éléments, dans nos pages web, qui réfèrent à une même catégorie ? Prenez simplement notre pièce la <em>Jalousie du Barbouillé</em>. Dans cette page, vous retrouvez plusieurs <em>didascalies</em>, plusieurs <em>noms de personnage</em> (au début des dialogues) et plusieurs <em>indications à l’acteur</em> (ce que nous avons surligné). Il serait intéressant d’informer le navigateur que toutes les didascalies qu’elles sont des didascalies. Cette utilité sera importante pour le CSS. Heureusement, les catégories existent en HTML. Le principe est d’ajouter un attribut qui informe sur la catégorie des éléments. En gros, nous leur ajoutons un type.</p>
+<h2 id="les-catégories-en-html-lattribut-classcategorie">Les catégories en HTML, l’attribut <code>class="categorie"</code></h2>
+<p>(<a href="https://www.w3schools.com/tags/att_class.asp">Référence</a>)</p>
+<p>Il s’agit d’un attribut global. C’est-à-dire qu’il est possible d’ajouter l’attribut <code>class</code> sur toutes les balises HTML. Cet attribut permet d’ajouter, à la base, une catégorie. Il est même possible d’ajouter plusieurs catégories. Pour y ajouter plusieurs catégories, nous ajoutons un simple espace blanc entre les noms de catégories. Il y a quelques règles sur les noms utilisés pour les catégories.</p>
+<ul>
+<li>Il doit être <strong>significatif</strong>.</li>
+<li>Il <strong>ne doit pas</strong> y avoir d’<strong>espaces</strong> dans un nom.</li>
+<li>Il <strong>ne faut pas</strong> utiliser de <strong>caractères spéciaux</strong> (les <strong>tirets</strong> <code>-</code> sont <strong>acceptés</strong>).</li>
+</ul>
+<p>Voici deux exemples, dans la pièce <em>La Jalousie du Barbouillé</em>, nous pouvons ajouter la catégorie <code>didascalie</code> à nos <em>didascalies</em>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">&lt;section</span><span class="ot"> id=</span><span class="st">&quot;scene-1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    <span class="kw">&lt;h3&gt;</span>Scène première (<span class="kw">&lt;em&gt;</span>Le Barbouillé<span class="kw">&lt;/em&gt;</span>)<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>            Le barbouillé entre sur la scène par le côté jardin. Il avance</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>            songeux vers le centre de la scène. Il garde ces yeux vers le base.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>            Il se place devant le public. Lentement, il relève tête et il</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>            regarde le public dans les yeux.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>        <span class="kw">&lt;strong&gt;</span>Le Barbouillé<span class="kw">&lt;/strong&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>        : Il faut avouer que je suis le plus malheureux de tous les hommes !</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>        J’ai une femme qui me fait enrager.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>            Le Barbouillé se déplace vers le côté cours tout en regardant le</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>            public.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a>        <span class="kw">&lt;strong&gt;</span>Le Barbouillé<span class="kw">&lt;/strong&gt;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a>        : Au lieu de me donner du soulagement et de faire les choses à mon</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a>        souhait, elle me fait donner au diable vingt fois le jour.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true"></a>            Le Barbouillé se tourne vers le côté jardins et il continue à</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true"></a>            discourir.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true"></a>        <span class="kw">&lt;strong&gt;</span>Le Barbouillé<span class="kw">&lt;/strong&gt;</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true"></a>        : Au lieu de se tenir à la maison, elle aime la promenade, la bonne</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true"></a>        chère, et fréquente je ne sais quelle sorte de gens.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true"></a>            Arrivé au côté jardin, le Barbouillé se retourne vers le public.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true"></a>        <span class="kw">&lt;strong&gt;</span>Le Barbouillé<span class="kw">&lt;/strong&gt;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true"></a>        : Ah ! pauvre Barbouillé, que tu es misérable ! Il faut pourtant la</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true"></a>        punir. Si tu la tuais... L’intention ne vaut rien, car tu serais pendu.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true"></a>        Si tu la faisais mettre en prison… La carogne en sortirait avec son</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true"></a>        passe-partout. Que diable faire donc ?</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true"></a><span class="kw">&lt;/section&gt;</span></span></code></pre></div>
+<p>Nous pouvons, aussi, ajouter la catégorie <code>dialogue</code> à nos <em>répliques</em>. De plus, nous pouvons modifier les balises autour du nom des personnages. Nous avons vu, la semaine dernière, la balise <code>&lt;span&gt;&lt;/span&gt;</code> qui donne un conteneur générique. Nous verrons son utilité dans un prochaine section.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="kw">&lt;section</span><span class="ot"> id=</span><span class="st">&quot;scene-1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="kw">&lt;h3&gt;</span>Scène première (<span class="kw">&lt;em&gt;</span>Le Barbouillé<span class="kw">&lt;/em&gt;</span>)<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>            Le Barbouillé entre sur la scène par le côté jardin. Il avance</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>            songeux vers le centre de la scène. Il garde ces yeux vers le base.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>            Il se place devant le public. Lentement, il relève tête et il</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>            regarde le public dans les yeux.</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;dialogue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>        <span class="kw">&lt;span&gt;</span>Le Barbouillé<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>        : Il faut avouer que je suis le plus malheureux de tous les hommes !</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>        J’ai une femme qui me fait enrager.</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a>            Le Barbouillé se déplace vers le côté cours tout en regardant le</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a>            public.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;dialogue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a>        <span class="kw">&lt;span&gt;</span>Le Barbouillé<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a>        : Au lieu de me donner du soulagement et de faire les choses à mon</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true"></a>        souhait, elle me fait donner au diable vingt fois le jour.</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true"></a>            Le Barbouillé se tourne vers le côté jardins et il continue à</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true"></a>            discourir.</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;dialogue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true"></a>        <span class="kw">&lt;span&gt;</span>Le Barbouillé<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true"></a>        : Au lieu de se tenir à la maison, elle aime la promenade, la bonne</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true"></a>        chère, et fréquente je ne sais quelle sorte de gens.</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;didascalie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true"></a>            Arrivé au côté jardins, le Barbouillé se retourne vers le public.</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true"></a>    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;dialogue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true"></a>        <span class="kw">&lt;span&gt;</span>Le Barbouillé<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true"></a>        : Ah ! pauvre Barbouillé, que tu es misérable ! Il faut pourtant la</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true"></a>        punir. Si tu la tuais... L’intention ne vaut rien, car tu serais pendu.</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true"></a>        Si tu la faisais mettre en prison… La carogne en sortirait avec son</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true"></a>        passe-partout. Que diable faire donc ?</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true"></a><span class="kw">&lt;/section&gt;</span></span></code></pre></div>
+<h2 id="à-quoi-ressemble-le-css">À quoi ressemble le CSS</h2>
+<p>La syntaxe du CSS est assez simple. Le langage fonctionne par <strong><em>propriété</em></strong>. En gros, le principe est d’attribuer des valeurs à des propriétés prédéfinies. Ces propriétés sont des placés dans des blocs qui indiquent que cette propriété est appliquée à une balise. Sans plus attendre, voici la syntaxe générale du CSS :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>balise {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    propriété-1<span class="in">: valeur-de-la-propri</span>été;</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    propriété-2<span class="in">: valeur-de-la-propri</span>été;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    propriété-3<span class="in">: valeur-de-la-propri</span>été;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>/ / <span class="fu">.</span> <span class="fu">.</span> <span class="fu">.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="co">/*********************************************************************</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a><span class="co"> * En CSS, les commentaires utilisent les mêmes caractères qu&#39;en Java.</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co"> *</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="co"> * Les commentaires de ligne : // Le commentaire...</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="co"> * </span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="co"> * Les blocs de commentaires (sur plusieurs lignes) : /* Le commentaire ...*/</span></span></code></pre></div>
+<h2 id="ajouter-du-css-au-html">Ajouter du CSS au HTML</h2>
+<p>Avant de voir nos premières propriétés, voyons comment ajouter le CSS à un fichier HTML. Il existe deux solutions possibles : lié un fichier <em>CSS</em> ou ajouter dans une balise <code>&lt;style&gt;&lt;/style&gt;</code>.</p>
+<h2 id="ajouter-dans-le-document-html-la-balise-stylestyle">Ajouter dans le document HTML, la balise <code>&lt;style&gt;&lt;/style&gt;</code></h2>
+<p>(<a href="https://www.w3schools.com/tags/tag_style.asp">Référence</a>)</p>
+<p>Cette balise, placé dans la balise <code>&lt;head&gt;&lt;/head&gt;</code> permets de définir sur CSS pour le document uniquement. Elle s’utilise comme suit :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>Titre du site<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    <span class="kw">&lt;style&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>        balise {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>            propriété-1<span class="in">: valeur-de-la-propri</span>été;</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>            propriété-2<span class="in">: valeur-de-la-propri</span>été;</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>            propriété-3<span class="in">: valeur-de-la-propri</span>été;</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>        / / <span class="fu">.</span> <span class="fu">.</span> <span class="fu">.</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>        }</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>    <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<h3 id="avantage-de-la-balise">Avantage de la balise</h3>
+<p>La balise permet de réduire le nombre de fichiers sur le site. De plus, vous êtes assuré d’avoir toujours le style dans votre page web.</p>
+<h3 id="désavantage-de-la-balise">Désavantage de la balise</h3>
+<p>Ceci alourdit de manière importante votre page web. De plus, votre code ne peut pas être réutilisé dans d’autre page web.</p>
+<h3 id="utilisation-de-la-balise-dans-le-cadre-de-ce-cours">Utilisation de la balise dans le cadre de ce cours</h3>
+<p>À moins que ce soit expressément demandé, nous <strong>n’utiliserons pas</strong> cette balise. Pour vos TP, vous devrez utiliser la prochaine balise.</p>
+<h2 id="lier-un-fichier-css-et-html-la-balise-link-hreflien-reltype">Lier un fichier CSS et HTML, la balise <code>&lt;link href="lien" rel="type"&gt;</code></h2>
+<p>(<a href="https://www.w3schools.com/tags/tag_link.asp">Référence</a>)</p>
+<p>Cette balise, placé dans la balise <code>&lt;head&gt;&lt;/head&gt;</code> permets de lier un fichier CSS dans une page web. Nous verrons plus tard qu’il est possible de lier d’autre ressource qu’un fichier CSS. Pour les fichiers CSS, cette balise s’utilise comme suit :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>Titre du site<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;./css/styles.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<h3 id="fichier-css">Fichier CSS</h3>
+<p>Les fichiers CSS ont toujours l’extension <code>.css</code>. Vous créez votre fichier exactement comme les fichiers HTML dans Visual Studio Code, mais vous sélectionnez <strong><em>CSS (.css)</em></strong> comme type de fichier. Par habitude et convention personnelle, je place toujours mes fichiers CSS dans un dossier <code>./css/</code> situé à la racine du site web (à côté de notre page web). Ceci permet de simplifier la vue dans le dossier et la recherche des fichiers. J’applique la même logique aux images et vidéo.</p>
+<h4 id="le-code-de-base-dun-fichier-css">Le code de base d’un fichier CSS</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="im">@charset</span> <span class="st">&quot;utf-8&quot;</span><span class="op">;</span></span></code></pre></div>
+<h3 id="lattribut-hreflien">L’attribut <code>href="lien"</code></h3>
+<p>Il s’agit ni plus ni moins que du même attribut que pour la balise <code>&lt;a href="lien"&gt;&lt;/a&gt;</code>. Son but, dans la balise <code>&lt;link&gt;</code> est d’informer du lien ( chemin) vers notre ressource (fichier CSS).</p>
+<h3 id="avantage-de-la-balise-1">Avantage de la balise</h3>
+<p>La balise permet de lier le CSS sans alourdir la page. De plus, vous pouvez réutiliser le fichier sur plus d’un site et vous pouvez toujours ajouter plus d’un fichier CSS. Il est donc possible de spécialiser nos fichiers.</p>
+<h3 id="désavantage-de-la-balise-1">Désavantage de la balise</h3>
+<p>Nous sommes dépendants de l’existence des fichiers CSS. S’il est déplacé, renommé ou supprimé, il faut modifier notre page web en conséquence.</p>
+<h3 id="utilisation-de-la-balise-dans-le-cadre-de-ce-cours-1">Utilisation de la balise dans le cadre de ce cours</h3>
+<p>À moins que ce soit expressément demandé, nous <strong>utiliserons toujours</strong> cette balise. Pour simplifier l’apprentissage les premiers exemples dans ce cours utiliserons la balise <code>&lt;style&gt;&lt;/style&gt;</code>.</p>
+<h2 id="lattribut-reltype">L’attribut <code>rel="type"</code></h2>
+<p>(<a href="https://www.w3schools.com/tags/att_link_rel.asp">Référence</a>)</p>
+<p>Cet attribut permet de spécifier le type de ressource lié par la balise <code>&lt;link&gt;</code>. Concernant les fichiers de style CSS, il faut comprendre que nous utilisons le type <code>rel="stylesheet"</code>. Il en existe d’autres, mais nous les verrons plus tard. Pour le moment, il ne sont pas utiles.</p>
+<h2 id="notre-première-propriété-css-color">Notre première propriété CSS, <code>color</code></h2>
+<p>(<a href="https://www.w3schools.com/cssref/pr_text_color.asp">Référence</a>)</p>
+<p>Nous avons vu un exemple, pendant le cours #4. Cette propriété permet de modifier la couleur d’écriture. Il existe plusieurs manières d’écrire une couleur :</p>
+<ul>
+<li>Avec son nom (exemple : rouge = <code>red</code>) ; il existe des codes de nom prédéfini (supporté par tous les navigateurs). Cliquez sur ce <a href="https://www.w3schools.com/colors/colors_names.asp">lien</a> pour connaître les différents noms.</li>
+<li>Il existe la couleur hexadécimale (exemple : rouge = <code>#ff0000</code>)</li>
+<li><dl>
+<dt>Il existe la couleur RGB (exemple</dt>
+<dd>rouge = <code>rgb(255, 0, 0)</code>)
+</dd>
+</dl></li>
+<li><dl>
+<dt>Il existe la couleur RGBA (exemple</dt>
+<dd>rouge = <code>rgb(255, 0, 0, 1)</code>)
+</dd>
+</dl></li>
+<li>Le mot clé <code>currentcolor</code> qui permet de réutiliser automatiquement la couleur mentionnez dans la balise.</li>
+</ul>
+<p>Cette propriété, comme toutes les autres, s’utilise simplement en indiquant son nom (<code>color</code>) et sa valeur.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>balise {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    <span class="kw">color</span>: valeur<span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="comment-ajouter-les-titres-en-bleu-foncé-dans-notre-pièce.">Comment ajouter les titres en bleu foncé dans notre pièce.</h2>
+<p>Pour que nos textes soient écrits en bleu foncé, il faut spécifier, toujours dans le fichier CSS, la balise du titre (<code>h1</code>, <code>h2</code>, <code>h3</code>, etc.) et, dans notre bloc, attribuer la valeur <code>darkblue</code> à la propriété <code>color</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>h1 {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkblue</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>h2 {</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkblue</span><span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>}</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>h3 {</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkblue</span><span class="op">;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="simplifions-notre-css">Simplifions notre CSS</h3>
+<p>Parfois, comme dans l’exemple précédent, plusieurs balises auront le même style. Toutefois, répéter plusieurs fois le même code alourdit le fichier et il s’agit d’une grande source d’erreur de la part de la personne développée. Heureusement pour nous, le CSS supporte une syntaxe « <em>généreuse</em> » pour ces cas de figure. Nous pouvons appliquer un bloc de style à plusieurs balises, il suffit de séparer chaque balise par une virgule. La syntaxe générale est alors :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>balise-1<span class="op">,</span> balise-2<span class="op">,</span> balise-3<span class="op">,</span> <span class="co">/*...*/</span><span class="op">,</span> balise-n {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    propriete-1<span class="in">: valeur</span>;</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="co">/*...*/</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    propriete-n: valeur<span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Ainsi, notre exemple précédent devient simplement :</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3 {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkblue</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="ordre-application-des-styles">Ordre application des styles</h2>
+<p>Après notre bloc de style, dans l’exemple précédent, ajoutez le code suivant :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>h2 {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">deeppink</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Que remarquez-vous ? Réessayez avec plusieurs couleurs différentes l’une à la suite de l’autre. Choisissez des couleurs donc la différence est marquante, personnellement j’ai pris :</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3 {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkblue</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a>}</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a>h2 {</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">deeppink</span><span class="op">;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a>}</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true"></a>h2 {</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkgreen</span><span class="op">;</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true"></a>}</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true"></a>h2 {</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkred</span><span class="op">;</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true"></a>}</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true"></a>h2 {</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">goldenrod</span><span class="op">;</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true"></a>}</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true"></a></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true"></a>h2 {</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">grey</span><span class="op">;</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true"></a>}</span></code></pre></div>
+<p>La couleur qui s’affiche est toujours la dernière indiquée. Il s’agit du <strong>principe de la cascade</strong>. Nous pouvons définir plusieurs fois un bloc de style, mais ce sera toujours la dernière valeur indiquée qui sera sélectionnée. Maintenant, ajoutez le mot clé <code>!important</code> après l’une des valeurs, sauf la dernière, et avant le point virgule. N’oubliez pas le <code>!</code> et d’ajouter un espace entre la valeur et le mot clé. Que remarquez-vous ?</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a>h2 {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkgreen</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Maintenant, ajoutez un deuxième <code>!important</code> dans un second bloc, plus bas que votre précédent. Que remarquez-vous ?</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>h2 {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkgreen</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>}</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a>h2 {</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkred</span><span class="op">;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true"></a>}</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true"></a>h2 {</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">goldenrod</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Peut importe si vous ajoutez des valeurs après une propriété avec ce mot clé, le navigateur utilisera la dernière valeur avec le mot clé <code>!important</code>. Selon vous, quelle est l’explication ?</p>
+<h2 id="pourquoi-important">Pourquoi <code>!important</code> ?</h2>
+<p>Ce mot clé appose une très haute priorité à votre valeur. Seule une autre propriété avec le mot clé <code>!important</code> pourra changer votre valeur à ce moment.</p>
+<h2 id="quest-ce-qui-ce-passe-avec-deux-fichiers-css">Qu’est-ce qui ce passe avec deux fichiers CSS ?</h2>
+<p>Ajoutez un second fichier CSS à votre projet. Ajoutez-y le code suivant :</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a>h2 {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">lawngreen</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Pour l’ajouter dans votre page HTML, ajoutez une nouvelle balise <code>&lt;link&gt;</code> situé après la précédente. Personnellement, j’ai appelé mon second fichier <code>app.css</code>. Mon <code>&lt;head&gt;&lt;/head&gt;</code> est devenu :</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>La Jalousie du Barbouillé<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;./css/style.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;./css/app.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<p>Que remarquez-vous ? Qu’est-ce qui ce passe si nous inversons les deux balises <code>&lt;link&gt;</code> ? Qu’est-ce qui se passe qui vous retirez les mots clés <code>!important</code> du second fichier (dans l’ordre des <code>&lt;link&gt;</code>) ? Par la suite, qu’est-ce qui arrive si nous enlevons tous les <code>!important</code> ? Finalement, qu’est-ce qui arrive si nous inversons à nouveau les fichiers ?</p>
+<h2 id="principe-de-la-cascade-en-css"><em>Principe de la cascade</em> en CSS</h2>
+<p>Nous allons établir formellement le <strong> principe de la cascade</strong> en CSS.</p>
+<blockquote>
+<p>Lors de la liaison des styles CSS, le navigateur appliquera la dernière valeur indiquée. Cette valeur est déterminée par le dernier style lu. De plus, lorsque la page web lie plusieurs feuilles de style, la dernière propriété lue est présente dans la dernière feuille liée.</p>
+</blockquote>
+<p>Bien évidemment, ce principe s’applique aux styles donnés dans les balises <code>&lt;style&gt;&lt;/style&gt;</code>. Il faut voir le contenu de ces balises comme une feuille de style.</p>
+<hr />
+<h2 id="sélecteurs-css">Sélecteurs CSS</h2>
+<p>En plus des <strong>sélecteurs de balise</strong> (par exemple <code>&lt;h1&gt;</code>), il existe les sélecteur d’identifiant. Les <strong><em>Sélecteur d’identifiant</em></strong> sélectionne une balise spécifique par ID, écrivez l’id précédé d’un dièse <code>#</code> - si un élément une balise a été défini avec un id comme ceci : <code>id="top"</code> - utilisez le sélecteur <code>#top</code> pour sélectionner précisément cette balise</p>
+<h4 id="exemple-ex2.html">Exemple: <code>ex2.html</code></h4>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>
+CSS Exemple 2
+</title>
+<style>
+        .ex0-2 p {
+            color: red;
+            background-color: yellow;
+        }
+        .ex0-2 #second {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+<div class="ex0-2">
+<pre><code>    &lt;p&gt;First paragraph.&lt;/p&gt;
+    &lt;p id=&quot;second&quot;&gt;Second paragraph.&lt;/p&gt;
+    &lt;p&gt;Third paragraph.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</body>
+</html>
+<div class="sourceCode" id="cb18"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>CSS Exemple 2<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true"></a>    <span class="kw">&lt;style&gt;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true"></a>        p {</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true"></a>            <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true"></a>            <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true"></a>        }</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true"></a>        <span class="pp">#second</span> {</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true"></a>            <span class="kw">background-color</span>: <span class="cn">lightblue</span><span class="op">;</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true"></a>        }</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true"></a>    <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>First paragraph.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;second&quot;</span><span class="kw">&gt;</span>Second paragraph.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Third paragraph.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<ul>
+<li><p>le sélecteur <code>p</code> sélectionne tous les paragraphes</p></li>
+<li><p><code>#second</code> sélectionne seulement la balise avec <code>id="second"</code>, dans ce cas le deuxième paragraphe</p></li>
+<li><p>Notez que les IDs sont uniques dans un document HTML, donc seulement une seule balise peut avoir un ID spécifique</p></li>
+<li><p>Par conséquent, un sélecteur d’ID peut correspondre à seulement une balise (si elle existe)</p></li>
+<li><p><strong><em>Sélecteur de classe</em></strong> : pour sélectionner les balises d’une classe spécifique (balises avec l’attribut <code>class</code> égal au nom d’une certaine classe, par exemple <code>class="important"</code>), utilisez le sélecteur <code>.important</code></p></li>
+<li><p><strong><em>Sélecteur classe-élément</em></strong> : pour sélectionner des balises d’une classe spécifique, combinez les sélecteurs de classe et de balise :</p>
+<ul>
+<li>par exemple, pour sélectionner tous les paragraphes de la classe <code>important</code>, utilisez le sélecteur <code>p.important</code></li>
+</ul></li>
+</ul>
+<p>#### Exemple : <code>ex3.html</code></p>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>
+CSS Exemple 3
+</title>
+<style>
+        .ex0-3 p {
+            color: red;
+            background-color: yellow;
+        }
+        .ex0-3 .important {
+            background-color: lightgreen;
+        }
+        .ex0-3 p.important {
+            border-width: 5px;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+<div class="ex0-3">
+<pre><code>    &lt;h1 class=&quot;important&quot;&gt;CSS Exemple 3&lt;/h1&gt;
+    &lt;p&gt;First paragraph.&lt;/p&gt;
+    &lt;p class=&quot;important&quot;&gt;Second paragraph.&lt;/p&gt;
+    &lt;p&gt;Third paragraph.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</body>
+</html>
+<hr />
+<div class="sourceCode" id="cb20"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>CSS Exemple 3<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true"></a>    <span class="kw">&lt;style&gt;</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true"></a>        p {</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true"></a>            <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true"></a>            <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true"></a>        }</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true"></a>        <span class="fu">.important</span> {</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true"></a>            <span class="kw">background-color</span>: <span class="cn">lightgreen</span><span class="op">;</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true"></a>        }</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true"></a></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true"></a>        p<span class="fu">.important</span> {</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true"></a>            <span class="kw">border-width</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true"></a>            <span class="kw">border-style</span>: <span class="dv">solid</span><span class="op">;</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true"></a>        }</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true"></a>    <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true"></a><span class="kw">&lt;h1</span><span class="ot"> class=</span><span class="st">&quot;important&quot;</span><span class="kw">&gt;</span>CSS Exemple 3<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>First paragraph.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;important&quot;</span><span class="kw">&gt;</span>Second paragraph.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Third paragraph.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<ul>
+<li><code>p</code> correspond à tous les paragraphes</li>
+<li><code>.important</code> correspond à toutes les balises avec <code>class="important"</code>
+<ul>
+<li>dans ce cas-ci, le <code>&lt;h1&gt;</code> et le deuxième <code>&lt;p&gt;</code></li>
+</ul></li>
+<li><code>p.important</code> correspond à tous les paragraphes avec <code>class="important"</code>
+<ul>
+<li>dans ce cas-ci, seulement le deuxième <code>&lt;p&gt;</code></li>
+</ul></li>
+<li><strong><em>Sélecteur de groupe</em></strong>: pour sélectionner plusieurs balises différentes, séparez les différentes balises avec des virgules
+<ul>
+<li>par exemple, pour sélectionner plusieurs niveaux de titres, tels que <code>h1</code>, <code>h2</code> et <code>h3</code>, utilisez le sélecteur <code>h1, h2, h3</code></li>
+<li>ceci peut aider à éviter de répéter les mêmes déclarations pour plusieurs balises différentes</li>
+</ul></li>
+</ul>
+<p>Voici un résumé des sélecteurs importants :</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 35%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sélecteur</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.classe</td>
+<td>.introduction</td>
+<td>Sélectionne tous les éléments avec la <code>class="introduction"</code></td>
+</tr>
+<tr class="even">
+<td>.classe1.classe2</td>
+<td>.section1.section2</td>
+<td>Sélectionne tous les éléments <strong>avec les deux</strong> classes <code>class="section1 section2"</code></td>
+</tr>
+<tr class="odd">
+<td>.classe1 .classe2</td>
+<td>.section1 .entete</td>
+<td>Sélectionne tous les éléments <strong>entete</strong> qui <strong>sont enfants</strong> d’un élément <strong>section1</strong></td>
+</tr>
+<tr class="even">
+<td>#id</td>
+<td>#top</td>
+<td>Sélectionne <strong>l’élément</strong> avec <code>id="top"</code></td>
+</tr>
+<tr class="odd">
+<td>.class, element</td>
+<td>.introduction, p</td>
+<td>Sélectionne <strong>tous les</strong> éléments avec la <code>class="introduction"</code> et tous les éléments <code>&lt;p&gt;</code></td>
+</tr>
+<tr class="even">
+<td>.class &gt; element</td>
+<td>.introduction&gt;p</td>
+<td>Sélectionne <strong>tous les</strong> éléments <code>&lt;p&gt;</code> ayant pour <strong>parent</strong> immédiat un élément avec la <code>class="introduction"</code></td>
+</tr>
+<tr class="odd">
+<td>.class + element</td>
+<td>.introduction+p</td>
+<td>Sélectionne <strong>le premier</strong> élément <code>&lt;p&gt;</code> <strong>suivant</strong> l’élément avec la <code>class="introduction"</code></td>
+</tr>
+<tr class="even">
+<td>.class ~ element</td>
+<td>.introduction~p</td>
+<td>Sélectionne tous les éléments <code>&lt;p&gt;</code> qui <strong>précède</strong> un élément ayant la. <code>class="introduction"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feuilles-de-style-externes">Feuilles de style externes</h3>
+<ul>
+<li><p>Déplaçons le contenu de la balise <code>&lt;style&gt;</code> dans un fichier css externe, en utilisant la balise <code>&lt;link&gt;</code></p>
+<p><code>&lt;link rel="stylesheet" type="text/css" href="ex5.css"&gt;</code></p></li>
+<li><p>Le résultat devrait toujours être le même.</p></li>
+</ul>
+<h4 id="exemple-ex5.html">Exemple : <code>ex5.html</code></h4>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex0-6 h1, .ex0-6 h2, .ex0-6 h3 {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="ex0-6">
+<pre><code>    &lt;h1&gt;CSS Exemple 5&lt;/h1&gt;
+    &lt;h2&gt;Grouping Selector&lt;/h2&gt;
+    &lt;h3&gt;Apply style to headers 1, 2 and 3&lt;/h3&gt;
+    &lt;h4&gt;Header 4 keeps the default style&lt;/h4&gt;
+&lt;/div&gt;</code></pre>
+</body>
+</html>
+<hr />
+<div class="sourceCode" id="cb22"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>CSS Exemple 5<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;ex5.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>CSS Exemple 5<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true"></a><span class="kw">&lt;h2&gt;</span>Grouping Selector<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true"></a><span class="kw">&lt;h3&gt;</span>Apply style to headers 1, 2 and 3<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true"></a><span class="kw">&lt;h4&gt;</span>Header 4 keeps the default style<span class="kw">&lt;/h4&gt;</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h4 id="fichier-ex5.css">Fichier : <code>ex5.css</code></h4>
+<div class="sourceCode" id="cb23"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3 {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="les-unités-de-longueur-référence">Les unités de longueur (<a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-size">Référence</a>)</h2>
+<p>Tout comme les couleurs, il existe de nombreuses unités de longueur en CSS. Chacune d’elle permet de mesurer la taille d’écrire ou d’un trait d’une manière différente. Il existe deux types d’unité les unités relatives et les unités absolues.</p>
+<h2 id="les-unités-relatives">Les unités relatives</h2>
+<p>Les unités relatives sont mesurées par rapport à une référence. Prenez votre écran en exemple. Je pourrais vous donner une unité qui s’appelle écran. Cette unité mesure la longueur des objets par rapport à votre écran. Ainsi, un objet qui a une longueur d’un écran a la même longueur que votre écran. Une longueur de deux écrans correspond à deux fois votre écran. Pour le CSS, nous avons les unités suivantes :</p>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 27%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nom de l’unité</th>
+<th>Symbole (utilisé en CSS)</th>
+<th>Signification</th>
+<th>Équivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pixel</td>
+<td><code>px</code></td>
+<td>Représente la taille selon le nombre de pixels. Cette unité dépend de l’écran ou du média.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>em</code></td>
+<td>Représente la taille selon la taille <code>font-size</code> du parent. Si la balise parent a une taille de 16px alors 1em vaut ce nombre. <strong>Attention à la composition</strong></td>
+<td>1em≈16px</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>rem</code></td>
+<td>Représente la taille par rapport à l’élément <code>&lt;html&gt;&lt;/html&gt;</code>. Si la taille de base du navigateur est 16px alors 1rem vaut ce nombre pour tous les éléments.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Pourcentage</td>
+<td><code>%</code></td>
+<td>Représente la taille par rapport à l’élément parent. Par exemple, <code>1 %</code> correspond à 1%≈<em>taille-parent</em>/100</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>ex</code></td>
+<td>Représente la taille par rapport à la taille de la lettre minuscule <code>x</code> de la police d’écriture utilisée.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Notez que la taille par défaut du navigateur est généralement de 16px.</p>
+<h2 id="le-danger-de-la-composition">Le danger de la composition</h2>
+<p>L’un des dangers de l’unité <code>em</code> est la composition. Pour faire une histoire courte, lorsque nous avons plusieurs balises imbriquées l’une dans l’autre, nous appelons l’ensemble une composition. Le problème de l’unité <code>em</code> est qu’elle définit la taille selon la taille d’écriture de son parent. Prenons par exemple le code suivant :</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a>    <span class="kw">&lt;head&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true"></a>        <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true"></a>        <span class="kw">&lt;title&gt;</span>Exemple<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true"></a>        <span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;style.css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span> <span class="kw">&gt;</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true"></a>    <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true"></a>    <span class="kw">&lt;body&gt;</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true"></a>    <span class="co">&lt;!-- --&gt;</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true"></a>        <span class="kw">&lt;h1&gt;</span>Un titre<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true"></a>        <span class="kw">&lt;h2&gt;</span>Un sous-titre<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true"></a>        <span class="kw">&lt;p&gt;</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true"></a>            Ceci est un texte sans être contenu dans une balise <span class="kw">&lt;strong&gt;</span>span<span class="kw">&lt;/strong&gt;</span>.</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true"></a>            <span class="kw">&lt;br</span> <span class="kw">&gt;</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true"></a>            <span class="kw">&lt;span&gt;</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true"></a>                Cette balise contient du texte :<span class="kw">&lt;br&gt;</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true"></a>                <span class="kw">&lt;span&gt;</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true"></a>                    Qui est aussi contenu dans une autre balise.</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true"></a>                <span class="kw">&lt;/span&gt;</span></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true"></a>            <span class="kw">&lt;/span&gt;</span></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true"></a>        <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true"></a>    <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<p>Les balises <code>&lt;p&gt;</code> et <code>&lt;span&gt;</code> imbriquée l’une dans l’autre est une composition. Or, si nous définissons la taille d’écriture des balises <code>&lt;span&gt;</code> à 2em . Alors, le texte de la balise <code>&lt;p&gt;</code> sera d’une taille normale, le texte de la première balise <code>&lt;span&gt;</code> sera le double de la taille de <code>&lt;p&gt;</code> (sa balise parente) et le texte de la deuxième balise <code>&lt;span&gt;</code> sera le double de son parent <strong>à lui</strong> soit la première balise <code>&lt;span&gt;</code> .</p>
+<hr />
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .bigSpan {
+                font-size: 2em;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- --&gt;
+    &lt;h2&gt;Un titre&lt;/h2&gt;
+    &lt;h3&gt;Un sous-titre&lt;/h3&gt;
+    &lt;p&gt;
+        Ceci est un texte sans être contenu dans une balise &lt;strong&gt;span&lt;/strong&gt;.
+        &lt;br &gt;
+        &lt;span class=&quot;bigSpan&quot;&gt;
+            Cette balise contient du texte :&lt;br&gt;
+            &lt;span class=&quot;bigSpan&quot;&gt;
+                Qui est aussi contenu dans une autre balise.
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<p>À l’inverse, si nous définissions la taille des balises <code>&lt;span&gt;</code> à <code>2rem</code> , alors la taille de la deuxième balise sera identique à la première, car la taille est définie à partir de la balise <code>&lt;html&gt;</code> et elle est donc globale à toute la page.</p>
+<hr />
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .bigSpan2 {
+                font-size: 2rem;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- --&gt;
+    &lt;h2&gt;Un titre&lt;/h2&gt;
+    &lt;h3&gt;Un sous-titre&lt;/h3&gt;
+    &lt;p&gt;
+        Ceci est un texte sans être contenu dans une balise &lt;strong&gt;span&lt;/strong&gt;.
+        &lt;br &gt;
+        &lt;span class=&quot;bigSpan2&quot;&gt;
+            Cette balise contient du texte :&lt;br&gt;
+            &lt;span class=&quot;bigSpan2&quot;&gt;
+                Qui est aussi contenu dans une autre balise.
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="les-unités-absolues">Les unités absolues</h2>
+<p>Les unités absolues ne dépendent pas des éléments de la page ou de l’écran. Elles seront identiques pour tous les écrans. Parmi ces unités, nous retrouvons les unités de longueur essentiellement.</p>
+<ul>
+<li><code>in</code> représente un pouce soit environ 2.54 centimètres ;</li>
+<li><code>cm</code> représente un centimètre ;</li>
+<li><code>mm</code> représente un millimètre ;</li>
+<li><code>pt</code> représente un point soit, par convention, <code>1/72</code> de pouce ;</li>
+<li><code>pc</code> représente un pica soit 12 points</li>
+</ul>
+<h2 id="des-propriétés-sur-le-texte">Des propriétés sur le texte</h2>
+<p>Depuis le début de ce cours, nous parlons de la taille de la police d’écriture (qui la même chose que la taille du texte). Bien que les unités s’appliqueront aussi aux autres propriétés CSS, nous allons commencer par voir comment modifier du texte en CSS.</p>
+<h2 id="exemple-html-de-cette-section">Exemple HTML de cette section</h2>
+<p>Pour la prochaine section, nous utiliserons le code HTML suivant :</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a>    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;normal&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a>        Ceci est un texte en HTML modifié par la classe normal.</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true"></a>    <span class="kw">&lt;/span&gt;</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true"></a>    <span class="kw">&lt;br</span> <span class="kw">&gt;</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true"></a>    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;ex-1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true"></a>        Ceci est un texte en HTML modifié par la classe ex-1.</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true"></a>    <span class="kw">&lt;/span&gt;</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true"></a>    <span class="kw">&lt;br</span> <span class="kw">&gt;</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true"></a>    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;ex-2&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true"></a>        Ceci est un texte en HTML modifié par la classe ex-2.</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true"></a>    <span class="kw">&lt;/span&gt;</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true"></a>    <span class="kw">&lt;br</span> <span class="kw">&gt;</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true"></a>    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;ex-3&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true"></a>        Ceci est un texte en HTML modifié par la classe ex-3.</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true"></a>    <span class="kw">&lt;/span&gt;</span></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true"></a>    <span class="kw">&lt;br</span> <span class="kw">&gt;</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true"></a>    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;ex-4&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true"></a>        Ceci est un texte en HTML modifié par la classe ex-4.</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true"></a>    <span class="kw">&lt;/span&gt;</span></span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true"></a>    <span class="kw">&lt;br</span> <span class="kw">&gt;</span></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Prenez note que la classe <code>normal</code> correspond uniquement aux valeurs de base du navigateur.</p>
+<h2 id="la-taille-du-texte-la-propriété-font-size-référence">La taille du texte, la propriété font-size (<a href="https://www.w3schools.com/cssref/pr_font_font-size.asp">Référence</a>)</h2>
+<p>Cette propriété permet de modifier la taille d’écriture du texte selon la taille donnée. Il existe plusieurs tailles prédéfinies dans le navigateur : <em>xx-small</em>, <em>x-small</em>, <em>small</em>, <em>medium</em>, <em>large</em>, <em>x-large</em> et <em>xx-large</em>. Il est aussi possible d’utiliser les mot clés <em>smaller</em> et <em>larger</em> qui signifie respectivement <strong>plus petit que</strong> et <strong>plus grand que</strong> la taille de l’élément parent.</p>
+<p>Par la suite, il est possible d’utiliser l’une des unités précédentes dans le calcul de la taille de notre texte. Prenons l’exemple CSS suivant :</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true"></a><span class="fu">.ex</span> {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true"></a>    <span class="kw">font-size</span>: <span class="dv">1</span><span class="dt">ex</span><span class="op">;</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true"></a>}</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true"></a><span class="fu">.ex-1</span> {</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true"></a>    <span class="kw">font-size</span>: <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true"></a>}</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true"></a><span class="fu">.ex-2</span> {</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true"></a>    <span class="kw">font-size</span>: <span class="dv">64</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true"></a>}</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true"></a><span class="fu">.ex-3</span> {</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true"></a>    <span class="kw">font-size</span>: <span class="dv">150</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true"></a>}</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true"></a><span class="fu">.ex-4</span> {</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true"></a>    <span class="kw">font-size</span>: <span class="dv">3</span><span class="dt">ex</span><span class="op">;</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex {
+                font-size: 1.5ex;
+            }
+            .ex-1 {
+                font-size: 2em;
+            }
+            .ex-2 {
+                font-size: 64px;
+            }
+            .ex-3 {
+                font-size: 150%;
+            }
+            .ex-4 {
+                font-size: 2.5ex;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;ex&quot;&gt;
+        &lt;span class=&quot;normal&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe normal.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex-1&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex-1.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex-2&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex-2.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex-3.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex-4&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex-4.
+        &lt;/span&gt;
+        &lt;br &gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="la-taille-du-texte-la-propriété-font-weight-référence">La taille du texte, la propriété font-weight (<a href="https://www.w3schools.com/cssref/pr_font_weight.asp">Référence</a>)</h2>
+<p>Cette propriété modifie le « poids » de l’écriture. Le poids correspond à l’épaisseur du trait. C’est à-dire que plus le trait est gros, plus le texte est gras. Il existe plusieurs valeurs possibles soit les tailles nommées : <em>normal</em>, <em>bold</em>, <em>bolder</em>, <em>lighter</em> ou les nombres 100, 200, 300, 400, 500, 600, 700, 800 et 900. À noter que les tailles 400 et 700 correspondent respectivement à <em>normal</em> et <em>bold</em>. Il faut aussi noter que ce ne sont pas toutes les polices d’écriture qui supportent toutes les tailles mentionnées.</p>
+<p>Prenons l’exemple CSS suivant :</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true"></a><span class="fu">.ex2-1</span> {</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true"></a>}</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true"></a><span class="fu">.ex2-2</span> {</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">bold</span><span class="op">;</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true"></a>}</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true"></a><span class="fu">.ex2-3</span> {</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true"></a>}</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true"></a><span class="fu">.ex2-4</span> {</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">900</span><span class="op">;</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex2 { font-size: 16px; }
+            .ex2-1 {
+                font-weight: 400;
+            }
+            .ex2-2 {
+                font-weight: bold;
+            }
+            .ex2-3 {
+                font-weight: 700;
+            }
+            .ex2-4 {
+                font-weight: 900;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;ex2&quot;&gt;
+        &lt;span class=&quot;normal&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe normal.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex2-1&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex2-1.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex2-2&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex2-2.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex2-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex2-3.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex2-4&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex2-4.
+        &lt;/span&gt;
+        &lt;br &gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="le-style-du-texte-la-propriété-font-style-référence">Le style du texte, la propriété font-style (<a href="https://www.w3schools.com/cssref/pr_font_font-style.asp">Référence</a>)</h2>
+<p>Cette propriété applique un effet visuel (style) au texte. Elle prend trois valeurs possible : <em>normal</em>, <em>italic</em> et <em>oblique</em>. Elle sert principalement à mettre du texte en italique. En général, la valeur <em>oblique</em> a le même impact que la valeur <em>italic</em>. Prenons l’exemple CSS suivant :</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a><span class="fu">.ex3-1</span> {</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true"></a>    <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true"></a>}</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true"></a><span class="fu">.ex3-2</span> {</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true"></a>    <span class="kw">font-style</span>: <span class="dv">oblique</span><span class="op">;</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true"></a>}</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true"></a><span class="fu">.ex3-3</span> {</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">900</span><span class="op">;</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true"></a>    <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true"></a>}</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true"></a><span class="fu">.ex3-4</span> {</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">900</span><span class="op">;</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex3-1 {
+                font-style: italic;
+            }
+            .ex3-2 {
+                font-style: oblique;
+            }
+            .ex3-3 {
+                font-weight: 900;
+                font-style: italic;
+            }
+            .ex3-4 {
+                font-weight: 900;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;ex2&quot;&gt;
+        &lt;span class=&quot;normal&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe normal.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex3-1&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex3-1.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex3-2&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex3-2.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex3-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex3-3.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex3-4&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex3-4.
+        &lt;/span&gt;
+        &lt;br &gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="la-décoration-du-texte-la-propriété-text-decoration-référence">La décoration du texte, la propriété text-decoration (<a href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp">Référence</a>)</h2>
+<p>Cette propriété permet d’ajouter une décoration au texte. Par les décorations, nous entendons des lignes. Ces lignes peuvent être sous le texte (souligné), par-dessus le texte et dessus le texte (barré). Toutefois, cette propriété possède une syntaxe particulière. Elle est appelée <strong>super propriété</strong>. Pour l’utiliser, la syntaxe est la suivante :</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true"></a>text-decoration<span class="in">: text-decoration-line</span> text-decoration-color text-decoration-style;</span></code></pre></div>
+<h2 id="les-valeurs-de-text-decoration-line-référence">Les valeurs de text-decoration-line (<a href="https://www.w3schools.com/cssref/css3_pr_text-decoration-line.asp">Référence</a>)</h2>
+<p>Cette propriété permet de définir le type de ligne. Il existe trois possibilités :</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 35%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mot clé</th>
+<th>Effet</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>overline</code></td>
+<td>Mets une ligne <strong>par-dessus</strong> le texte.</td>
+<td><span class="ex-overline">Cette phrase a une ligne par dessus.</span></td>
+</tr>
+<tr class="even">
+<td><code>underline</code></td>
+<td>Mets une ligne <strong>sous</strong> le texte</td>
+<td><span class="ex-underline">Cette phrase a une ligne sous.</span></td>
+</tr>
+<tr class="odd">
+<td><code>line-through</code></td>
+<td>Mets une ligne <strong>sur</strong> le texte</td>
+<td><del>Cette phrase a une ligne sur elle</del>.</td>
+</tr>
+</tbody>
+</table>
+<p>De plus, il est possible de combiner plusieurs mots clés ensemble. Pour y parvenir, nous ajoutons les deux mots clés.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true"></a>text-decoration-line<span class="in">: line-through</span> underline;</span></code></pre></div>
+<p><span class="ex-line-underline">Cette phrase a une ligne sous et sur elle.</span></p>
+<h2 id="les-valeurs-de-text-decoration-color-référence">Les valeurs de text-decoration-color (<a href="https://www.w3schools.com/cssref/css3_pr_text-decoration-color.asp">Référence</a>)</h2>
+<p>Cette propriété a été ajoutée avec <strong>CSS3</strong>. Elle permet de modifier la couleur de la décoration. Par défaut, cette valeur est la même que celle du texte. De plus, nous lui donnons les mêmes valeurs que pour la couleur du texte.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true"></a>text-decoration<span class="in">: underline</span>;</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true"></a>text-decoration-color<span class="in">: pink</span>;</span></code></pre></div>
+<p><span class="ex-underline-pink">Cette phrase a une ligne sous et rose!</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Navigateur</strong></th>
+<th><img src="https://www.w3schools.com/images/compatible_chrome.gif" alt="Google Chrome" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_edge.gif" alt="InternetExplorer/Edge" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_firefox.png" alt="Firefox" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_safari.gif" alt="Safari" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_opera.gif" alt="Opera" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Version minimale</strong></td>
+<td>57.0</td>
+<td>79.0</td>
+<td>36.0</td>
+<td>12.1</td>
+<td>44.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="les-valeurs-de-text-decoration-style-référence">Les valeurs de text-decoration-style (<a href="https://www.w3schools.com/cssref/css3_pr_text-decoration-style.asp">Référence</a>)</h2>
+<p>Cette propriété permet de modifier le style de la ligne. Elle a été ajoutée avec le <strong>CSS3</strong> et elle possède cinq valeurs possibles. De plus, elle est toujours utilisée avec une valeur <code>text-decoration-line</code>. Par défaut, sa valeur est <code>solid</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Mot clé</th>
+<th>Effet</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>solid</code></td>
+<td>La ligne sera <strong>pleine</strong>.</td>
+<td><span class="ex-underline">Ma phrase avec décoration.</span></td>
+</tr>
+<tr class="even">
+<td><code>wavy</code></td>
+<td>La ligne sera <strong>ondulée</strong>.</td>
+<td><span class="ex-underline-wavy">Ma phrase avec décoration.</span></td>
+</tr>
+<tr class="odd">
+<td><code>dotted</code></td>
+<td>La ligne sera sous la forme de <strong>points</strong>.</td>
+<td><span class="ex-underline-dotted">Ma phrase avec décoration.</span></td>
+</tr>
+<tr class="even">
+<td><code>dashed</code></td>
+<td>La ligne sera sous la forme de <strong>tiret</strong>.</td>
+<td><span class="ex-underline-dashed">Ma phrase avec décoration.</span></td>
+</tr>
+<tr class="odd">
+<td><code>double</code></td>
+<td>La ligne sera <strong>doublée</strong>.</td>
+<td><span class="ex-underline-double">Ma phrase avec décoration.</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Navigateur</strong></th>
+<th><img src="https://www.w3schools.com/images/compatible_chrome.gif" alt="Google Chrome" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_edge.gif" alt="InternetExplorer/Edge" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_firefox.png" alt="Firefox" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_safari.gif" alt="Safari" /></th>
+<th><img src="https://www.w3schools.com/images/compatible_opera.gif" alt="Opera" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Version minimale</strong></td>
+<td>57.0</td>
+<td>79.0</td>
+<td>36.0</td>
+<td>12.1</td>
+<td>44.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exemple-en-combinant-les-décorations">Exemple en combinant les décorations</h2>
+<div class="sourceCode" id="cb37"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true"></a><span class="fu">.ex4-1</span> {</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true"></a>    <span class="kw">text-decoration</span>: <span class="dv">overline</span> <span class="cn">green</span> <span class="dv">solid</span><span class="op">;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true"></a>}</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true"></a><span class="fu">.ex4-2</span> {</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true"></a>    <span class="kw">text-decoration</span>: <span class="dv">underline</span> <span class="cn">green</span> <span class="dv">solid</span><span class="op">;</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true"></a>}</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true"></a><span class="fu">.ex4-3</span> {</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true"></a>    <span class="kw">text-decoration</span>: <span class="dv">underline</span> <span class="cn">blue</span> <span class="dv">solid</span><span class="op">;</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true"></a>}</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true"></a><span class="fu">.ex4-4</span> {</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true"></a>    <span class="kw">text-decoration</span>: <span class="dv">underline</span> <span class="cn">#056A92</span> <span class="dv">double</span><span class="op">;</span></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex4-1 {
+                text-decoration: overline green solid;
+            }
+            .ex4-2 {
+                text-decoration: line-through red solid;
+            }
+            .ex4-3 {
+                text-decoration: underline blue solid;
+            }
+            .ex4-4 {
+                text-decoration: underline #056A92 double;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;ex2&quot;&gt;
+        &lt;span class=&quot;normal&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe normal.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex4-1&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex4-1.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex4-2&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex4-2.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex4-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex4-3.
+        &lt;/span&gt;
+        &lt;br &gt;
+        &lt;span class=&quot;ex4-4&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex4-4.
+        &lt;/span&gt;
+        &lt;br &gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="la-taille-du-texte-la-propriété-text-align-référence">La taille du texte, la propriété text-align (<a href="https://www.w3schools.com/cssref/pr_text_text-align.asp">Référence</a>)</h2>
+<p>Cette propriété permet de modifier l’alignement <strong>horizontal</strong> du texte dans son élément parent. Par défaut, le texte est toujours aligné à <strong>gauche</strong> (<em>left</em>). À noter qu’il faut un élément qui prend toute la ligne comme un <code>h1</code>, <code>p</code> ou <code>div</code>. Vous pouvez essayer avec un <code>span</code> ça ne fonctionnera pas par défaut. Voici les quatre valeurs possibles.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true"></a><span class="fu">.ex5-1</span> {</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true"></a>    <span class="kw">text-align</span>: <span class="dv">left</span><span class="op">;</span> <span class="co">/* La ligne sera alignée sur la gauche */</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true"></a>}</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true"></a><span class="fu">.ex5-2</span> {</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true"></a>    <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span> <span class="co">/* La ligne sera alignée sur la droite */</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true"></a>}</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true"></a><span class="fu">.ex5-3</span> {</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true"></a>    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span> <span class="co">/* La ligne sera alignée au centre */</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true"></a>}</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true"></a><span class="fu">.ex5-4</span> {</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true"></a>    <span class="kw">text-align</span>: <span class="dv">justify</span><span class="op">;</span> <span class="co">/* La ligne sera justifiée (comme un article de journal)*/</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex5-1 {
+                text-align: left;
+            }
+            .ex5-2 {
+                text-align: right;
+            }
+            .ex5-3 {
+                text-align: center;
+            }
+            .ex5-4 {
+                text-align: justify;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;ex2&quot;&gt;
+        &lt;div class=&quot;normal&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe normal.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex5-1&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex5-1.
+        &lt;/div&gt;
+        &lt;br &gt;
+        &lt;div class=&quot;ex5-2&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex5-2.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex5-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex5-3.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex5-4&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex5-4.
+        &lt;/div&gt;
+        &lt;span class=&quot;ex5-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex5-3. Mais pas vraiment, car je suis dans un &amp;lt;span&amp;gt;
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="les-ombres-sur-un-texte-la-propriété-text-shadow-référence">Les ombres sur un texte, la propriété text-shadow (<a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.asp">Référence</a>)</h2>
+<p>Apparue avec le <strong>CSS3</strong>, la propriété <code>text-shadow</code> permet d’afficher un effet d’ombre sous le texte. Il utilise la syntaxe suivante :</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true"></a>text-shadow<span class="in">: horizontal</span> verticale blur color;</span></code></pre></div>
+<p><code>Horizontal</code> détermine le décalage horizontal de l’ombre. Cette valeur est numérique. La valeur négative est acceptée et elle s’effectue sur la gauche.</p>
+<p><code>verticale</code> Détermine le décalage vertical de l’ombre. Cette valeur est numérique. La valeur négative est acceptée et elle s’effectue vers le haut.</p>
+<p><code>blur</code> n’est pas obligatoire, mais elle détermine le dégradé, le temps que la couleur s’efface, de la couleur de l’ombre.</p>
+<p><code>color</code> n’est pas obligatoire, mais elle détermine la couleur de l’ombre.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true"></a><span class="fu">.ex6-1</span> {</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true"></a>    <span class="kw">text-shadow</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">1</span><span class="dt">px</span> <span class="cn">#FF0000</span><span class="op">;</span>  <span class="co">/* Légère ombre rouge */</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true"></a>}</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true"></a><span class="fu">.ex6-2</span> {</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true"></a>    <span class="kw">text-shadow</span>: <span class="dv">8</span><span class="dt">px</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">8</span><span class="dt">px</span> <span class="cn">#FF0000</span><span class="op">;</span>  <span class="co">/* ombre rouge très diffuse vers la droite */</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true"></a>}</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true"></a><span class="fu">.ex6-3</span> {</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true"></a>    <span class="co">/* ombre rouge assez diffuse vers la gauche et le haut*/</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true"></a>    <span class="kw">text-shadow</span>: <span class="dv">-4</span><span class="dt">px</span> <span class="dv">-4</span><span class="dt">px</span> <span class="dv">4</span><span class="dt">px</span> <span class="cn">Blue</span><span class="op">;</span> </span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true"></a>}</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true"></a><span class="fu">.ex6-4</span> {</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true"></a>    <span class="co">/* Deux ombres noires*/</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true"></a>    <span class="kw">text-shadow</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">1</span><span class="dt">px</span><span class="op">,</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">3</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex6-1 {
+                text-shadow: 1px 1px #FF0000;
+            }
+            .ex6-2 {
+                text-shadow: 8px 2px 8px #FF0000;
+            }
+            .ex6-3 {
+                text-shadow: -4px -4px 4px Blue;
+            }
+            .ex6-4 {
+                text-shadow: 1px 1px, 3px 3px;  
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;ex2&quot;&gt;
+        &lt;div class=&quot;normal&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe normal.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex6-1&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex6-1.
+        &lt;/div&gt;
+        &lt;br &gt;
+        &lt;div class=&quot;ex6-2&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex6-2.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex6-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex6-3.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex6-4&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex6-4.
+        &lt;/div&gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="la-police-de-caractères-font-family-référence">La police de caractères <code>font-family</code> (<a href="https://www.w3schools.com/css/css_font.asp">Référence</a>)</h2>
+<p>Le choix d’une police de caractères est très important pour un site web. Cela touche l’identité du site, ainsi que la lisibilité. C’est encore plus vrai quand on mélange cela avec les autres modifications de texte que nous avons vues plus haut. Dans le cadre du cours, nous allons utiliser des polices de caractères installées dans votre système. Mais rien n’empêche de charger des polices de caractères.</p>
+<p>En CSS, il existe cinq familles de polices génériques :</p>
+<ul>
+<li><p>Les <strong>polices Serif</strong> ont un petit trait sur les bords de chaque lettre. Ils créent un sentiment de formalité et d’élégance.</p></li>
+<li><p>Les <strong>polices sans empattement</strong> ont des lignes épurées (pas de petits traits attachés). Ils créent un look moderne et minimaliste.</p></li>
+<li><p><strong>Polices Monospace</strong> - ici toutes les lettres ont la même largeur fixe. Ils créent un look mécanique.</p></li>
+<li><p>Les <strong>polices cursives</strong> imitent l’écriture humaine.</p></li>
+<li><p>Les <strong>polices Fantasy</strong> sont des polices décoratives/ludiques.</p></li>
+</ul>
+<p>Les <strong>polices sans empattement</strong> sont considérées comme les plus faciles à lire pour un site web.</p>
+<p>La propriété <code>font-family</code> est utilisée pour définir la police de caractères. On peut mettre une ou plusieurs polices. La police sera choisie en ordre, selon la disponibilité dans le système de la personne consultant le site web. Généralement, on choisira une police précise jusqu’à une police générique.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true"></a><span class="fu">.ex7-1</span> {</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true"></a>    <span class="co">/* La première police est utilisée, sauf si elle n&#39;existe pas dans ce cas, la deuxième sera prise et pour finir avec la dernière police */</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true"></a>    <span class="kw">font-family</span>: <span class="st">&quot;Times New Roman&quot;</span><span class="op">,</span> Times<span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true"></a>}</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true"></a><span class="fu">.ex7-2</span> {</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true"></a>    <span class="kw">font-family</span>: Arial<span class="op">,</span> Helvetica<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true"></a>}</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true"></a><span class="fu">.ex7-3</span> {</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true"></a>    <span class="kw">font-family</span>: <span class="st">&quot;Lucida Console&quot;</span><span class="op">,</span> <span class="st">&quot;Courier New&quot;</span><span class="op">,</span> <span class="dv">monospace</span><span class="op">;</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true"></a>}</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true"></a><span class="fu">.ex7-4</span> {</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true"></a>    <span class="kw">font-family</span>: <span class="dv">cursive</span><span class="op">;</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex7-1 {
+                font-family: &quot;Times New Roman&quot;, Times, serif;
+            }
+            .ex7-2 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .ex7-3 {
+                font-family: &quot;Lucida Console&quot;, &quot;Courier New&quot;, monospace;
+            }
+            .ex7-4 {
+                font-family: cursive;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;ex2&quot;&gt;
+        &lt;div class=&quot;normal&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe normal.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex7-1&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex7-1.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex7-2&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex7-2.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex7-3&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex7-3.
+        &lt;/div&gt;
+        &lt;div class=&quot;ex7-4&quot;&gt;
+            Ceci est un texte en HTML modifié par la classe ex7-4.
+        &lt;/div&gt;
+    &lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="exercice-1">Exercice 1</h2>
+<p>Reprenons l’exercice de La Jalousie du Barbouillé. Nous allons styliser le texte.</p>
+<ul>
+<li>Ajouter un fichier <code>jalousie.css</code> dans le répertoire du projet de la pièce de théâtre.</li>
+<li>Dans le fichier HTML, ajouter la balise <code>&lt;link&gt;</code> dans le <code>&lt;head&gt;</code> et lier le fichier <code>jalousie.css</code>.</li>
+<li>Sous-lignez tous les titres <code>&lt;h1&gt;</code> et <code>&lt;h2&gt;</code>. De plus, ajouter une autre couleur et changer le style (ex: dotted, dashed, …) de la sous-ligne seulement pour les <code>&lt;h1&gt;</code>.</li>
+<li>Ajouter une couleur de fond à l’entête (<code>id="top"</code>). Choisissez une couleur pâle comme un bleu (<code>aliceblue</code>).</li>
+<li>Modifier la couleur et la grosseur de la police de toutes les occurences du personnage le <strong>Barbouillé</strong> à l’intérieur des <strong>dialogues</strong> ou des <strong>didascalies</strong>. La couleur peut être un gris foncé et la grosseur peut être 50% plus grosse. Ajouter une ombre de 2 pixels de hauteur et de largeur avec du <code>blur</code> de 2 pixels.</li>
+<li>Ajouter une ligne en forme de vague (<code>wavy</code>) sous le nom <strong>Barbouillé</strong> à chaque fois que celui-ci est dans une balise <code>&lt;strong&gt;</code>.</li>
+<li>Modifier la police de caractères de toutes les didascalies pour “Geneva” et si la police n’existe pas, “sans-serif” devra être utilisée.</li>
+<li>Rayez toutes les occurrences en rouge du nom <strong>Docteur</strong> dans les <strong>didascalies</strong> et les <strong>dialogues</strong>.</li>
+<li>Aligner le texte au centre du titre principal.</li>
+<li>Aligner le texte au centre de chaque titre de section (personnages, pièce, …)</li>
+</ul>
+<h2 id="styliser-les-hyperliens-référence">Styliser les hyperliens (<a href="https://www.w3schools.com/css/css_link.asp">Référence</a>)</h2>
+<p>Les hyperliens <code>&lt;a&gt;</code> peuvent être stylisés avec les mêmes propriétés que le texte comme <code>color</code>, <code>background</code>, <code>font-family</code>, …</p>
+<p>Par contre, il existe des pseudo-classes qui permettent de modifier les hyperliens dans différents états.</p>
+<p>Voici les quatre états de hyperliens sont : - <code>a:link</code> - un lien normal non visité - <code>a:visited</code> - un lien que l’utilisateur a visité - <code>a:hover</code> - un lien lorsque l’utilisateur passe la souris dessus - <code>a:active</code> - un lien au moment où il est cliqué</p>
+<p><strong>L’ordre de définition est important!</strong> <code>a:hover</code> doit venir après <code>a:link</code> et <code>a:visited</code> <code>a:active</code> doit venir après <code>a:hover</code>.</p>
+<p>La raison est que l’état <code>a:link</code> englobe <code>a:hover</code>. Même chose pour l’état <code>a:visited</code>. Alors, <code>a:hover</code> ne servirait à rien si elle est définit avant.</p>
+<p>Regardons un exemple intéressant qui change le style par défaut des hyperliens.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true"></a><span class="fu">.ex8</span> a {</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true"></a>  <span class="kw">outline</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true"></a>  <span class="kw">text-decoration</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true"></a>  <span class="kw">padding</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true"></a>}</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true"></a></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true"></a><span class="fu">.ex8</span> a<span class="in">:link</span> {</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true"></a>  <span class="kw">color</span>: <span class="cn">#265301</span><span class="op">;</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true"></a>}</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true"></a></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true"></a><span class="fu">.ex8</span> a<span class="in">:visited</span> {</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true"></a>  <span class="kw">color</span>: <span class="cn">#437A16</span><span class="op">;</span></span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true"></a>}</span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true"></a></span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true"></a><span class="fu">.ex8</span> a<span class="in">:focus</span> {</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true"></a>  <span class="kw">border-bottom</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span><span class="op">;</span></span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true"></a>  <span class="kw">background</span>: <span class="cn">#BAE498</span><span class="op">;</span></span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true"></a>}</span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true"></a></span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true"></a><span class="fu">.ex8</span> a<span class="in">:hover</span> {</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true"></a>  <span class="kw">border-bottom</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span><span class="op">;</span></span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true"></a>  <span class="kw">background</span>: <span class="cn">#CDFEAA</span><span class="op">;</span></span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true"></a>  <span class="kw">cursor</span>: progress<span class="op">;</span></span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true"></a>}</span>
+<span id="cb46-25"><a href="#cb46-25" aria-hidden="true"></a></span>
+<span id="cb46-26"><a href="#cb46-26" aria-hidden="true"></a><span class="fu">.ex8</span> a<span class="in">:active</span> {</span>
+<span id="cb46-27"><a href="#cb46-27" aria-hidden="true"></a>  <span class="kw">background</span>: <span class="cn">#265301</span><span class="op">;</span></span>
+<span id="cb46-28"><a href="#cb46-28" aria-hidden="true"></a>  <span class="kw">color</span>: <span class="cn">#CDFEAA</span><span class="op">;</span></span>
+<span id="cb46-29"><a href="#cb46-29" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex8 a {
+                outline: none;
+                text-decoration: none;
+                padding: 2px 1px 0;
+            }
+            .ex8 a:link {
+                color: #265301;
+            }
+            .ex8 a:visited {
+                color: #437A16;
+            }
+            .ex8 a:focus {
+                border-bottom: 1px solid;
+                background: #BAE498;
+            }
+            .ex8 a:hover {
+                border-bottom: 1px solid;
+                background: #CDFEAA;
+                cursor: progress;
+            }
+            .ex8 a:active {
+                background: #265301;
+                color: #CDFEAA;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;ex8&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=L8QCAt0jtpM&quot;&gt;Un lien intéressant!&lt;/a&gt;
+    &lt;/div&gt;
+     &lt;a href=&quot;https://www.youtube.com/watch?v=L8QCAt0jtpM&quot;&gt;Un lien standard&lt;/a&gt;
+     &lt;p&gt;Mettez votre souris au dessus des liens!&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<p>Avez-vous remarqué la propriété <code>cursor</code>. Elle permet de modifier le style du curseur. Consulter ce lien pour en savoir plus sur <a href="https://developer.mozilla.org/fr/docs/Web/CSS/cursor">les valeurs possibles de cursor</a>.</p>
+<h2 id="styliser-les-listes-référence">Styliser les listes (<a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/Styling_lists">Référence</a>)</h2>
+<p>Les listes <code>&lt;ul&gt;</code> et <code>&lt;ol&gt;</code> peuvent utilisés les mêmes propriétés que le texte. Il y a quand même quelques propriétés de plus à connaître.</p>
+<ul>
+<li><code>line-height</code> Modifie l’espace entre les éléments.</li>
+<li><code>list-style-type</code> définit le type de puce pour les listes non ordonnées ou bien des nombres, des lettres ou des chiffres romains pour une liste ordonnée.</li>
+<li><code>list-style-position</code> définit si les puces seront à l’intérieur ou à l’extérieur du début de l’élément de liste.</li>
+<li><code>line-style-image</code> permet d’utiliser une image à la place des puces. Mais l’utilisation des propriétés <code>background</code> est généralement préférée.</li>
+<li><code>line-style</code> peut être utilisé pour regrouper <code>list-style-type</code>, <code>list-style-position</code> et <code>line-style-image</code> dans une même propriété.</li>
+</ul>
+<div class="sourceCode" id="cb48"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true"></a><span class="fu">.ex9</span> ul {</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true"></a>    <span class="kw">background</span>: <span class="cn">#3399ff</span><span class="op">;</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true"></a>}</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true"></a></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true"></a><span class="fu">.ex9</span> ul li {</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true"></a>    <span class="kw">background</span>: <span class="cn">#cce5ff</span><span class="op">;</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">darkblue</span><span class="op">;</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true"></a>    <span class="kw">margin</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true"></a>}</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true"></a></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true"></a><span class="fu">.ex10</span> ul {</span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true"></a>    <span class="kw">list-style-type</span>: <span class="dv">square</span><span class="op">;</span></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true"></a>    <span class="kw">list-style-position</span>: <span class="dv">inside</span><span class="op">;</span></span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true"></a>    <span class="kw">line-height</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Exemple
+</title>
+<pre><code>&lt;style&gt;
+            .ex9 ul {
+                background: #3399ff;
+                border-left: 5px solid red;
+                background-color: #f1f1f1;
+                list-style-type: none;
+            }
+            .ex9 ul li {
+                color: darkblue;
+                margin: 5px;
+            }
+            .ex10 ul {
+                list-style-type: square;
+                list-style-position: inside;
+                line-height: 100%;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Thé&lt;/li&gt;
+            &lt;li&gt;Boisson&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ex9&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Thé&lt;/li&gt;
+            &lt;li&gt;Boisson&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ex10&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Thé&lt;/li&gt;
+            &lt;li&gt;Boisson&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+</html>
+<hr />
+<h2 id="exercice-2">Exercice 2</h2>
+<p>Reprenons l’exercice de La Jalousie du Barbouillé. Nous allons styliser les liens et les listes.</p>
+<ul>
+<li>Modifier tous les hyperliens pour être 1,25 fois plus gros que le texte standard.</li>
+<li>Enlever le sous-ligné sous les hyperliens par défaut, mais le sous-ligné doit rester, si la souris <strong>est au dessus</strong> de l’hyperlien (<code>hover</code>, <code>focus</code>).</li>
+<li>Changer la couleur de fond des hyperliens quand la souris est au dessus du lien (<code>hover</code>, <code>focus</code>) pour un mauve pâle (ex: #e6aafe).</li>
+<li>Changer la couleur de l’hyperlien quand celui-ci est visité (<code>visited</code>) pour un mauve foncé (ex: #8222b9).</li>
+<li>Changer le type du curseur (<code>cursor</code>) quand la souris est au dessus d’un hyperlien (<code>hover</code>).</li>
+<li>Inversez la couleur de l’hyperlien avec la couleur de fond quand celui-ci est actif (<code>active</code>). Par exemple, mettre la couleur de fond mauve foncé et la couleur du lien en mauve pâle.</li>
+<li>Choisissez les deux hyperliens “Scène première” et “Scène deuxième” dans la table des matières et changer les couleurs pour orange pâle et orange foncé à la place du mauve.</li>
+<li>Modifier les puces de la liste des personnages pour des carrés.</li>
+<li>Ajouter la même couleur de fond que l’entête pour chaque élément de la liste.</li>
+<li>Modifier la couleur de fond de la section <code>liste-perso</code> pour une couleur plus foncée comme un bleu “cornflowerblue”.</li>
+<li>Modifier la grosseur de la police de caractères de la table des matières pour que le premier niveau de la liste soit 50% plus gros que le texte standard. Pour le deuxième niveau d’éléments de la liste, ce doit être 25% plus petit que le premier niveau. (Indice: <code>em</code>)</li>
+<li>Enlever les puces pour la liste de la table des matières</li>
+</ul>
+<hr />
+<p>Notes écrites par Godefroy Borduas, modifiées par Denis Rinfret et Pierre-Luc Boulanger.</p>
+</body>
+</html>

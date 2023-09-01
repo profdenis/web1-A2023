@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>420-1W1-DM Web 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="github.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">420-1W1-DM Web 1</h1>
+</header>
+<h1 id="le-fichier-html">Le fichier HTML</h1>
+<p>Dans votre éditeur, nous avons déjà un fichier <strong>index.html</strong>. Par convention, la première page d’un site web s’appelle <code>index</code>. Sélectionnez toujours le format <em>Hypertext Markup Language</em> (<code>.html</code>). Assurez-vous que l’extension est bien <code>.html</code></p>
+<p>De plus, tous les documents (images, fichier css, etc.) devront être dans le même dossier que votre fichier HTML.</p>
+<h2 id="que-se-passe-t-il-si-nous-ajoutons-seulement-du-texte">Que se passe-t-il si nous ajoutons seulement du texte ?</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>Bonjours tout le monde!<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Je m&#39;appelle XYZ<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Nous avons vu précédemment, que le navigateur va simplement afficher votre texte. Mais, nous allons voir plus loin qu’il faut ajouter autre chose pour former un document HTML complet.</p>
+<h2 id="termes-de-base-du-html">Termes de base du HTML</h2>
+<p>Maintenant que nous avons vu comment créer notre fichier, parlons un peu des termes de base du HTML.</p>
+<h3 id="éléments">Éléments</h3>
+<p>Un élément est séparé en 4 composantes:</p>
+<ul>
+<li>Une balise ouvrante</li>
+<li>Des attributs</li>
+<li>Le contenu</li>
+<li>Une balise fermante</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>  <span class="kw">&lt;h3</span><span class="ot"> id=</span><span class="st">&quot;sousTitre&quot;</span><span class="kw">&gt;</span>Comment ça va!<span class="kw">&lt;/h3&gt;</span></span></code></pre></div>
+<p>Le nom de l’élément dans l’exemple s’appelle h3. Seule la balise ouvrante et fermante est obligatoire!</p>
+<h3 id="balises">Balises</h3>
+<p>Les <strong>balises</strong> sont à la base des documents HTML. Ces derniers ne sont pas affichés à l’écran, mais il renvoie des informations essentielles au navigateur. Ce sont les balises qui présentent la structure de la page. Elles décrivent la nature ou comment afficher du texte (ex. un tableau, du texte dans un conteneur, etc.) Elle permet aussi d’afficher une image, une vidéo, etc.</p>
+<p>Les balises sont toujours entre chevrons <code>&lt;</code> et <code>&gt;</code> comme ceci : <code>&lt;nom&gt;&lt;/nom&gt;</code>. Il existe <strong>2 types</strong> de balises : en paires et orphelines.</p>
+<h4 id="balise-en-paires">Balise en paires</h4>
+<p>Représente la majorité des balises. Le contenu de la balise est toujours situé entre la <em>balise ouvrante</em> <code>&lt;balise&gt;</code> et la <em>balise fermante</em> <code>&lt;/balise&gt;</code>.</p>
+<p>La balise ouvrante est toujours de la forme <code>&lt;balise&gt;</code> où <em>balise</em> est le type.</p>
+<p>La balise fermante est comme la balise ouvrante, mais le type est précédé du caractère <code>/</code> comme ceci : <code>&lt;/balise&gt;</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>Le texte suivant est dans une balise en paire appelée cellule.</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="kw">&lt;cellule&gt;</span>Ceci est dans une balise en paire appelée cellule.<span class="kw">&lt;/cellule&gt;</span></span></code></pre></div>
+<h4 id="balise-orpheline">Balise orpheline</h4>
+<p>Une balise orpheline est décrite seulement par la balise ouvrante <code>&lt;balise_Orpheline&gt;</code>. Ces balises servent en général ajouter, au document, une image ou une vidéo par exemple.</p>
+<p>Certain utilise aussi la notation <code>&lt;balise_Orpheline /&gt;</code> afin de distinguer les balises en paire des balises orphelines.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>Le texte suivant est dans une balise orpheline.</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="kw">&lt;texte</span> <span class="er">&quot;Ceci</span><span class="ot"> est une balise orpheline</span><span class="er">&quot;</span> <span class="kw">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>Cette autre balise est équivalente à la balise précédente.</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a><span class="kw">&lt;texte</span> <span class="er">&quot;Ceci</span><span class="ot"> est une balise orpheline encore</span><span class="er">&quot;</span> <span class="kw">/&gt;</span></span></code></pre></div>
+<h3 id="attribut">Attribut</h3>
+<p>Parfois, il faut spécifier une valeur aux balises. Il s’agit d’une information utilisée par le navigateur afin de permettre de spécifier un format d’affichage. Les attributs ont toujours la forme suivante : <code>nomAttribut="valeur de l'attribut"</code></p>
+<p>Dans l’exemple suivant, l’attribut <code>auteur</code> spécifie le nom de l’auteur de la citation tandis que l’attribut <code>date</code> spécifie la date de celle-ci.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="kw">&lt;citation</span><span class="ot"> auteur=</span><span class="st">&quot;Le meilleur prof du monde&quot;</span><span class="ot"> date=</span><span class="st">&quot;31 août&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    Le meilleur prof du monde est sans hésiter Godefroy !</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="kw">&lt;/citation&gt;</span></span></code></pre></div>
+<h3 id="attention">ATTENTION !</h3>
+<p>Les balises précédentes ne sont pas de vraie balise et attribut.</p>
+<div style="page-break-after: always;">
+
+</div>
+<h2 id="la-page-de-base">La page de base</h2>
+<p>En HTML5, les pages Web ont toujours la même base :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;fr&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>Titre du site web<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h3 id="la-balise-doctype">La balise <code>DOCTYPE</code></h3>
+<p><a href="https://www.w3schools.com/tags/tag_doctype.asp">Référence</a></p>
+<p>Cette balise est située en début de fichier. Il permet de spécifier au navigateur comment doit-il interpréter le code de la page. Cette valeur change selon la version de HTML. Dans notre cours, nous sommes en <strong>HTML5</strong>.</p>
+<h4 id="html5">HTML5</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="html-4.01">HTML 4.01</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;<span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="xhtml-1.1">XHTML 1.1</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;<span class="dt">&gt;</span></span></code></pre></div>
+<h4 id="html-3.0">HTML 3.0</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>HTML public &quot;-//W3O//DTD W3 HTML 3.0//EN&quot;<span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="la-balise-html">La balise <code>html</code></h3>
+<p><a href="https://www.w3schools.com/tags/tag_html.asp">Référence</a></p>
+<p>La balise <code>&lt;html&gt;&lt;/html&gt;</code> est la base du document. Elle indique au navigateur ce qui fait partie de la page web. Toutes vos balises doivent être incluses à l’intérieur de celle-ci.</p>
+<h3 id="la-balise-head">La balise <code>head</code></h3>
+<p><a href="https://www.w3schools.com/html/html_head.asp">Référence</a></p>
+<p>La balise <code>&lt;head&gt;&lt;/head&gt;</code> contiens l’ensemble des <em>métadonnées</em> de la page web. Ces métadonnées sont des informations fournies au navigateur afin qu’il comprenne comment la page sera affichée.</p>
+<p>À l’intérieur de cette balise, nous retrouverons les indications pour ajouter les styles, les indications aux moteurs de recherche et au titre du site (qui sera affiché dans l’onglet du navigateur). <strong>Aucune balise</strong> présente à l’intérieur <strong>ne sera affichée</strong> au visiteur.</p>
+<h3 id="la-balise-meta">La balise <code>meta</code></h3>
+<p><a href="https://www.w3schools.com/tags/tag_meta.asp">Référence</a></p>
+<p>La balise <code>&lt;meta&gt;</code>, qui est une balise orpheline, contient des informations sur la page web. Ces informations sont utilisées par le navigateur pour comprendre comment lire la page. C’est la même chose pour les moteurs de recherche.</p>
+<p>Dans cet exemple, notre balise meta définit l’attribut <code>charset</code>. Il s’agit du jeu de caractères. En gros, cette balise, avec cet attribut, indique au navigateur comment sont enregistrés les caractères. La valeur utilisée est <code>utf-8</code>. Vous n’avez pas besoin de le changer puisqu’il s’agit du codage le plus courant aujourd’hui.</p>
+<p>Il existe d’autres balises meta :</p>
+<ul>
+<li><code>&lt;meta name="description" content="Description du site"&gt;</code> : Permet d’ajouter une description du site web</li>
+<li><code>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;</code> : Permet de définir des mots clés, pour les moteurs de recherche, concernant votre site</li>
+<li><code>&lt;meta name="author" content="John Doe"&gt;</code> : Permet de définir l’auteur du site.</li>
+</ul>
+<p>Ces balises <code>meta</code> ne sont pas obligatoires et ils sont parfois simplement ignorés par les créateurs.</p>
+<h3 id="la-balise-title">La balise <code>title</code></h3>
+<p><a href="https://www.w3schools.com/tags/tag_title.asp">Référence</a></p>
+<p>La balise <code>&lt;title&gt;&lt;/title&gt;</code> permets d’indiquer le nom de la page web. Le navigateur utilisera le contenu de cette balise pour le texte inclus dans l’onglet du navigateur. La balise contiendra uniquement des caractères.</p>
+<p>Dans l’exemple précédent, la page contient le code suivant :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;fr&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>Le titre de nom site dans title<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Cette page contient un code de base.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h3 id="la-balise-body">La balise <code>body</code></h3>
+<p><a href="https://www.w3schools.com/tags/tag_body.asp">Référence</a></p>
+<p>La balise <code>&lt;body&gt;&lt;/body&gt;</code> définit le corps du document. C’est à l’intérieur de ce dernier que nous ajoutons les éléments afficher au visiteur du site. Il est important de noter que la balise <code>body</code> est <em>unique</em>.</p>
+<h2 id="comment-afficher-du-texte">Comment afficher du texte</h2>
+<p>L’un des premiers éléments à afficher est un texte. Nous utilisons la base <code>&lt;p&gt;&lt;/p&gt;</code>. Votre navigateur comprend alors que tout ce qui se trouve dans la base doit être considéré comme du texte.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Bonjours tout le monde ! Mon site fonctionne correctement.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<h3 id="effectuer-un-saut-de-ligne">Effectuer un saut de ligne</h3>
+<p>Parfois, il est nécessaire de s’assurer que votre texte soit sur deux lignes séparées. Néanmoins, si vous ajoutez des sauts de ligne, ceux-ci n’apparaîtront pas dans votre page. Exemple :</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Bonjours tout le monde !</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a>    Mon site fonctionne correctement.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Il faut utiliser la balise orpheline <code>&lt;br &gt;</code>. Elle indique un saut et un retour de ligne. De plus, le client ne verra jamais la balise. Il verra simplement le saut de ligne.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Bonjours tout le monde !</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a>    <span class="kw">&lt;br&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>    <span class="kw">&lt;br&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a>    Mon site fonctionne correctement.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Qui est équivalent à :</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Bonjours tout le monde !<span class="kw">&lt;br&gt;&lt;br&gt;</span>Mon site fonctionne correctement.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<h3 id="afficher-un-second-paragraphe">Afficher un second paragraphe</h3>
+<p>Dans un site web, nous pouvons ajouter autant de paragraphes que souhaité. Dans l’exemple suivant, il y a deux paragraphes. Il y aura un saut de ligne automatique entre les deux paragraphes.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Bonjours tout le monde !</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a>    <span class="kw">&lt;br&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a>    <span class="kw">&lt;br&gt;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a>    Mon site fonctionne correctement.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Ceci est un second paragraphe.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Le code complet de la page web est :</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;fr&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>Le titre de nom site dans title<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Bonjours tout le monde !<span class="kw">&lt;br&gt;</span>Voilà<span class="kw">&lt;br&gt;&lt;br&gt;</span>Mon site fonctionne correctement.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Ceci est un second paragraphe.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<hr />
+<p>Notes écrites par Godefroy Borduas, modifiées par Denis Rinfret et Pierre-Luc Boulanger.</p>
+</body>
+</html>

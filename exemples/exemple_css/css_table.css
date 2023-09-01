@@ -1,0 +1,36 @@
+table {
+	border-collapse: collapse;
+  	color: black;
+}
+
+th, td {
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+
+th {
+	font-variant: small-caps;
+	text-align: center;
+	background-color: black;
+	color: limegreen;
+}
+
+caption {
+	caption-side: bottom;
+	font-style: oblique;
+	font-size: 75%;
+	margin-top: 5px;
+}
+
+tr:nth-child(even) {
+	background-color: #eafaea;
+}
+
+tr:nth-child(odd) {
+	background-color: #98e698;
+}
+
+tr:hover {
+	background-color: limegreen;
+  	color: white;
+}

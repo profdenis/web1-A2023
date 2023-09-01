@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Explication de l&apos;exemple</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <style>
+body {
+        max-height: 1024px;
+        max-width: 800px;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+}
+</style>
+<h1 id="explication-de-lexemple">Explication de l'exemple</h1>
+<p>L'objectif est de modifier la page <code>index.html</code>, <code>produits.html</code> et <code>ordinateur-1.html</code> pour ajouter les classes <strong>Bootstrap</strong> manquantes, ainsi que les icônes de <strong>Bootstrap</strong>.</p>
+<h2 id="page-index">Page Index</h2>
+<p>Pour la page index, il faut ajouter un formulaire et des icônes.</p>
+<p>Voici le résultat final pour grand écran :</p>
+<p><img src=".\images\r%C3%A9sultat-grand.jpg" alt="Résultat"></p>
+<p>et pour la version tablette ou mobile :</p>
+<p><img src=".\images\r%C3%A9sultat-tablette.jpg" alt="Résultat"></p>
+<p>Voici la liste des icônes manquantes avec le terme à chercher :</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Une maison (house)</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Une personne (person)</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Un cercle d'information (circle et info</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Un emoji fâché (angry)</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Un icône d'envoie (send)</li>
+</ul>
+<p>J'ai mis toutes les places ayant besoin d'une icône entre crochet []</p>
+<p>Pour le formulaire, vous devez ajouter les champs textes et la case à cocher.
+Assurez-vous d'utiliser la grille Bootstrap pour placer chaque élément. 3 cases pour le <code>label</code> et 9 cases pour les champs devraient faire l'affaire.</p>
+<p>Voici une liste de classes Bootstrap qui pourraient être utiles :</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>input-group</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>input-group-text</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>form-control</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>form-control-label</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>btn</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>btn-primary</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>btn-danger</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>btn-lg</code></li>
+</ul>
+<h2 id="page-produits">Page Produits</h2>
+<p>Voici le résultat final pour grand écran :</p>
+<p><img src=".\images\r%C3%A9sultat-produits.jpg" alt="Résultat"></p>
+<p>Pour la version mobile et tablette, les éléments doivent être en colonne ou lieu d'en ligne.
+L'objectif est d'ajouter les classes Bootstrap pour que le contenu soit sous forme de carte (<code>card</code>).</p>
+<p>Voici une liste de classes Bootstrap qui pourraient être utiles pour les ordinateurs :</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>card</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>card-body</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>card-title</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>card-text</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>card-footer</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>text-muted</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>card-img-top</code></li>
+</ul>
+<p>Pour l'alerte :</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>bi-cash-coin</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>bi-exclamation-triangle</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>bi</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>alert</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>alert-warning</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> <code>alert-dismissible</code></li>
+</ul>
+<p>Ajoutez des badges dans les titres des ordinateurs (<code>badge</code> et une couleur <code>text-bg-*</code>).</p>
+<p>Ajoutez un bouton avec <code>popover</code> à la place du texte &quot;Choisissez-moi!&quot;.</p>
+<h2 id="le-menu-dropdown">Le menu Dropdown</h2>
+<p>Ajouter un choix d'ordinateurs dans le menu comme on peut voir sur cette image :</p>
+<p><img src=".\images\r%C3%A9sultat-produits.jpg" alt="Résultat"></p>
+<p>Pour cela, vous devez ajouter à l'intérieur du <code>&lt;li class=&quot;nav-item dropdown&quot;&gt;</code> un hyperlien de avec la classe <code>.dropdown-toggle</code> et <code>.nav-link</code>.</p>
+<p>Pour le choix, c'est une liste non-ordonnée avec la classe <code>.dropdown-menu</code>. À l'intérieur des <code>&lt;li&gt;</code>, il faut ajouter des hyperliens avec la classe <code>.dropdown-item</code>. Vous pouvoez faire pointer les hyperliens vers la même page <code>ordinateur-1.html</code>.</p>
+<p>En cas de doute, n'hésitez pas à consulter les exemples <strong>Bootstrap</strong>.</p>
+<h2 id="page-ordinateur-1">Page ordinateur 1</h2>
+<p>Voici le résultat sur grand écran :</p>
+<p><img src=".\images\r%C3%A9sultat-ordinateur.jpg" alt="Résultat"></p>
+<p>Il reste à ajoutez les éléments manquants pour faire un accordéon. Dans le HTML vous pouvez trouver cela dans le div <code>id=&quot;ex-accordion&quot;</code>.</p>
+<p>Voilà! C'est tout pour l'exercice. N'hésitez pas à améliorer le code.</p>
+
+        
+        
+    </body>
+    </html>

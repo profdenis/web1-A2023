@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Dropdown Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dropdown avec Boostrap</h1>
+        <p>
+            Un drop down est un bouton qui sur le clique ouvre un choix d'options.
+            Généralement, c'est pour naviguer dans la page ou dans une autre page ou pour ouvrir un modal.
+        </p>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mon viking préféré
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#viking-1">Viking 1</a></li>
+              <li><a class="dropdown-item" href="#viking-2">Viking 2</a></li>
+              <li><a class="dropdown-item" href="#viking-3">Viking 3</a></li>
+              <li><a class="dropdown-item" href="#viking-4">Viking 4</a></li>
+              <li><a class="dropdown-item" href="#viking-5">Viking 5</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container my-2">
+        <p>
+            Un peu mettre aussi de la couleur avec <code>.btn-*</code> ou mettre le bouton plus gros avec <code>.btn-lg</code>!
+            Il existe un mode dark pour la liste avec <code>.dropdown-menu-dark</code>
+        </p>
+        <div class="dropdown">
+            <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mon viking préféré
+            </button>
+            <ul class="dropdown-menu text-bg-warning">
+              <li><a class="dropdown-item" href="#viking-1">Viking 1</a></li>
+              <li><a class="dropdown-item" href="#viking-2">Viking 2</a></li>
+              <li><a class="dropdown-item" href="#viking-3">Viking 3</a></li>
+              <li><a class="dropdown-item" href="#viking-4">Viking 4</a></li>
+              <li><a class="dropdown-item" href="#viking-5">Viking 5</a></li>
+            </ul>
+        </div>
+        <div class="dropdown my-2">
+            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mon viking préféré
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#viking-1">Viking 1</a></li>
+              <li><a class="dropdown-item" href="#viking-2">Viking 2</a></li>
+              <li><a class="dropdown-item" href="#viking-3">Viking 3</a></li>
+              <li><a class="dropdown-item" href="#viking-4">Viking 4</a></li>
+              <li><a class="dropdown-item" href="#viking-5">Viking 5</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container my-2">
+        <p>
+            On peut changer plusieurs autres éléments comme la direction de la liste, la façon de fermer la liste,
+            ajouter une division dans la liste, ajouter un entête, l'alignement,...
+            Pour plus de détails - <a href="https://getbootstrap.com/docs/5.2/components/dropdowns/">le site de bootstrap</a>
+        </p>
+    </div>
+    <div class="container my-4">
+        <h2>Mes vikings!</h2>
+        <div class="row">
+            <img id="viking-1" src="./images/viking-1.jpg" alt="Viking 1" class="col-6">
+            <img id="viking-2" src="./images/viking-2.jpg" alt="Viking 2" class="col-6">
+            <img id="viking-3" src="./images/viking-3.jpg" alt="Viking 3" class="col-6">
+        </div>
+        <div class="row">
+            <img id="viking-4" src="./images/viking-4.jpg" alt="Viking 4" class="col-6">
+            <img id="viking-5" src="./images/viking-5.jpg" alt="Viking 5" class="col-6">
+            <img id="viking-6" src="./images/viking-6.jpg" alt="Viking 6" class="col-6">
+        </div>
+    </div>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

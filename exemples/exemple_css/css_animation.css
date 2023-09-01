@@ -1,0 +1,176 @@
+.ex-texte div {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: lightgreen;
+    border: 2px solid black;
+}
+
+.ex-texte .simple p {
+    position: relative;
+    animation-duration: 5s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    max-width: 200px;
+}
+
+.ex-texte .complexe p {
+    max-width: 400px;
+    position: relative;
+    animation-name: slidebanner, colorchange;
+    animation-duration: 5s, 2.5s;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    from {
+        left: 70%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes slidebanner {
+    from {
+        left: 70%;
+        max-width: 200px;
+    }
+    50% {
+        font-size: 150%;
+    }
+    75% {
+        font-size: 200%;
+    }
+    to {
+        font-size: 150%;
+        left: 0%;
+        max-width: 400px;
+    }
+}
+
+@keyframes colorchange {
+    from {
+        background-color: lightgreen;
+        color: black;
+    }
+    to {
+        background-color: green;
+        color: white;
+    }
+}
+
+
+.ex-animation .center {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.ex-animation .wave {
+    width: 5px;
+    height: 100px;
+    background: linear-gradient(45deg, cyan, #fff);
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+}
+
+.wave:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.wave:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.loader {
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 20px solid #FF7A59;
+    width: 200px;
+    height: 200px;
+    animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.ex-animation .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.ex-animation .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.ex-animation .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.ex-animation .button:hover span {
+    padding-right: 25px;
+}
+
+.ex-animation .button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

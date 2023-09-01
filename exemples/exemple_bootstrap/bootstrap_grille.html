@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grille</title>
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mb-4">
+        <h2>Exemple avec 3 colonnes</h2>
+        <div class="row bg-light text-center">
+            <!-- Première boîte -->
+            <div class="col-4 border border-2 border-primary">
+                <p>One of three columns</p>
+            </div>
+            <!-- Deuxième boîte -->
+            <div class="col-4 border border-2 border-primary">
+                <p>One of three columns</p>
+            </div>
+            <!-- Troisième boîte -->
+            <div class="col-4 border border-2 border-primary">
+                <p>One of three columns</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-4">
+        <h2>Exemple de 3 colonnes avec un container fluide</h2>
+        <div class="row bg-light text-center no-gutter">
+            <!-- Première boîte -->
+            <div class="col-4 border border-2 border-primary">
+                <p>One of three columns</p>
+            </div>
+            <!-- Deuxième boîte -->
+            <div class="col-4 border border-2 border-primary">
+                <p>One of three columns</p>
+            </div>
+            <!-- Troisième boîte -->
+            <div class="col-4 border border-2 border-primary">
+                <p>One of three columns</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-4">
+        <h2>Exemple avec sans breakpoint</h2>
+        <div class="row">
+            <div class="col-5 border border-2 border-primary">
+                <p>Largeur 5</p>
+            </div>
+            <div class="col-7 border border-2 border-primary">
+                <p>Largeur 7</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-4">
+        <h2>Exemple avec un breakpoint tablette</h2>
+        <div class="row bg-light text-center">
+            <div class="col-7 col-md-5 border border-2 border-primary">
+                <p>Largeur 5 pas tout le temps</p>
+            </div>
+            <div class="col-5 col-md-7 border border-2 border-primary">
+                <p>Largeur 7 pas tout le temps</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <h2>Exemple avec deux colonnes automatiques</h2>
+        <div class="row bg-light text-center">
+            <div class="col border border-2 border-primary">
+              6 col
+            </div>
+            <div class="col border border-2 border-primary">
+              6 col
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <h2>Exemple avec plusieurs lignes</h2>
+        <div class="row bg-light text-center">
+            <div class="col border border-2 border-primary">
+                2 col
+            </div>
+            <div class="col-8 border border-2 border-primary">
+                8 col
+            </div>
+            <div class="col border border-2 border-primary">
+                2 col
+            </div>
+        </div>
+        <div class="row bg-light text-center">
+            <div class="col border border-2 border-primary">
+                1 col
+            </div>
+            <div class="col-8 border border-2 border-primary">
+                8 col
+            </div>
+            <div class="col-3 border border-2 border-primary">
+                3 col
+            </div>
+        </div>
+        <div class="row bg-light text-center">
+            <div class="col border border-2 border-primary">
+                3 col
+            </div>
+            <div class="col-6 border border-2 border-primary">
+                6 col
+            </div>
+            <div class="col-3 border border-2 border-primary">
+                3 col
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <h2>Exemple avec une colonne automatique</h2>
+        <div class="row bg-light text-center g-0">
+            <div class="col border border-2 border-primary">
+              Répartition du reste
+            </div>
+            <div class="col col-auto border border-2 border-primary">
+              Contenu auto
+            </div>
+            <div class="col border border-2 border-primary">
+              Répartition du reste
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <h2>Exemple avec une marge automatique</h2>
+        <div class="row bg-light text-center g-0">
+            <div class="col-3 border border-2 border-primary">3 colonnes</div>
+            <div class="col border border-2 border-primary">6 colonnes</div>
+            <div class="col-3 border border-2 border-primary">3 colonnes</div>
+        </div>
+        <div class="row bg-light text-center g-0">
+            <div class="col-3 me-auto border border-2 border-primary">3 colonnes</div>
+            <div class="col-3 border border-2 border-primary">3 colonnes</div>
+        </div>
+    </div>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

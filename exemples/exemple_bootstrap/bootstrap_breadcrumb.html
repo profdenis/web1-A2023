@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Breadcrumb Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Breadcrumb avec Boostrap</h1>
+        <p>
+            Un Breadcrumb ou <em>miette de pain</em> donne une trace de ce que l'utilisateur a consulté
+            (C'est souvent le cas quand on navigue dans un epsace de fichier) ou donne une hiérarchie de la structure
+            des pages webs.
+            Comme nous n'avons pas de javascript, l'utilité présentement est de présenter la hiérarchie du site ou de la
+            page.
+        </p>
+    </div>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#home">Accueil</a></li>
+                <li class="breadcrumb-item"><a href="#context">Contexte</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Référence</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container">
+        <h2 id="home">Accueil</h2>
+        <img src="./images/viking-4.jpg" alt="Vikings">
+    </div>
+    <div class="container">
+        <h2 id="context">Un peu de contexte</h2>
+        <img src="./images/viking-3.jpg" alt="Vikings">
+    </div>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

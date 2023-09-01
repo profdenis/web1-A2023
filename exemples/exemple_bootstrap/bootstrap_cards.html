@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Carte et Liste Bootstrap</title>
+    <style>
+        p {
+            color: var(--bs-green);
+        }
+    </style>
+</head>
+<body>
+    <h1>Je suis une carte de texte avec une image et un bouton</h1>
+    <div class="card mx-3" style="width: 18rem;">
+        <img src="./images/viking-1.jpg" class="card-img-top" alt="Un viking!">
+        <div class="card-body">
+            <h5 class="card-title">À propos des Vikings</h5>
+            <p class="card-text">Je suis un Viking et j'aimerais que tout le monde s'intéresse à moi.</p>
+            <a href="#" class="btn btn-primary">Plus d'information</a>
+        </div>
+    </div>
+    <h3 class="my-4">
+        Une carte contient généralement du texte, une image, un bouton ou un hyperlien.
+        Par contre, on peut ajouter une liste groupée sans problème.
+    </h3>
+    <div class="card mx-3" style="width: 18rem;">
+        <img src="./images/viking-1.jpg" class="card-img-top" alt="Un viking!">
+        <div class="card-body">
+            <h5 class="card-title">À propos des Vikings</h5>
+            <p class="card-text">Je suis un Viking et j'aimerais que tout le monde s'intéresse à moi.</p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Je suis bon à la guerre</li>
+                <li class="list-group-item">À l'espionnage</li>
+                <li class="list-group-item">À la soupe!</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Plus d'information</a>
+        </div>
+    </div>
+    <h3 class="my-4">
+        Je suis comme n'importe quelle autre boîte, je peux avoir une modification de ma bordure ou de ma couleur
+    </h3>
+    <div class="card border border-5 border-warning mx-3" style="width: 18rem;">
+        <img src="./images/viking-1.jpg" class="card-img-top" alt="Un viking!">
+        <div class="card-body text-success">
+            <h5 class="card-title">À propos des Vikings</h5>
+            <p class="card-text">Je suis un Viking et j'aimerais que tout le monde s'intéresse à moi.</p>
+            <a href="#" class="btn btn-primary">Plus d'information</a>
+        </div>
+    </div>
+
+    <h3 class="my-4">
+        Je peux utiliser la grille pour former une belle ligne de carte!
+    </h3>
+    <div class="row g-4 mx-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/viking-1.jpg" class="card-img-top" alt="Un viking!">
+                <div class="card-body">
+                    <h5 class="card-title">À propos du Viking #1</h5>
+                    <p class="card-text">Je suis le Viking #1.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Choisissez-moi!</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/viking-2.jpg" class="card-img-top" alt="Un viking!">
+                <div class="card-body">
+                    <h5 class="card-title">À propos du Viking #2</h5>
+                    <p class="card-text">Je suis le Viking #2.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Choisissez-moi!</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/viking-3.jpg" class="card-img-top" alt="Un viking!">
+                <div class="card-body">
+                    <h5 class="card-title">À propos du Viking #3</h5>
+                    <p class="card-text">Je suis le Viking #3.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Choisissez-moi!</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

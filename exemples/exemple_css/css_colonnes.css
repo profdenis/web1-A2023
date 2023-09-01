@@ -1,0 +1,33 @@
+.col3 {
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 5px dotted cornflowerblue;
+}
+
+.col3 p {
+    margin-top: 0;
+}
+
+h1 {
+    text-align: center;
+    column-span: all;
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        color: blue;
+        background-color: pink;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        color: red;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        color: green;
+    }
+}

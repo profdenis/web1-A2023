@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Formulaires Bootstrap</title>
+</head>
+
+<body>
+    <h1>Bienvenue dans ma page de formulaire!</h1>
+    <form class="m-4">
+        Text : <input type="text">
+        Textarea :
+        <textarea>Un peu de texte ici</textarea>
+        Select :
+        <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+        <button>Envoyer</button>
+    </form>
+    <div class="m-4">
+        <h2>Mon formulaire avec alignement</h2>
+        <form>
+            <div>
+                <label for="texte" class="form-label">Text : </label>
+                <input id="texte" type="text" class="form-control">
+            </div>
+            <div class="my-2">
+                <label for="textarea" class="form-label">Textarea : </label>
+                <textarea id="textarea" class="form-control">Un peu de texte ici</textarea>
+            </div>
+            <div class="my-2">
+                <label for="select" class="form-label">Select : </label>
+                <select id="select" class="form-control">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+            </div>
+            <button>Envoyer</button>
+        </form>
+    </div>
+
+    <div class="m-4">
+        <h2>Une liste de case à cocher</h2>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="origine" value="ami" checked>
+                Par un ami
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="origine" value="web">
+                Sur le web
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="origine" value="hasard">
+                Par hasard
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="origine" value="autre">
+                Autre...
+            </label>
+        </div>
+    </div>
+
+    <div class="m-4">
+        <h2>Formulaire avec la grille</h2>
+        <form class="col-md-6">
+            <div class="row">
+              <label for="text" class="col-md-3 col-form-label">Text :</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="text">
+              </div>
+            </div>
+            <div class="row">
+              <label for="textarea" class="col-md-3 col-form-label">Textarea :</label>
+              <div class="col-md-9">
+                <input type="textarea" class="form-control" id="textarea2">
+              </div>
+            </div>
+            <div class="row">
+              <label for="select" class="col-md-3 form-control-label">Select :</label>
+              <div class="col-md-9">
+                <select id="select2" class="form-control" >
+                  <option>Option 1</option>
+                  <option>Option 3</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </div>
+            </div>
+          </form>
+    </div>
+
+    <div class="m-4">
+        <h2>Formulaire sur une ligne</h2>
+        <form class="row">
+          <label for="text" class="col-md-1">Texte</label>
+          <input type="text" class="col-md-4" id="text3" placeholder="un texte ici">
+          <div class="form-check col-md-2 ms-2">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Se souvenir de moi...
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary col-md-2">Envoyer</button>
+        </form>
+    </div>
+
+    <div class="m-4">
+      <h2>Formulaire avec un groupe</h2>
+      <form class="row g-2">
+        <div class="input-group input-group-lg col-md-4">
+          <span class="input-group-text">€</span>
+          <input type="text" class="form-control" value="100">
+        </div>
+        <div class="input-group input-group-sm col-md-4">
+          <input type="text" class="form-control text-right" value="100,50">
+          <span class="input-group-text">€</span>
+        </div>
+      </form>
+
+      <form class="row g-2 my-4">
+        <div>
+          <div class="input-group">
+            <div class="input-group-text">
+              <input type="checkbox">
+            </div>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div>
+          <div class="input-group">
+            <div class="input-group-text">
+              <input type="radio">
+            </div>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="m-4">
+      <h2>Formulaire avec effets</h2>
+      <form>
+        <div class="row">
+          <label class="col-md-4 col-form-label text-right">Contrôle statique :</label>
+          <div class="col-md-8">
+            <p class="form-control-static">Ce contrôle est statique</p>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-md-4 col-form-label text-right" for="inactif">
+            Contrôle désactivé :
+          </label>
+          <div class="col-md-8">
+            <input type="text"
+                   id="inactif"
+                   class="form-control"
+                  placeholder="Ce contrôle n'est pas actif"
+                  disabled>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-md-4 col-form-label text-right" for="inactif">
+            Contrôle en lecture seule :
+          </label>
+          <div class="col-md-8">
+            <input type="text"
+                   id="inactif"
+                   class="form-control"
+                   placeholder="Ce contrôle est en lecture seule"
+                   readonly>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-md-4 col-form-label form-control-lg text-right" for="inactif">
+            Contrôle géant :
+          </label>
+          <div class="col-md-8">
+            <input type="text"
+                   id="inactif"
+                   class="form-control form-control-lg"
+                   placeholder="Ce contrôle est géant">
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-md-4 col-form-label form-control-sm text-right" for="inactif">
+            Contrôle petit :
+          </label>
+          <div class="col-md-8">
+            <input type="text"
+                   id="inactif"
+                   class="form-control form-control-sm"
+                   placeholder="Ce contrôle est petit">
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-md-4 col-form-label form-control-sm text-right" for="inactif">
+            Contrôle normal :
+          </label>
+          <div class="col-md-8">
+            <input type="text"
+                   id="inactif"
+                   class="form-control"
+                   placeholder="Ce contrôle est normal">
+            <small class="form-text text-muted">
+              Un petit texte explicatif pour le contrôle
+            </small>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="m-4">
+      <h2>Formulaire avec validation</h2>
+      <form>
+        <div>
+          <label for="nom">Nom</label>
+          <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+        </div>
+        <div>
+          <label for="prenom">Prénom</label>
+          <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
+        </div>
+        <div>
+          <label for="prenom">Age</label>
+          <input type="number" class="form-control" id="age" value="20" min="20" max="80" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+      </form>    
+    </div>
+
+</body>
+
+</html>

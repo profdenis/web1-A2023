@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>420-1W1-DM Web 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="github.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">420-1W1-DM Web 1</h1>
+</header>
+<h2 id="les-balises-du-cours-précédent-révision">Les balises du cours précédent (révision)</h2>
+<p>En vrac, nous avons vu :</p>
+<ul>
+<li>les commentaires : <code>&lt;!-- --&gt;</code></li>
+<li>Les niveaux de titre :</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>Titre très important<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">&lt;h2&gt;</span>Titre important<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="kw">&lt;h3&gt;</span>Titre considérable<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="kw">&lt;h4&gt;</span>Titre moins important<span class="kw">&lt;/h4&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="kw">&lt;h5&gt;</span>Titre encore moins important<span class="kw">&lt;/h5&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="kw">&lt;h6&gt;</span>Titre de dernier niveau<span class="kw">&lt;/h6&gt;</span></span></code></pre></div>
+<ul>
+<li>La mise en <strong>gras</strong> : <code>&lt;strong&gt;&lt;/strong&gt;</code></li>
+<li>La mise en <em>italique</em> : <code>&lt;em&gt;&lt;/em&gt;</code></li>
+<li>Le texte <mark>surligné</mark> : <code>&lt;mark&gt;&lt;/mark&gt;</code></li>
+<li>Les listes non ordonnées : <code>&lt;ul&gt;&lt;/ul&gt;</code></li>
+<li>Les listes ordonnées : <code>&lt;ol&gt;&lt;/ol&gt;</code>
+<ul>
+<li>Trois attributs des listes ordonnées : <code>start="number"</code>, <code>type="v"</code>, <code>reversed</code></li>
+</ul></li>
+<li>Les éléments de liste <code>&lt;li&gt;&lt;/li&gt;</code></li>
+<li>Les hyperliens : <code>&lt;a href="lien"&gt;&lt;/a&gt;</code></li>
+</ul>
+<h3 id="les-deux-types-de-liens-relatifs-et-absolus">Les deux types de liens <em>relatifs</em> et <em>absolus</em></h3>
+<p><strong>Les liens <em>relatifs</em></strong> établissent le chemin entre un fichier et une ressource (une autre page, une image, etc.) à partir de sa propre proposition.</p>
+<pre><code>Dossier du site web/
+    |---index.html
+    |---media/
+    |  |---images/
+    |  |  |---photo.png
+    |  |  |---logo.png
+    |  |---video/
+    |  |  |---promo.mp4
+    |---page2.html</code></pre>
+<p>Depuis la page <code>index.html</code>, le chemin d’accès vers la page <code>page2.html</code> est simplement :</p>
+<pre><code>    ./page2.html</code></pre>
+<p>Le point représente la position du fichier <code>index.html</code>. Le chemin, depuis ce même fichier, pour le fichier <code>logo.png</code> est :</p>
+<pre><code>    ./media/images/logo.png</code></pre>
+<p><strong>Les liens <em>absolues</em></strong> représente un chemin d’accès depuis la racine d’un site web. C’est-à-dire son nom de domaine. Prenons l’exemple que la page <code>index.html</code> souhaite accéder à la page <code>moncv.html</code> sur le site <code>exemple.com</code> et que cette page se trouve dans le dossier <code>Parcours</code>, alors le chemin est :</p>
+<pre><code>    https://godefroy.ca/Parcours/moncv.html</code></pre>
+<h2 id="les-liens-vers-dautres-items-quune-ressource-web">Les liens vers d’autres items qu’une ressource web</h2>
+<p>La semaine dernière, nous avons utilisé les liens pour naviguer d’une page à l’autre. Il ne s’agit pas du seul moyen d’utiliser les liens. Nous pouvons avoir un lien entre les éléments (titre, paragraphe, image, etc.) au sein d’une même page. Aujourd’hui, nous étudierons comment créer des liens vers une section ou un élément de notre site web, des courriels, les fichiers, les téléphones, etc. En premier lieu, nous allons nous intéressé à lier des sections.</p>
+<p>Vous pouvez imaginer plusieurs utilisations :</p>
+<ul>
+<li>table des matières</li>
+<li>notes de bas de page</li>
+<li>référer à une autre section (ex. <em>contactez-nous</em>)</li>
+<li>etc.</li>
+</ul>
+<p>Néanmoins, pour y parvenir, il faut que le navigateur soit en mesure de distinguer les différents éléments. De base, il ne sait pas comment différencier les deux titres suivants : <code>&lt;h1&gt;mon premier titre&lt;/h1&gt;</code> et <code>&lt;h1&gt;mon deuxième titre&lt;/h1&gt;</code>. Il est donc nécessaire de les identifier. C’est-à-dire de leur donner une valeur unique, dans la page, afin d’être en mesure de le retrouver.</p>
+<h2 id="identification-des-éléments">Identification des éléments</h2>
+<p>Pourquoi est-ce important de distinguer des éléments d’un site ? Pour la même manière qui est importante de retrouver facilement des employés dans une entreprise. Imaginez que vous travailler pour Exemple Inc. Vous souhaitez retrouver l’employé Luc. Votre recherche risque d’être difficile. Luc est un prénom assez populaire et donc il y a plusieurs Luc. Il serait alors utile d’avoir un identifiant unique à Luc. Disons que l’identifiant de Luc est 1120548. Vous savez que l’employé 1120548 est le Luc que vous recherchez. Il est donc <strong>identifiable</strong>. Je peux refaire le même exercice avec vous. Au cégep, votre identifiant est simplement votre numéro de DA. En d’autres mots, nous identifions des personnes, des lieux, des objets ou des éléments de page web pour être en mesure de les retrouver facilement. Imaginez le code suivant :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>Mon premier titre<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="kw">&lt;h2&gt;</span>Mon premier paragraphe<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>    pulvinar dui nec gravida. Aliquam at suscipit</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>    elit, ut ullamcorper odio. Vestibulum ut vulputate metus, at bibendum</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    lectus. Aenean lacinia est id sem egestas</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>    interdum. Sed semper molestie erat non congue. Curabitur at maximus dui, sit</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>    amet viverra diam. Phasellus ut</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>    vehicula mauris. Donec pulvinar efficitur dolor a elementum. Fusce cursus</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>    tempor erat, id pellentesque lorem</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>    volutpat eu. Cras consectetur dolor mi. Duis cursus lacinia lorem, nec</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a>    euismod quam bibendum dictum.</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true"></a><span class="kw">&lt;h2&gt;</span>Mon deuxième paragraphe<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true"></a>    Praesent vitae elit eget magna tempor maximus quis id mi. Suspendisse in</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true"></a>    cursus neque. Sed accumsan hendrerit orci,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true"></a>    vitae luctus sapien facilisis sit amet. Morbi interdum vestibulum massa nec</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true"></a>    scelerisque. Integer et venenatis</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true"></a>    turpis. Suspendisse vel porttitor risus. Donec sed turpis aliquet quam</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true"></a>    auctor pulvinar. Suspendisse ornare ante</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true"></a>    eros, sit amet facilisis diam sagittis placerat.</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Maintenant, imaginez que vous vouliez mettre un lien vers le titre <strong><em>Mon deuxième paragraphe</em></strong>. Si les identifiants, que nous allons voir comment les écrire dans quelques lignes, n’existaient pas, il serait nécessaire d’écrire le texte au complet afin que le navigateur le retrouve. Ça donnerait quelque chose du genre :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    Ceci est lien vers <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;vers:Mon deuxième paragraphe&quot;</span><span class="kw">&gt;</span>mon deuxième</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>    paragraphe<span class="kw">&lt;/a&gt;</span>.</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Ok, ça semble correct. Mais, imaginez si nous souhaitions ajouter le lien vers le paragraphe en tant que tel ! Il faudrait ajouter le paragraphe au complet ? Le code sera horrible. Voyez par vous-même.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    Ceci est lien vers <span class="kw">&lt;a</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="ot">        href=</span><span class="st">&quot;vers:Praesent vitae elit eget magna tempor maximus quis id mi. Suspendisse in cursus neque. Sed accumsan hendrerit orci, vitae luctus sapien facilisis sit amet. Morbi interdum vestibulum massa nec scelerisque. Integer et venenatis turpis. Suspendisse vel porttitor risus. Donec sed turpis aliquet quam auctor pulvinar. Suspendisse ornare ante eros, sit amet facilisis diam sagittis placerat.&quot;</span><span class="kw">&gt;</span>mon</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    deuxième paragraphe<span class="kw">&lt;/a&gt;</span>.</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<h2 id="identifiez-des-sections-lattribut-id">Identifiez des sections, l’attribut <code>id</code></h2>
+<p><a href="https://www.w3schools.com/tags/att_id.asp">Référence</a></p>
+<p>L’attribut <code>id="valeur"</code> permet d’identifier un élément de la page web. Ce peut être un paragraphe, un lien, un titre, une image, un conteneur, etc. L’attribut est compatible avec <strong>tous les éléments HTML</strong>. L’ajout de cet identifiant permet de retrouver la cible rapidement dans votre page.<br />
+Néanmoins, la valeur de votre attribut est une <strong>chaîne de caractère</strong> (comme les types String en Java). De plus, elle doit respecter trois critères essentiels :</p>
+<ol type="1">
+<li>Il doit être <strong>unique</strong> dans votre page.</li>
+<li>Il ne doit <strong>pas avoir</strong> d’espace.</li>
+<li>Il doit être <strong>significatif</strong>.</li>
+</ol>
+<p>Comment utilise-t-on l’attribut ? Comme tous les attributs en HTML, nous les installons dans la balise ouvrante pour les balises en pair et dans la balise pour les balises orpheline. Voici trois exemples d’utilisation de l’attribut.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;identifie-un-paragraphe&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    pulvinar dui nec gravida. Aliquam at suscipit</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    elit, ut ullamcorper odio. Vestibulum ut vulputate metus, at bibendum</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>    lectus.</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a><span class="kw">&lt;br</span><span class="ot"> id=</span><span class="st">&quot;identifie-un-saut-de-ligne&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a><span class="kw">&lt;h2</span><span class="ot"> id=</span><span class="st">&quot;identifie-un-titre&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>    Un titre de niveau 2</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a><span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
+<h3 id="choisir-le-bon-identifiant">Choisir le bon identifiant</h3>
+<p>Concrètement, comment choisit-on un bon identifiant ? Premièrement, il doit être unique. Deuxième, il doit représenter ce qu’il pointe. Un bon identifiant vous permet de savoir quoi regarder avec sa valeur seulement. Prenons un exemple, vous réalisez un site web d’entreprise. Vous y ajoutez le logo de l’entreprise et vous désirez lui donner un identifiant. Si vous lui donnez l’identifiant <strong>logo</strong>, nous serons facilement qu’il s’agit d’un logo. Néanmoins, si vous lui donnez l’identifiant <strong>image-entreprise-512x512-px</strong>, c’est déjà plus dur. Pour y voir mieux, reprenons notre exemple précédent. Les identifiants des deux titres de niveau <strong>h2</strong> seront simplement : <strong>premier-paragraphe</strong> et <strong>second-paragraphe</strong>. Sans plus de contexte sur le site, l’attribution de titre est plus complexe.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>Mon premier titre<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="kw">&lt;h2</span><span class="ot"> id=</span><span class="st">&quot;premier-paragraphe&quot;</span><span class="kw">&gt;</span>Mon premier paragraphe<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>    pulvinar dui nec gravida. Aliquam at suscipit</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>    elit, ut ullamcorper odio. Vestibulum ut vulputate metus, at bibendum</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>    lectus. Aenean lacinia est id sem egestas</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>    interdum. Sed semper molestie erat non congue. Curabitur at maximus dui, sit</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>    amet viverra diam. Phasellus ut</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>    vehicula mauris. Donec pulvinar efficitur dolor a elementum. Fusce cursus</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>    tempor erat, id pellentesque lorem</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>    volutpat eu. Cras consectetur dolor mi. Duis cursus lacinia lorem, nec</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>    euismod quam bibendum dictum.</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true"></a><span class="kw">&lt;h2</span><span class="ot"> id=</span><span class="st">&quot;second-paragraphe&quot;</span><span class="kw">&gt;</span>Mon deuxième paragraphe<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true"></a>    Praesent vitae elit eget magna tempor maximus quis id mi. Suspendisse in</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true"></a>    cursus neque. Sed accumsan hendrerit orci,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true"></a>    vitae luctus sapien facilisis sit amet. Morbi interdum vestibulum massa nec</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true"></a>    scelerisque. Integer et venenatis</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true"></a>    turpis. Suspendisse vel porttitor risus. Donec sed turpis aliquet quam</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true"></a>    auctor pulvinar. Suspendisse ornare ante</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true"></a>    eros, sit amet facilisis diam sagittis placerat.</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<h2 id="ajouter-un-lien-vers-un-élément-de-notre-page">Ajouter un lien <em>vers</em> un élément de notre page</h2>
+<p>Maintenant que nous savons ajouter des identifiants à nos éléments. Il pourrait être intéressant d’ajouter des liens vers ses éléments. Mais pourquoi faire de tel lien ?</p>
+<ul>
+<li>Avoir une table des matières</li>
+<li>Ajouter des références</li>
+<li>Guidez le client</li>
+<li>Modifier dynamiquement les valeurs (via JavaScript)</li>
+<li>Modifier le style visuel pour cet élément précis (grâce au CSS)</li>
+<li>Etc.</li>
+</ul>
+<p>Pour le moment, intéressons-nous uniquement à créer des liens vers nos éléments. Plutôt, j’ai utilisé un lien imaginaire dans la balise <code>&lt;a&gt;&lt;/a&gt;</code>. Rappelez-vous de celle-ci :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;vers:Mon deuxième paragraphe&quot;</span><span class="kw">&gt;</span>mon deuxième paragraphe<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<p>Cette forme n’est pas complètement fausse. Je me suis inspiré de la forme réelle. Premièrement, il existe un symbole qui permet au navigateur de rechercher un identifiant <code>id</code> dans votre page. Il s’agit du caractère <code>#</code>. Dès que le navigateur voit ce symbole, il sait qu’il doit recherche l’identifiant qui est immédiatement à la droite de ce symbole.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a>Ainsi, ce <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#recherchez-moi&quot;</span><span class="kw">&gt;</span>lien<span class="kw">&lt;/a&gt;</span> conduit vers l&#39;id <span class="kw">&lt;strong&gt;&lt;em&gt;</span>recherchez-moi<span class="kw">&lt;/em&gt;&lt;/strong&gt;</span>.</span></code></pre></div>
+<p>Essayez-le par <a href="https://www.w3schools.com/code/tryit.asp?filename=GIU4GZX16CG4">vous-même</a>.</p>
+<h2 id="exercice-1-la-jalousie-du-barbouillé">Exercice #1 : La Jalousie du Barbouillé</h2>
+<p>Reprenons notre exemple de la semaine dernière <a href="exercices/jalousie_barbouille.txt">La Jalousie du Barbouillé</a>. Maintenant que nous sommes dans des championnes et des champions dans l’utilisation des liens, nous allons créer une table des matières (ou un sommaire si vous préférez). Mais, qu’est-ce qu’une table des matières ? Simplement, il s’agit d’une liste qui réfère à chaque titre de section, de sous-section, de paragraphes, etc. Il s’agit d’une liste où nous pouvons accéder facilement à cet élément. Ainsi, votre tâche est d’<strong>ajouter la table des matières</strong> de la pièce. Cette table <strong>contiendra tous les titres</strong> (section, scène) de la pièce.</p>
+<h2 id="linfobulle">L’infobulle</h2>
+<p>Parfois, il est utile d’ajouter une indication à l’utilisateur. Cette dernière permet de clarifier le texte. Toutefois, cette indication ne doit pas alourdir la page. C’est pour cette raison que nous utilisons les infobulles. Il s’agit d’une petite indication qui apparaît lorsque nous survolons un lien avec la souris.</p>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/infobulle.png" alt="" /><figcaption>Une infobulle (image tirée du site <em>OpenClassroom</em>)</figcaption>
+</figure>
+<h2 id="linfobulle-lattribut-title">L’infobulle, l’attribut <code>title</code></h2>
+<p><a href="https://www.w3schools.com/tags/att_title.asp">Référence</a></p>
+<p>L’attribut <code>title="Information à afficher"</code> s’ajoute à toutes les balises HTML. Elle permet d’afficher une information précise à votre balise. Sa valeur est simplement le texte à afficher. Voici un exemple :</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">&lt;p&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;https://www.who.int/fr&quot;</span><span class="ot"> title=</span><span class="st">&quot;Organisation mondiale de la santé&quot;</span><span class="kw">&gt;</span>WHO<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>    was founded in 1948.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&quot;Free Web tutorials&quot;</span><span class="kw">&gt;</span>W3Schools.com<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Essayez par <a href="https://www.w3schools.com/code/tryit.asp?filename=GIU5PLO1FU79">vous-même</a>.</p>
+<h2 id="lien-vers-des-ressources-spécifiques">Lien vers des ressources <em>spécifiques</em></h2>
+<p>Jusqu’à maintenant, nous avons vu les liens vers des pages web. Il s’agit de lier une page HTML vers une autre page HTML grâce au protocole <code>https://</code>. Bien, il existe d’autres types de ressource que nous pouvons lier. Vous pouvez envoyer un <em>courriel</em>, <em>appeler</em> un numéro de téléphone ou Skype. La syntaxe est la même : <code>protocole:adresse</code>.</p>
+<p>Voici une liste des liens possibles :</p>
+<ul>
+<li>Envoyez un courriel : <code>mailto:adresse_email</code>
+<ul>
+<li>Ex. à <a href="mailto:denis.rinfret@cegepdrummond.ca">denis.rinfret@cegepdrummond.ca</a> : <code>mailto:denis.rinfret@cegepdrummond.ca</code></li>
+</ul></li>
+<li>Appelez un numéro de téléphone : <code>tel:000-000-0000p000</code> où <code>p000</code> indique un poste
+<ul>
+<li>Ex. au <a href="tel:1-877-644-4545">1 877 644-4545</a> : <code>tel:1-877-644-4545</code></li>
+<li>Ex. au <a href="tel:819-478-4671p5560">819 478-4671 extension 5560</a> : <code>tel:819-478-4671p5560</code></li>
+</ul></li>
+<li>Appelez un numéro Skype : <code>callto:pseudo_skype</code></li>
+</ul>
+<h2 id="les-caractères-spéciaux">Les caractères spéciaux</h2>
+<p>Il existe certain caractère et symbole très utile comme le symbole du droit d’auteur (©), le symbole de marque déposée (®), le symbole d’Euro (€), les lettres grecques (μ, ξ, δ), etc. Malheureusement, c’est symbole n’existe pas sur nos claviers. Il n’est pas possible de les ajouter facilement à nos textes. Toutefois, il existe une norme qui définit chaque symbole sous la forme d’un code. Ce code a toujours la même forme : <code>&amp;code;</code> où la valeur <code>code</code> varie d’un symbole à l’autre. Vous pouvez utiliser ces différents codes dans vos titres et vos textes afin qu’il soit affiché. De plus, l’avantage avec ces codes est qu’ils sont normalisés et donc uniformes sur toutes les plateformes sauf quelques exceptions. Prenez note que les codes avec le nombre et les codes « <em>Entity</em> » sont équivalents. Vous retrouverez sur le site du cours une <a href="03_html_symboles.md">liste</a> non exhaustive des symboles et leur code HTML.</p>
+<h2 id="les-images">Les images</h2>
+<p>Un site web sans image est un site web triste. La plupart des sites utilisent au moins une image pour illustrer d’une manière ou d’une autre. Néanmoins, il existe plusieurs formats différents.</p>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 6%" />
+<col style="width: 62%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>Extension(s)</th>
+<th>Description</th>
+<th>Utilisation recommandée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PNG</td>
+<td><code>.png</code></td>
+<td>Gère les fonds transparents. Compression sans perte. N’altère pas les couleurs. Affiche jusqu’à 16 millions de couleurs.</td>
+<td>Les images de bonnes qualité</td>
+</tr>
+<tr class="even">
+<td>GIF</td>
+<td><code>.gif</code></td>
+<td>Image peu compressée. Gère le transparent. Permets l’animation des images en un seul fichier. Limité à 256 couleurs.</td>
+<td>Les images animées</td>
+</tr>
+<tr class="odd">
+<td>Jpeg</td>
+<td><code>.jpg</code> ou <code>.jpeg</code></td>
+<td>Grande compression des images (taille) et conserve une bonne qualité des images. Affiche jusqu’à 16 millions de couleurs.</td>
+<td>Le reste</td>
+</tr>
+<tr class="even">
+<td>SVG</td>
+<td><code>.svg</code></td>
+<td>Image vectorielle. Facilement manipulable avec JavaScript. Possibilité d’ajouter du style avec le CSS.</td>
+<td>Les images “responsives” (quoi que Bootstrap supporte bien PNG)</td>
+</tr>
+<tr class="odd">
+<td>WebP</td>
+<td><code>.webp</code></td>
+<td>Permets une qualité similaire à PNG. Le chargement des pages est plus rapide. Créer par Google en 2010. Nécessite des outils spécialisés pour convertir les images existantes.</td>
+<td>En cours de déploiement, le format n’est pas supporté par tous les navigateurs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comparatif-entre-png-jpeg-et-webp">Comparatif entre PNG, JPEG et WebP</h3>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Webp_-_Jpeg_-_Lossless_comparative.png" alt="" /><figcaption>Comparatif entre PNG, JPEG et WebP</figcaption>
+</figure>
+<h2 id="afficher-des-images-en-html-la-balise-img-srclien-alttexte-alternatif">Afficher des images en HTML, la balise <code>&lt;img src="lien" alt="texte alternatif"&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_img.asp">Référence</a></p>
+<p>Pour afficher une image en HTML, il suffit d’utiliser la balise orpheline <code>&lt;img src="lien" alt="texte alternatif"&gt;</code>. Cette balise est utilisée directement dans le corps de texte ou dans un conteneur. Elle permet d’ajouter l’image à l’endroit indiquez. Toutefois, les balises d’image ont besoin de deux attributs essentiels :</p>
+<ul>
+<li><code>src="lien"</code> : Cet attribut indique le chemin où trouver l’image. Les liens sont les mêmes que pour les pages web</li>
+<li><code>alt="texte alternatif"</code> : Cet attribut fournit un texte à afficher lorsque le navigateur ne peut pas afficher l’image ou pour les lecteurs d’écran. Il s’agit simplement d’un texte descriptif.</li>
+</ul>
+<p>Prenez l’image suivante :</p>
+<figure>
+<img src="https://www.cegepdrummond.ca/wp-content/uploads/2019/05/RentréeA18_cegepdrummond-1024x683.jpg" alt="" /><figcaption>Entré du Cégep de Drummondville le jour de la rentrée d’automne</figcaption>
+</figure>
+<p>Le code HTML pour l’afficher est le suivant :</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;https://www.cegepdrummond.ca/wp-content/uploads/2019/05/RentréeA18_cegepdrummond-1024x683.jpg&quot;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a><span class="ot">     alt=</span><span class="st">&quot;Entrée du Cégep de Drummondville le jour de la rentrée d&#39;automne&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<p>Si vous remarquez bien, il est possible d’utiliser une image disponible sur un autre site. Néanmoins, vous devez faire attention avec ceci. Vous êtes, à ce moment, dépendant du site. Advenant que le site supprime cette dernière, vous n’aurez plus d’image. Certain site vous bloquer cette possibilité. En effet, à chaque fois que vous appelez une image sur votre site, les navigateurs doivent faire une requête à l’autre site, ce qui génère du trafic et donc un coût au gestionnaire.</p>
+<h2 id="les-figures-en-html-la-balise-figurefigure">Les figures en HTML, la balise <code>&lt;figure&gt;&lt;/figure&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_figure.asp">Référence</a></p>
+<p>Une autre façon d’afficher une image est d’utiliser une figure. Concrètement, une figure est une image avec une légende qui l’explique. Les figures sont généralement utilisées lors des articles et des sites documentaires. En HTML, la balise <code>&lt;figure&gt;&lt;/figure&gt;</code> va contenir l’image grâce à la balise <code>&lt;img&gt;</code> et la description (<em>caption</em> en anglais). Si nous prenons l’exemple précédent, le code pour afficher la figure est le suivant :</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a><span class="kw">&lt;figure&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;https://www.cegepdrummond.ca/wp-content/uploads/2019/05/RentréeA18_cegepdrummond-1024x683.jpg&quot;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a><span class="ot">         alt=</span><span class="st">&quot;Entrée du Cégep de Drummondville le jour de la rentrée d&#39;automne&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a>    Fig.1 - Entrée du Cégep de Drummondville le jour de la rentrée d&#39;automne</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
+<figure>
+<img src="https://www.cegepdrummond.ca/wp-content/uploads/2019/05/RentréeA18_cegepdrummond-1024x683.jpg"
+         alt="Entrée du Cégep de Drummondville le jour de la rentrée d'automne"> Fig.1 - Entrée du Cégep de Drummondville le jour de la rentrée d’automne
+</figure>
+<p>Essayez par <a href="https://www.w3schools.com/code/tryit.asp?filename=GIU0SUWIQWY2">vous-même</a> .</p>
+<p>Si vous regardez attentivement l’exemple, vous allez voir que la légende ne s’écrit pas sous l’image, mais directement à sa droite si la fenêtre est assez large. La raison est simple. Le navigateur ne comprend pas qu’il s’agit d’une légende.</p>
+<h2 id="les-légendes-des-figures-en-html-la-balise-figcaptionfigcaption">Les légendes des figures en HTML, la balise <code>&lt;figcaption&gt;&lt;/figcaption&gt;</code></h2>
+<p>(<a href="https://www.w3schools.com/tags/tag_figcaption.asp">Référence</a>)</p>
+<p>La balise <code>&lt;figcaption&gt;&lt;/figcaption&gt;</code> permet d’indiquer au navigateur que l’image contenue dans la même figure que ce dernier possède une légende. De plus, la balise renseigne directement sur la valeur de cette légende. Nous devons donc comprendre que la balise <code>&lt;figcaption&gt;&lt;/figcaption&gt;</code> est exclusivement utilisée dans une balise <code>&lt;figure&gt;&lt;/figure&gt;</code>. Bien qu’elle peut être utilisée en dehors, le navigateur considéra la balise comme du texte dans ce contexte. L’exemple précédent devient donc :</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a><span class="kw">&lt;figure&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;https://www.cegepdrummond.ca/wp-content/uploads/2019/05/RentréeA18_cegepdrummond-1024x683.jpg&quot;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a><span class="ot">         alt=</span><span class="st">&quot;Entrée du Cégep de Drummondville le jour de la rentrée d&#39;automne&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a>    <span class="kw">&lt;figcaption&gt;</span>Fig.1 - Entrée du Cégep de Drummondville le jour de la rentrée</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a>        d&#39;automne</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true"></a>    <span class="kw">&lt;/figcaption&gt;</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
+<figure>
+<img src="https://www.cegepdrummond.ca/wp-content/uploads/2019/05/RentréeA18_cegepdrummond-1024x683.jpg"
+         alt="Entrée du Cégep de Drummondville le jour de la rentrée d'automne">
+<figcaption>
+Fig.1 - Entrée du Cégep de Drummondville le jour de la rentrée d’automne
+</figcaption>
+</figure>
+<p>Essayez par <a href="https://www.w3schools.com/code/tryit.asp?filename=GIUA3J85EFWR">vous-même</a>.</p>
+<h2 id="exercice-2-des-images-pour-le-barbouillé">Exercice #2 : Des images pour le Barbouillé</h2>
+<p>Recherchez des images de la pièce <em>La Jalousie du Barbouillé</em> sur Google. Par la suite, ajoutez une nouvelle section. Cette section doit être placée avec la section <strong>Source</strong>. Pour chaque image, ajoutez une petite légende qui décrit l’image et son origine (avec un lien vers ce dernier). N’oubliez pas de mettre à jour votre table des matières. Pour cet exercice, ajoutez trois images. La première doit être sauvegardée dans le dossier local à votre site. Le dossier local est le dossier qui contient votre page web et tous les autres fichiers (autre page HTML, image, vidéo, fichier CSS) de votre site. De plus, cette image doit être ajoutée avec la balise <code>&lt;img ... &gt;</code>. La seconde image doit être ajoutée grâce à un lien internet. Je veux que vous utilisiez une image sur un serveur distant. Enfin, votre troisième image doit utiliser la balise <code>&lt;figure&gt;&lt;/figure&gt;</code>.</p>
+<h2 id="les-conteneurs">Les conteneurs</h2>
+<p>Maintenant que nous avons vu les éléments de contenu en HTML, il est temps de nous intéresser à la mise en page. Nous ne sommes pas encore au visuel. Ceci arrive dans deux semaines. Néanmoins, nous intéresserons à la manière d’afficher des éléments. Les conteneurs, en HTML, sont simplement des balises en pair qui contient les éléments au sein du conteneur. Ils auront toujours la forme suivante :</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a><span class="kw">&lt;conteneur&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a>    <span class="co">&lt;!-- Votre contenue sera entre les balises --&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true"></a><span class="kw">&lt;/conteneur&gt;</span></span></code></pre></div>
+<p>Il existe différents conteneurs. Chaque conteneur possède son rôle et il est important de les respecter.</p>
+<h2 id="les-entêtes">Les entêtes</h2>
+<p>Les sites ont généralement des entêtes. C’est-à-dire une barre de menu qui nous permet d’avoir une vision claire du site.</p>
+<figure>
+<img src="../images/header.png" alt="" /><figcaption>Entête</figcaption>
+</figure>
+<p>Exemple d’un entête avec le site <a href="youtube.com">youtube.com</a></p>
+<p><img src="../images/header_2.png" alt="Entête 2" /> Exemple d’un entête avec le site <a href="cegepdrummond.ca">cegepdrummond.ca</a> En général, nous allons retrouver le logo du site, le slogan, le nom du site ( s’il n’est pas dans le logo). Il est parfois possible de trouver des boutons d’actions comme un lien vers Facebook, Omnivox ou autre. Parfois, les entêtes contiendront même le menu de navigation (voir la prochaine section).</p>
+<h2 id="les-entêtes-en-html-la-balise-headerheader">Les entêtes en HTML, la balise <code>&lt;header&gt;&lt;/header&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_header.asp">Référence</a></p>
+<p>En HTML, la balise <code>&lt;header&gt;&lt;/header&gt;</code> contient toujours l’entête du site. Il s’agit ni plus ni moins qu’une balise parente. Son but est uniquement de créer un bloc avec tous les éléments de l’entête. Cette balise indique au navigateur qu’il s’agit d’un entête, mais vous pouvez la placer où vous souhaitez. Toutefois, elle est généralement placée en premier du body. Créons un fichier d’entête pour notre pièce, la <em>Jalousie du Barbouillé</em>. Dans ce entête, nous allons mettre le titre de la pièce, le logo ci-bas et le slogan suivant : <em>Une farce du XVIIe siècle</em>. <img src="https://laberge.csdgs.qc.ca/wp-content/uploads/sites/71/2019/04/hotmeini-en-gros-20-pcs-lot-th-tre-masques.jpg" alt="École Laberge | Pièce de théâtre" /> Pour ajouter ces trois éléments dans l’entête, il suffit de les placer dans une balise <code>&lt;header&gt;&lt;/header&gt;</code>. De plus, comme notre entête est le haut de la page, nous pouvons lui attribuer l’identifiant <code>top</code></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a><span class="kw">&lt;header</span><span class="ot"> id=</span><span class="st">&quot;top&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;https://laberge.csdgs.qc.ca/wp-content/uploads/sites/71/2019/04/hotmeini-en-gros-20-pcs-lot-th-tre-masques.jpg&quot;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true"></a><span class="ot">         alt=</span><span class="st">&quot;Logo de la comédie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true"></a>    <span class="kw">&lt;h1&gt;</span>La Jalousie du Barbouillé par <span class="kw">&lt;em&gt;</span>Molière<span class="kw">&lt;/em&gt;&lt;/h1&gt;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span>Une farce du XVIIe siècle<span class="kw">&lt;/em&gt;</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true"></a><span class="kw">&lt;/header&gt;</span></span></code></pre></div>
+<h2 id="la-navigation">La navigation</h2>
+<p>Sans navigation, il est difficile de se déplacer dans un site. La quasi-totalité des sites actuels possède une section pour naviguer à travers ce dernier. Voici deux exemples :</p>
+<figure>
+<img src="../images/nav.png" alt="" /><figcaption>Barre de navigation de youtube.com</figcaption>
+</figure>
+<figure>
+<img src="../images/nav_2.png" alt="" /><figcaption>Barre de navigation de bmo.com</figcaption>
+</figure>
+<h2 id="les-barres-de-navigation-la-balise-navnav">Les barres de navigation, la balise <code>&lt;nav&gt;&lt;/nav&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_nav.asp">Référence</a></p>
+<p>La balise <code>&lt;nav&gt;&lt;/nav&gt;</code> contient, tout comme <code>&lt;header&gt;&lt;/header&gt;</code>, tous les liens de la barre de navigation. Son principe est le même que la balise précédente. De plus, vous pouvez l’ajouter dans votre entête, mais ce n’est pas obligatoire. Pour notre pièce, la navigation se résume à notre table des matières. Donc, pour désigner notre table des matières comme une barre de navigation, il suffit d’ajouter notre liste dans la balise <code>&lt;nav&gt;&lt;/nav&gt;</code>.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true"></a><span class="kw">&lt;nav&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true"></a>    <span class="kw">&lt;ul&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#liste-perso&quot;</span><span class="kw">&gt;</span>Les personnages<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true"></a>            <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#piece&quot;</span><span class="kw">&gt;</span>La pièce<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true"></a>            <span class="kw">&lt;ul&gt;</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true"></a>                <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#scene-1&quot;</span><span class="kw">&gt;</span>Scène première (<span class="kw">&lt;em&gt;</span>Le</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true"></a>                    Barbouillé<span class="kw">&lt;/em&gt;</span>)<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true"></a>                <span class="kw">&lt;li&gt;</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true"></a>                    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#scene-2&quot;</span><span class="kw">&gt;</span>Scène deuxième (<span class="kw">&lt;em&gt;</span>Le Barbouillé, Le</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true"></a>                        Docteur<span class="kw">&lt;/em&gt;</span>)<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true"></a>                <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true"></a>            <span class="kw">&lt;/ul&gt;</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true"></a>        <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#representation&quot;</span><span class="kw">&gt;</span>Représentation de la pièce<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#source&quot;</span><span class="kw">&gt;</span>Source<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#autre-exemple&quot;</span><span class="kw">&gt;</span>Autres exemples du cours<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true"></a>    <span class="kw">&lt;/ul&gt;</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true"></a><span class="kw">&lt;/nav&gt;</span></span></code></pre></div>
+<h2 id="le-pied-de-page-la-balise-footerfooter">Le pied de page, la balise <code>&lt;footer&gt;&lt;/footer&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_footer.asp">Référence</a></p>
+<p>Ce conteneur représente les éléments tout en bas de la page. En général, le pied de page contient les informations suivantes :</p>
+<ul>
+<li>Les informations de l’auteur</li>
+<li>Les informations du <em>copyright</em></li>
+<li>Les informations de contact</li>
+<li>Le <em>sitemap</em></li>
+<li>Un lien pour retourner dans le haut de la page.</li>
+</ul>
+<figure>
+<img src="../images/footer.png" alt="" /><figcaption>Pied de page du site du cégep</figcaption>
+</figure>
+<p>Pour créer un pied de page, nous utilisons la balise <code>&lt;footer&gt;&lt;/footer&gt;</code>. Comme les autres conteneurs, il suffit d’ajouter nos éléments à l’intérieur. Créons un pied de page pour notre pièce de théâtre.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="kw">&lt;footer&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>        Ce site a été créer par <span class="kw">&lt;strong&gt;</span>Votre nom<span class="kw">&lt;/strong&gt;</span> du groupe <span class="kw">&lt;em&gt;</span>3<span class="kw">&lt;/em&gt;</span>.</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a>        <span class="kw">&lt;br&gt;</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true"></a>        Droit d&#39;auteur <span class="dv">&amp;copy;</span> 2023</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true"></a>        <span class="kw">&lt;br&gt;</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true"></a>        Pour contactez l&#39;auteur, envoyez un courriel à cette <span class="kw">&lt;a</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true"></a><span class="ot">            href=</span><span class="st">&quot;mailto:prenom.nom@etu.cegepdrummond.ca&quot;</span><span class="kw">&gt;</span>adresse<span class="kw">&lt;/a&gt;</span>.</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true"></a>        <span class="kw">&lt;br&gt;</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true"></a>        <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#top&quot;</span><span class="kw">&gt;</span>Revenir en haut de la page<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true"></a><span class="kw">&lt;/footer&gt;</span></span></code></pre></div>
+<h2 id="les-sections-la-balise-sectionsection">Les sections, la balise <code>&lt;section&gt;&lt;/section&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_section.asp">Référence</a></p>
+<p>Les sections regroupent différents éléments ayant un lien ensemble. Il faut voir les sections comme un regroupement d’information.</p>
+<figure>
+<img src="../images/section.png" alt="" /><figcaption>Des sections de page sur le portail de la Zone numérique</figcaption>
+</figure>
+<p>Pour créer une section en HTML, il suffit d’ajouter, comme pour <code>&lt;header&gt;&lt;/header&gt;</code>, nos éléments dans la balise <code>&lt;section&gt;&lt;/section&gt;</code>. Dans notre pièce de Molière, ajoutons la pièce, la source et toutes les autres sections dans un conteneur (sauf les personnages). Il est même possible d’ajouter une section dans une section. Prenons l’exemple de la pièce. L’entièreté de la pièce peut être dans une section et chaque scène peut être dans une seconde section. De plus, toutes les autres sections peuvent être dans une section propre.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true"></a><span class="kw">&lt;section</span><span class="ot"> id=</span><span class="st">&quot;piece&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true"></a>    <span class="kw">&lt;h2&gt;</span>La pièce <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#top&quot;</span><span class="kw">&gt;</span>Revenir au début de la page<span class="kw">&lt;/a&gt;&lt;/h2&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true"></a>    <span class="kw">&lt;section</span><span class="ot"> id=</span><span class="st">&quot;scene-1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true"></a>        <span class="kw">&lt;h3&gt;</span>Scène première (<span class="kw">&lt;em&gt;</span>Le Barbouillé<span class="kw">&lt;/em&gt;</span>)<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true"></a>        <span class="kw">&lt;p&gt;</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true"></a>            <span class="kw">&lt;em&gt;</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true"></a>                Le Barbouillé entre sur la scène par le côté jardins. Il avance</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true"></a>                songeux vers le centre de la scène. Il</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true"></a>                garde ces yeux vers le base. Il se place devant le public.</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true"></a>                Lentement, il relève tête et il regarde le</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true"></a>                public dans les yeux.</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true"></a>            <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true"></a>        <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true"></a>        <span class="co">&lt;!-- On ajoute le reste de la scène --&gt;</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true"></a>    <span class="kw">&lt;/section&gt;</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true"></a></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true"></a>    <span class="kw">&lt;section</span><span class="ot"> id=</span><span class="st">&quot;scene-2&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true"></a>        <span class="kw">&lt;h3&gt;</span>Scène deuxième (<span class="kw">&lt;em&gt;</span>Le Barbouillé, Le Docteur<span class="kw">&lt;/em&gt;</span>)<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true"></a>        <span class="kw">&lt;p&gt;</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true"></a>            <span class="kw">&lt;em&gt;</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true"></a>                Le Barbouillé se tourne vers le côté cours songeux. Le Docteur</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true"></a>                entre d&#39;un pied ferme et décidé du côté</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true"></a>                cours. Sérieux et hautain, comme à son habitude, ce dernier se</span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true"></a>                dirige sans ce soucier du Barbouillé vers</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true"></a>                l&#39;autre côté de la scène.</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true"></a>            <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true"></a>        <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true"></a>        <span class="co">&lt;!-- On ajoute le reste de la scène --&gt;</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true"></a>    <span class="kw">&lt;/section&gt;</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true"></a><span class="kw">&lt;/section&gt;</span></span></code></pre></div>
+<h2 id="les-informations-complémentaires-la-balise-asideaside">Les informations complémentaires, la balise <code>&lt;aside&gt;&lt;/aside&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_aside.asp">Référence</a></p>
+<p>La balise <code>&lt;aside&gt;&lt;/aside&gt;</code> définit un contenu complémentaire à la page. En règle générale, ils sont placés sur les côtés de la page.</p>
+<figure>
+<img src="https://user.oc-static.com/files/343001_344000/343657.png" alt="" /><figcaption>Bloc d’informations complémentaires sur Wikipédia</figcaption>
+</figure>
+<p>Ajoutons notre liste de personnage comme une information complémentaire. Pour ce faire, on ajoute notre contenu entre les balises <code>&lt;aside&gt;&lt;/aside&gt;</code>.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="co">&lt;!-- Cette section contient la liste des personnages de la pièce. --&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="kw">&lt;aside</span><span class="ot"> id=</span><span class="st">&quot;liste-perso&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a>    <span class="kw">&lt;h2&gt;</span>Les personnages<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a>    <span class="kw">&lt;ul&gt;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>Le Barbouillé (mari d&#39;Angélique)<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>Le Docteur<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>Angélique (fille de Gorgibus)<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>Valière (amant d&#39;Angélique)<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>Cathau (suivante d&#39;Angélique)<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>Gorgibus (père d&#39;Angélique)<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>Villebrequin<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true"></a>        <span class="kw">&lt;li&gt;</span>La Vallée<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true"></a>    <span class="kw">&lt;/ul&gt;</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true"></a><span class="kw">&lt;/aside&gt;</span></span></code></pre></div>
+<h2 id="les-articles-la-balise-articlearticle">Les articles, la balise <code>&lt;article&gt;&lt;/article&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_article.asp">Référence</a></p>
+<p>Les articles contiennent des éléments qui pourraient être réutilisés dans un autre site. Le meilleur exemple est un article de journal. Le texte, le titre, le résumé, les figures, etc. seront alors dans la section <code>&lt;article&gt;&lt;/article&gt;</code>.</p>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/article5.png" alt="" /><figcaption>Un article publié sur Le Monde</figcaption>
+</figure>
+<p>On utilise les balises <code>&lt;article&gt;&lt;/article&gt;</code> de la même manière que les autres conteneurs.</p>
+<h2 id="un-petit-schéma-pour-mieux-comprendre-le-rôle-de-chaque-balise">Un petit schéma pour mieux comprendre le rôle de chaque balise</h2>
+<figure>
+<img src="https://user.oc-static.com/files/343001_344000/343677.png" alt="" /><figcaption>Sections de la page identifiées par les balises</figcaption>
+</figure>
+<h2 id="exemple-complet">Exemple complet</h2>
+<p>Je vous laisse un exemple complet de notre site sur la <em>Jalousie du Barbouillé</em>. Vous trouverez le dossier complet sur LÉA après le cours. Cette version contient la page tel que nous l’avons modifié dans ce cours. Nous continuerons à modifier cette pièce grâce au CSS.</p>
+<h2 id="la-balise-detailsdetails">La balise <code>&lt;details&gt;&lt;/details&gt;</code></h2>
+<p><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/details">Référence</a></p>
+<p>La balise <code>&lt;details&gt;&lt;/details&gt;</code> permet révéler une information. On peut ajouter un résumé avec la balise <code>&lt;summary&gt;&lt;/summary&gt;</code></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a><span class="kw">&lt;details&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a>    <span class="kw">&lt;summary&gt;</span>Quelle est la couleur du cheval blanc de Napoléon?<span class="kw">&lt;/summary&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a>    Blanc, très blanc!</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true"></a><span class="kw">&lt;/details&gt;</span></span></code></pre></div>
+<details>
+<summary>Quelle est la couleur du cheval blanc de Napoléon?</summary> Blanc, très blanc!
+</details>
+<hr />
+<p>Rien n’empêche de mettre autre chose que du texte comme un lien ou une image.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a><span class="kw">&lt;details&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a>    <span class="kw">&lt;summary&gt;</span>Pourquoi j&#39;aime le <span class="kw">&lt;a</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true"></a><span class="ot">            href=</span><span class="st">&quot;https://developer.mozilla.org/fr/docs/Web/HTML&quot;</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true"></a><span class="ot">            title=</span><span class="st">&quot;Lien vers une description du HTML&quot;</span><span class="kw">&gt;</span>HTML<span class="kw">&lt;/a&gt;</span>?</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true"></a>    <span class="kw">&lt;/summary&gt;</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true"></a>    Parce que c&#39;est de l&#39;art </span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;https://laberge.csdgs.qc.ca/wp-content/uploads/sites/71/2019/04/hotmeini-en-gros-20-pcs-lot-th-tre-masques.jpg&quot;</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true"></a><span class="ot">        alt=</span><span class="st">&quot;Logo de la comédie&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true"></a><span class="kw">&lt;/details&gt;</span></span></code></pre></div>
+<p>Par défaut, le contenu est caché. Il existe un attribut <code>open</code> qui permet d’afficher le contenu par défaut.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="kw">&lt;details</span><span class="ot"> open</span><span class="kw">&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true"></a>    <span class="kw">&lt;summary&gt;</span>Suis-je ouvert?<span class="kw">&lt;/summary&gt;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true"></a>    Oui par défaut!</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true"></a><span class="kw">&lt;/details&gt;</span></span></code></pre></div>
+<details open>
+<summary>Suis-je ouvert?</summary> Oui par défaut!
+</details>
+<h2 id="les-conteneurs-génériques-les-balises-divdiv-et-les-balises-spanspan">Les conteneurs génériques, les balises <code>&lt;div&gt;&lt;/div&gt;</code> et les balises <code>&lt;span&gt;&lt;/span&gt;</code></h2>
+<p><a href="https://www.w3schools.com/tags/tag_div.asp">Référence</a> <a href="https://www.w3schools.com/tags/tag_span.asp">Référence</a></p>
+<p>Il s’agit de deux balises génériques. Elles n’ont pas de but particulier. Ces balises servent uniquement à séparer du contenu. Elles agissent comme les différents conteneurs vus précédemment, mais elles n’ont pas de signification. Nous verrons leur utilité plus tard avec le CSS.</p>
+<h3 id="la-différence-entre-les-balises">La différence entre les balises</h3>
+<p>La balise <code>&lt;div&gt;&lt;/div&gt;</code> sert à contenir des éléments (comme <code>&lt;article&gt;&lt;/article&gt;</code>, <code>&lt;section&gt;&lt;/section&gt;</code>, etc.) sans avoir de but précis. Pour notre pièce, nous pourrions utiliser cette balise pour contenir une réplique ou une didascalie.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true"></a>    <span class="co">&lt;!-- Ce div contient une didascalie. --&gt;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true"></a>        <span class="kw">&lt;em&gt;</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true"></a>            Le Barbouillé entre sur la scène par le côté jardin. Il avance</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true"></a>            soigneux vers le centre de la scène. Il garde</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true"></a>            ces yeux vers le base. Il se place devant le public. Lentement, il</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true"></a>            relève tête et il regarde le public dans</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true"></a>            les yeux.</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true"></a>        <span class="kw">&lt;/em&gt;</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true"></a>    <span class="co">&lt;!-- Ce div contient une réplique. --&gt;</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true"></a>        <span class="kw">&lt;strong&gt;</span>Le Barbouillé<span class="kw">&lt;/strong&gt;</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true"></a>        : Il faut avouer que je suis le plus malheureux de tous les hommes !</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true"></a>        J’ai une femme qui me fait enrager.</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>Tandis que la balise <code>&lt;span&gt;&lt;/span&gt;</code> cherche à contenir un élément dans une ligne. Par exemple, le nom d’un personnage.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a>    <span class="co">&lt;!-- Ce div contient une réplique. --&gt;</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true"></a>        <span class="kw">&lt;span&gt;&lt;strong&gt;</span>Le Barbouillé<span class="kw">&lt;/strong&gt;&lt;/span&gt;</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true"></a>        <span class="kw">&lt;mark&gt;</span>(au public)<span class="kw">&lt;/mark&gt;</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true"></a>        : Il faut avouer que je suis le plus malheureux de tous les hommes !</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true"></a>        J’ai une femme qui me fait enrager.</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true"></a>    <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<h2 id="exercice-3-mettre-en-page-la-charte-des-droits-et-libertés">Exercice #3 : Mettre en page la <em>Charte des droits et libertés</em></h2>
+<p>Reprenez notre code de la semaine dernière. Nous allons ajouter différents éléments à cette page.</p>
+<ul>
+<li>Un entête avec le titre de la loi, le sous-titre (Code civil du Québec, chapitre C-12) et le <a href="https://www.economie.gouv.qc.ca/fileadmin/contenu/documents_soutien/piv/qc_communication_numerique.zip">logo du Gouvernement du Québec</a></li>
+<li>Ajouter une navigation entre les articles (table des matières)</li>
+<li>Inclure chaque article dans un conteneur <code>&lt;article&gt;&lt;/article&gt;</code></li>
+<li>Ajouter un lien vers l’article original sur le site de <em>LégiQuébec</em> en partant de ce lien https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-12.
+<ul>
+<li>L’identifiant pour la <strong>PARTIE X</strong> est <code>ga:l_x</code></li>
+<li>L’identifiant pour le <strong>CHAPITRE X</strong> de la <strong>PARTIE X</strong> est <code>ga:l_x-gb:l_x</code></li>
+<li>L’identifiant pour l’<strong>ARTICLE 0</strong> est <code>se:0</code></li>
+</ul></li>
+<li>Les historiques de chaque article doivent être placées dans une infobulle sur un lien historique</li>
+<li>Chaque chapitre doit être dans un conteneur comme <code>&lt;div&gt;&lt;/div&gt;</code>.</li>
+<li>Chaque partie doit être dans une section.</li>
+<li>Le préambule est un article et il est sa propre section.</li>
+<li>Chaque article, chapitre et section doivent avoir un identifiant.</li>
+<li>Ajouter une section contactez-nous avec un titre, une zone de texte ainsi qu’un bouton soumettre qui ne fait rien.</li>
+<li>Ajouter un article dans une balise <code>&lt;details&gt;&lt;/details&gt;</code> et ajouter le titre dans le sommaire.</li>
+</ul>
+<hr />
+<p>Notes écrites par Godefroy Borduas, modifiées par Denis Rinfret et Pierre-Luc Boulanger.</p>
+</body>
+</html>

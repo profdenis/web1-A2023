@@ -1,0 +1,31 @@
+.ex-transformation div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin: 40px;
+}
+
+.rotate:hover {
+    transform: rotate(20deg);
+}
+
+.translate:hover {
+    transform: translate(100px, 10px);
+}
+
+.scaleBig:hover {
+    transform: scale(2, 3);
+}
+
+.scaleSmall:hover {
+    transform: scale(0.75, 0.5);
+}
+
+.skew1:hover {
+    transform: skew(10deg, 5deg);
+}
+
+.skew2:hover {
+    transform: skew(10deg, 10deg);
+}

@@ -1,0 +1,317 @@
+h1,h2 {
+    text-decoration-line: underline;
+    transition: all 1s ease-out;
+}
+
+h1 {
+    text-decoration: underline blue dashed;
+}
+
+h2 {
+    text-align: center;
+}
+
+h1:hover,h2:hover {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    transform: scale(1.25, 1.25);
+}
+
+body {
+    background-image: url('../images/nuages.jpg');
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+a:visited {
+    color: #8222b9;
+}
+a:focus {
+    text-decoration: underline;
+    background: #e6aafe;
+}
+a:hover {
+    text-decoration: underline;
+    background: #e6aafe;
+    cursor: progress;
+}
+a:active {
+    background: #8222b9;
+    color: #e6aafe;
+}
+
+.scene-link a:visited {
+    color: #daa81e;
+}
+
+.scene-link a:focus {
+    text-decoration: underline;
+    background: #fedcaa;
+}
+
+.scene-link a:hover {
+    text-decoration: underline;
+    background: #fedcaa;
+    cursor: progress;
+}
+
+.scene-link a:active {
+    background: #daa81e;
+    color: #fedcaa;
+}
+
+#table-matieres {
+    background: #f0fff0;
+    display: block;
+}
+
+#table-matieres ul {
+    overflow: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#table-matieres li a {
+    display: block;
+    color: rgb(25, 155, 25);
+    font-weight: bolder;
+    padding: 8px 8px;
+    text-decoration: none;
+    font-size: 1.50em;
+}
+
+#table-matieres li a.active {
+    background-color: rgb(25, 155, 25);
+    color: white;
+}
+
+#table-matieres li a:hover:not(.active) {
+    background-color: rgb(25, 155, 25);
+    color: black;
+    transform: scale(1.25);
+}
+
+#table-matieres li#link-source a:hover:not(.active) {
+    transform: scale(0.5);
+}
+
+#table-matieres .scene-link a {
+    font-size: 0.75em;
+}
+
+#top {
+    background-color: aliceblue;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#top img {
+    width: auto;
+    height: 200px;
+}
+
+span.barbouille {
+    color: darkgray;
+    font-size: 150%;
+    text-shadow: 2px 2px 2px darkgrey;
+}
+
+strong.barbouille {
+    font-weight: 900;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#liste-perso {
+    background-color: aliceblue;
+    flex: 20%;
+}
+
+#liste-perso ul {
+    list-style-type: square;
+    line-height: 30px;
+}
+
+#liste-perso li:hover {
+    background-color: #6bbdb6;
+}
+
+span.docteur {
+    text-decoration: line-through red solid;
+}
+
+.scene {
+    margin-bottom: 50px;
+}
+
+.didascalie {
+    font-family: Geneva, sans-serif;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 10px;
+    border-left: 6px solid #f7a156;
+    background: #fff7f0;
+}
+
+.content { 
+    flex: 80%;
+    background-color: white;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#source,
+#autre-exemple,
+#representation,
+#piece,
+#statistiques {
+    border: 2px solid #e1e4e5;
+    padding: 20px;
+    margin: 20px;
+}
+
+#scene-1 {
+    border-bottom: 6px solid #e1e4e5;
+}
+
+footer {
+    background-color: aliceblue;
+    padding: 10px;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+/****** Section pour le tableau des films au Box-office ********/
+#statistiques table {
+    border-collapse: collapse;
+    color: black;
+    width: 100%;
+}
+
+#statistiques th, #statistiques td {
+    padding: 10px;
+    border-bottom: 2px solid black;
+    text-align: left;
+}
+
+#statistiques th {
+    background-color: aliceblue;
+}
+
+#statistiques caption {
+    caption-side: bottom;
+    font-style: oblique;
+    font-size: 75%;
+    margin-top: 5px;
+}
+
+#statistiques tr:nth-child(even) {
+    background-color: aliceblue;
+}
+
+#statistiques tr:hover {
+    background-color: rgb(197, 209, 219);
+}
+/****** FIN Section pour le tableau des films au Box-office ********/
+
+.image-spin:hover{
+    animation-duration: 5s;
+    animation-name: spin;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+  
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(720deg);
+    }
+
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+.image-lenvers:hover{
+    transform: rotate(180deg);
+}
+
+.image-surprise {
+    font-size: 36px;
+    padding: 20px;
+    width: 80%;
+    height: 200px;
+    background:rgb(197, 209, 219) no-repeat center;
+    transition: all 2s ease-out;
+}
+
+.image-surprise:hover {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/c/c2/La_Licorne_et_le_Loup.JPG') no-repeat center;
+    width: 90%;
+    height: 800px;
+    color: white;
+}
+
+.image-fit{
+    width: 100%;
+}
+
+@media (max-width: 1120px) {
+    .flex-container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    #top {
+        flex-direction: column;
+    }
+
+    .image-lenvers {
+        display: none;
+    }
+
+    .title-top{
+        min-width: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .title-top{
+        font-size: smaller;
+    }
+}

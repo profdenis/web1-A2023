@@ -1,0 +1,27 @@
+.special_box {
+    background-color: lightgoldenrodyellow;
+    padding: 25px;
+    /*padding: 25px 100px 200px 400px;*/
+    border: 5px solid red;
+    /*margin: 100px;*/
+    margin: 25px auto;
+    /*text-align: center;*/
+    width: fit-content;
+    width: -moz-fit-content;
+    min-width: 300px;
+    max-width: 80vw;
+}
+
+dl {
+
+}
+
+dt {
+    font-weight: bolder;
+}
+
+/* uncomment either the display or visibility declaration to enable the hidden class */
+.hidden {
+    /*display: none;*/
+    visibility: hidden;
+}

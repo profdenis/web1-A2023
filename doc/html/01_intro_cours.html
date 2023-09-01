@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>420-1W1-DM Web 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="github.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">420-1W1-DM Web 1</h1>
+</header>
+<h1 id="bienvenue-au-cours-de-web-1">Bienvenue au cours de Web 1</h1>
+<p>Dans le cours de web 1, nous explorons la création de pages web côté client. Le cours se limite au design des pages et à des animations simples. Le prochain cours se concentra sur l’utilisation du JavaScript côté client. Ceci permet l’ajout de logique et de « dynamisme ».</p>
+<figure>
+<img src="../images/html-js-css-logo.jpg" alt="" /><figcaption>Logos du langage HTML, CSS et Javascript</figcaption>
+</figure>
+<h2 id="au-menu-du-cours">Au menu du cours</h2>
+<ul>
+<li><a href="#histoire-du-web">Histoire du web</a></li>
+<li><a href="#comment-fonctionne-le-web-">Comment fonctionne le Web ?</a></li>
+<li><a href="#différence-entre-le-html-et-le-css">Différence entre le HTML et le CSS</a></li>
+<li><a href="#dans-ce-cours">Navigateurs et éditeurs</a></li>
+<li><a href="#visual-studio-code">Visual Studio Code</a></li>
+</ul>
+<h2 id="histoire-du-web">Histoire du web</h2>
+<p>Internet est une évolution du réseau ARPANET, soit « Advanced Research Projects Agency Network ». C’est un réseau de recherche créé dans les années 1960 par des universités américaines et commandités par les agences militaires américaines. La transition de l’ARPANET vers un réseau grand public et commercial a débuté dans les années 1980, pour devenir Internet dans les années 1990.</p>
+<figure>
+<img src="../images/arpanet-ucla-stanford.jpg" alt="" /><figcaption>Étendu du réseau ARPANET en 1969</figcaption>
+</figure>
+<p>L’invention du World Wide Web remonte à <strong>1989</strong> par le chercheur Britannique <em> </em>Tim Berners-Lee<strong>. Chercheur au </strong>Centre Européen de la Recherche Nucléaire** (CERN), Bernes-Lee souhaitait créer un réseau d’échange d’information instantané entre les universités et les chercheurs. En effet, le CERN n’est pas un simple laboratoire. Le CERN regroupe plus de 17 000 personnes en recherche dans plus de 100 pays. C’est aussi le Grand collisionneur de hadrons (LHC) soit l’immense accélérateur de particules de 27 km de circonférence à la frontière franco-suisse.</p>
+<figure>
+<img src="../images/cern.jpg" alt="" /><figcaption>Collisionneur du CERN en suisse</figcaption>
+</figure>
+<p>Le projet du web repose en partie sur le système Xanadu élaborer par <strong>Théordore Holm Nelson</strong> (Ted Nelson) en 1960 alors étudiant en sociologie à l’Université Harvard. Ce dernier souhaitait créer un système d’information au bout des doigts. Son projet repose une machine capable de stocker des données et de les mettre à disposition partout dans le monde. Durant ce projet, Nelson créa le concept d’<strong>hypertexte</strong>.</p>
+<p>L’hypertexte est un format de document regroupant plusieurs éléments comme des images, des sons, des données, etc. Tous ces éléments sont accessibles par un lien. Ce lien peut être interne à la machine ( local) ou externe. En effet, le WWW et l’hypertexte ne sont qu’un système d’échange d’information et des structures de données. Le web <strong>ne permet pas</strong> l’échange d’information. Il est l’information.</p>
+<p>La tâche de la transmission d’informations est dédiée à un réseau d’échange en temps réel des informations soit l’<strong>internet</strong>. En terme technique, l’internet est un réseau à <strong>commutation de paquets</strong> décentralisé. Chaque information envoyée le sera sous la forme d’un paquet : <em>paquet = en-tête d’information + charge utile (donnée) + pied de fermeture</em></p>
+<p>Ces paquets sont utilisés pour réduire la corruption et facilité le transfère. Depuis, l’internet repose sur plusieurs protocoles comme le FTP (<em>File Transfert Protocol</em>). Néanmoins, Berners-Lee inventa le <strong>HTTP</strong> (<em>Hypertext Transfer Protocol</em>) ainsi que les adresses web basées sur les serveurs DNS.</p>
+<figure>
+<img src="../images/dns.png" alt="" /><figcaption>Exemple d’une requête DNS</figcaption>
+</figure>
+<p>De plus, le WWW repose sur le partage d’information. Il était donc nécessaire de créer un langage permettant de structurer les pages du web. C’est ainsi qu’est né le <strong>HyperText Markup Language</strong> (HTML).</p>
+<p>Ce langage est inspiré du <strong>Standard Generalized Markup Language</strong> (SGML). Ce langage permettait de décrire des documents. Inspiré du <strong>Generalized Markup Language</strong>, le SGML a été normalisé par les communautés européennes (ancêtre de l’Union européenne).</p>
+<p>Après toutes ses innovations, le CERN libéra le code source du Web en 1993. Cette libération permit la multiplication des serveurs web ainsi que sa démocratisation au sein du public.</p>
+<p>À la fin de 1994, le Web comportait 10 000 serveurs (2 000 serveurs à usage commercial) et 10 millions d’utilisateurs. Cette démocratisation apporta néanmoins de nombreux défis tels que technique ( capacité de transfert entre autres) et de sécurité (protection des informations sensibles par exemple).</p>
+<p>Bien que le HTML répond bien au besoin de <em>structure</em> des documents web, les auteurs de page Web n’avaient pas la possibilité de <strong>décrire son visuel</strong>. Ainsi, dès 1994, <strong>Netscape Navigator</strong>, tout nouveau navigateur sur le marché, introduit les premiers éléments de présentation directement dans le code HTML. Par la suite, plusieurs projets ont été proposés :</p>
+<ul>
+<li><em>Stylesheet proposal</em> de Pei Wei</li>
+<li><em>Stylesheets for HTML</em> de Robert Raisch (O’Reilly)</li>
+<li><em>Cascading HTML Style Sheets</em> (CHSS) d’Håkon Wium Lie</li>
+<li><em>JavaScript-Based Style Sheets</em> (JSSS) par Netscape Navigator</li>
+</ul>
+<p>L’utilisation du CSS (<strong><em>Cascading Style Sheets</em></strong> ou <strong>feuilles de style en cascade</strong>) a été retenu par Dave Raggett alors le principal éditeur du projet de spécification du HTML 3.0 au W3C. Ce dernier souhait implanter un langage de description pur et indépendant du HTML, car le HTML devait, selon lui, être un langage purement structurel.</p>
+<p>De plus, le second avantage du CSS repose le principe de <em>cascade</em>. Ce principe traduit la possibilité, pour une page web, d’avoir un style qui hérite de plusieurs feuilles de style différentes.</p>
+<p>En 1995, le World Wide Web Consortium (W3C), l’organisme chargé de la normalisation du Web, est opérationnel et crée le groupe de travail sur le CSS. Durant la même année, le W3C tient, à Paris, le <em>W3C style sheet workshop</em>. Cette conférence opta pour des feuilles de style simple comme le CSS et Microsoft annonça qu’il supporte le CSS dans son navigateur<em>Internet Explorer</em> dans les futures versions du logiciel.</p>
+<figure>
+<img src="../images/logo-w3c.png" alt="" /><figcaption>Logo du World Wide Web Consortium</figcaption>
+</figure>
+<p>Après cette annonce, la première spécification du CSS est présentée le 17 décembre 1996. Cette dernière contient alors 50 propriétés. Néanmoins, les mises à jour des spécifications sont lentes et difficiles. En effet, chaque niveau du CSS doit alors être compatible et intégrer la précédente. Donc, CSS 3 intègre CSS 2.1 et CSS 1.</p>
+<p>Le deuxième niveau CSS2 est publié en mai 1998, alors que le troisième niveau CSS3 est publié par module à partir de 2011 alors que son développement commença en 1999 à la suite de CSS2. En 2017, plusieurs modules comme <em>Transforms</em> et <em>Transitions</em> n’ont toujours pas été publiés. Cette lenteur conduit alors à la guerre des navigateurs et elle explique pourquoi certaines pages ne s’affichent pas correctement sur différent navigateur et parfois différente version d’un même navigateur.</p>
+<p>Plusieurs dialectes de CSS comme SASS et SCSS sont inventés pour aider le développement en CSS. Malheureusement, ces dialectes ne sont pas compris par les navigateurs, car ils ne sont pas dans le standard CSS. Dans le cadre du cours, ces dialectes ne seront pas vus, car ils demandent d’utiliser des pré-processeurs. <img src="../images/sass-vs-scss.png" alt="Comparaison entre le SASS et SCSS et le CSS" /></p>
+<h2 id="comment-accède-t-on-au-web-aujourdhui">Comment accède-t-on au Web aujourd’hui ?</h2>
+<p>Le Web a été démocratisé. Il est facilement accessible. Certains le décrivent comme un service essentiel. Les technologies se sont développées. Il n’existe plus de limite. Alors qu’en 2000, l’internet haute vitesse était à ses balbutiements, il n’était pas imaginable de pouvoir écouter un film dans une qualité proche du cinéma dans son salon.</p>
+<p>Les navigateurs Web se sont plus l’unique moyen d’accédé au WWW. Des applications comme Facebook ou Netflix utilisent les protocoles de communication pour réaliser différentes activités. Il existe aussi des systèmes d’exploitation reposant sur le Web (WebOS, ChromeOS).</p>
+<p>De plus, les vitesses de transfert augmentent de plus en plus (réseau en fibre-optique, LTE, 5G) tout en dominant des inconvénients comme la latence et la perte de donnée. Imaginez, nous sommes passés d’une offre de connexion Internet à 56 kbit/s au début des années 2000 à 1 Gbit/s en 2022.</p>
+<figure>
+<img src="../images/dialup.gif" alt="" /><figcaption>Image d’une connexion Internet via la ligne de téléphone</figcaption>
+</figure>
+<h3 id="statistiques-de-la-population-ayant-accès-à-internet">Statistiques de la population ayant accès à Internet</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Année</th>
+<th>2002</th>
+<th>2003</th>
+<th>2004</th>
+<th>2005</th>
+<th>2006</th>
+<th>2007</th>
+<th>2008</th>
+<th>2009</th>
+<th>2010</th>
+<th>2011</th>
+<th>2012</th>
+<th>…</th>
+<th>2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>%</td>
+<td>61,59</td>
+<td>64,20</td>
+<td>65,96</td>
+<td>71,66</td>
+<td>72,40</td>
+<td>73,20</td>
+<td>76,70</td>
+<td>80,30</td>
+<td>80,30</td>
+<td>83,00</td>
+<td>86,77</td>
+<td>…</td>
+<td>97,00</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comment-fonctionne-le-web">Comment fonctionne le Web ?</h2>
+<p>Grâce au protocole HTTP, le client (nous) demande à un serveur des informations concernant une ressource (page Web). Le serveur nous renvoie cette information par parquet. Le client prend alors ses informations et ils les interprètent pour nous les afficher.</p>
+<figure>
+<img src="../images/HTTP-requete-reponse.png" alt="" /><figcaption>Exemple client/serveur du protocol HTTP</figcaption>
+</figure>
+<h2 id="différence-entre-le-html-et-le-css">Différence entre le HTML et le CSS</h2>
+<p>Le HTML permet de spécifier la <strong>structure</strong> de l’information. Dans un fichier HTML, nous décrivons le contenu et son emplacement (dans l’entête, dans tel ou tel conteneur, dans le pied de page). Il n’y a pas de visuel.</p>
+<p>Le CSS permet de spécifier la <strong>vue</strong> de l’information. Dans un fichier CSS, nous indiquons la couleur au texte, la taille des images, l’espace entre les conteneurs. Sans le CSS, les pages ont toutes la même vue de base. Soit une lecture simple et directe par le navigateur des balises HTML.</p>
+<h3 id="voici-une-page-facebook-avec-ou-sans-css.-cest-exactement-le-même-html.">Voici une page Facebook avec ou sans CSS. C’est exactement le même HTML.</h3>
+<figure>
+<img src="../images/facebook-connexion.png" alt="" /><figcaption>Exemple d’une page Facebook avec style css</figcaption>
+</figure>
+<figure>
+<img src="../images/facebook-connexion-sans-style.png" alt="" /><figcaption>Exemple d’une page Facebook sans style css</figcaption>
+</figure>
+<h2 id="quest-ce-quun-moteur-de-rendu">Qu’est-ce qu’un moteur de rendu ?</h2>
+<p>Dans chaque navigateur, vous retrouvez un moteur de rendu. Ce dernier est responsable d’interpréter les balises HTML afin de savoir quoi afficher et les styles CSS pour déterminer comment afficher les éléments.</p>
+<p>Si un moteur de rendu ne sait pas où trouver une feuille de style (CSS), il utilisera un style de base implémenté directement dans son code.</p>
+<div style="page-break-after: always;">
+
+</div>
+<h2 id="dans-ce-cours">Dans ce cours</h2>
+<p>En 420-1W1-DM, nous verrons comment mettre en page nos éléments (texte, tableau, images, vidéo, etc.) grâce au HTML. Par après, nous verrons comment ajouter du style et, ainsi, rendre nos pages attrayantes.</p>
+<h2 id="quest-ce-que-nous-allons-utiliser-dans-ce-cours">Qu’est-ce que nous allons utiliser dans ce cours ?</h2>
+<p>Concernant le serveur, nous utiliserons nos ordinateurs. En effet, les pages HTML et CSS ne nécessitent pas d’interpréteur autre que le moteur de rendu d’un navigateur. Ainsi, il suffit d’ouvrir une page HTML (<code>mapage.html</code> par exemple) dans un navigateur. Soit en passant par <em>Fichier/Ouvrir un fichier</em> dans le menu du navigateur ou assignant les fichiers HTML à un navigateur.</p>
+<h2 id="quel-navigateur-allons-nous-utiliser">Quel navigateur allons-nous utiliser ?</h2>
+<p>Nous utiliserons au moins 2 navigateurs. Un navigateur doit utiliser le moteur de rendu Gecko (Mozilla Firefox). Pour ce dernier, je vous recommande <a href="https://www.mozilla.org/fr/firefox/developer/">Firefox Developer Edition</a>. Dans cette version, les outils de développement sont déjà activés. Ceci facilitera le développement des pages Web.</p>
+<p>Le second navigateur devra utiliser le moteur de rendu Blink. Ce moteur est utilisé par le projet Chromium en autre. Ce projet open source est la base de Google Chrome ou encore la nouvelle version de Microsoft Edge.</p>
+<div style="page-break-after: always;">
+
+</div>
+<h2 id="pourquoi-utiliser-différents-navigateurs">Pourquoi utiliser différents navigateurs ?</h2>
+<p>Comme le montre l’image ci-bas, les navigateurs Blink représentent près du trois quarts des navigateurs utilisés. Il est donc nécessaire d’ajuster nos sites aux 25% qui reste. Le Web doit être <strong>accessible</strong>. Pourquoi aucun moteur de rendu ne s’est établi comme l’unique moteur ? Pour certains, il s’agit d’une question technologique. Pour d’autres, il s’agit simplement d’utiliser le navigateur disponible dans son ordinateur.</p>
+<figure>
+<img src="../images/repartition-navigateur.png" alt="" /><figcaption>Répartition des parts de marché des navigateurs Web</figcaption>
+</figure>
+<p><a href="https://fr.wikipedia.org/wiki/Parts_de_marché_des_navigateurs_web">Parts de marché des navigateurs Web version interactive</a></p>
+<h2 id="un-éditeur-pour-écrire-les-pages">Un éditeur pour écrire les pages</h2>
+<p>Fondamentalement, les fichiers HTML et CSS sont essentiellement des fichiers textes. Bien évidemment, vous pouvez utiliser un IDE spécialisé dans le développement web comme WebStorm de JetBrains (le créateur d’IntelliJ que vous utilisez en 1N1). Néanmoins, l’utilisation d’un IDE n’est pas nécessaire pour ce cours.</p>
+<p>Vous pouvez utiliser l’éditeur multiplate-forme <a href="https://code.visualstudio.com/">Visual Studio Code</a>. Cet éditeur est suffisant pour ce cours. Ou vous pouvez tout simplement utiliser IntelliJ, que vous devez installer pour le cours d’introduction à la programmation (1N1) de toute façon.</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>Visual Studio Code (<strong>VS Code</strong>) est un éditeur de code source léger et flexible. Il est gratuit et le code est ouvert au public.</p>
+<p>Vous pouvez <a href="https://code.visualstudio.com/Download">télécharger Visual Studio Code ici</a></p>
+<p>L’avantage principal de Visual Studio Code est ses extensions. Une extension permet d’ajouter des fonctionnalités à l’éditeur de base.</p>
+<p>Visual Studio Code supporte sans extension le développement de page HTML → https://code.visualstudio.com/Docs/languages/html</p>
+<p>Le support inclus plusieurs éléments facilitant le développement HTML et CSS:</p>
+<ul>
+<li>Suggestions de balises (<strong>IntelliSense</strong>)</li>
+<li>Auto complétion des balises</li>
+<li><em>Tooltip</em></li>
+<li>Formatage des balises</li>
+</ul>
+<p>Si vous utilisez Visual Studio Code, les extensions <em>HTML Essentials</em> et <em>HTML Preview</em> sont recommandées pour faciliter le dévelopment de pages web.</p>
+<figure>
+<img src="../images/vscode-extensions.png" alt="" /><figcaption>Comment installer une extension VS Code</figcaption>
+</figure>
+<p>Exemple d’installation de l’extension HTML Preview</p>
+<p>Pour avoir l’éditeur en français, il faut télécharger une extension</p>
+<figure>
+<img src="../images/vscode-francais.png" alt="" /><figcaption>Comment avoir VS Code en français</figcaption>
+</figure>
+<p>C’est exactement de cette façon que j’édite ces notes ou les énoncés des travaux pratiques!</p>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="vérification-du-français">Vérification du français</h3>
+<p>Il existe une extension de Visual Studio Code qui permet de vérifier le français dans plusieurs types de fichier comme le HTML ou le Java.</p>
+<p>Ajouter ces deux extensions :</p>
+<ul>
+<li>Code spell checker</li>
+<li>French - Code spell checker</li>
+</ul>
+<figure>
+<img src="../images/InstallationCodeSpellChecker.png" alt="" /><figcaption>Comment avoir VS Code en français</figcaption>
+</figure>
+<p>Pour activer le dictionnaire de <strong>Code spell checker</strong>, dans Visual Studio Code sélectionner la touche F1 ou cliquer sur le menu Affichage -&gt; Palette de commandes</p>
+<p>Dans la boite, entrez ceci -&gt; <strong>Show Spell Checker Configuration Info</strong>.</p>
+<p>Sélectionner l’onglet Workspace ou User selon votre préférence. Activer la ou les langues que vous voulez.</p>
+<figure>
+<img src="../images/InstallationCodeSpellLanguage.png" alt="" /><figcaption>Comment avoir VS Code en français</figcaption>
+</figure>
+<h2 id="votre-première-page-html">Votre première page HTML!</h2>
+<p>Pour créer votre première page HTML, ouvrez VS Code.</p>
+<p>Aller dans le menu <strong>Fichier</strong> et sélectionner <strong>Ouvrir le dossier</strong></p>
+<figure>
+<img src="../images/vscode-ouvertureprojet.png" alt="" /><figcaption>Ouvrir un dossier dans VS Code</figcaption>
+</figure>
+<p>Sélectionner un dossier où vous voulez mettre votre première page HTML.</p>
+<p>Une fois le dossier ouvert dans VS Code, créez un nouveau fichier <strong>index.html</strong> dans l’explorateur de fichier avec un clique droit.</p>
+<figure>
+<img src="../images/vscode-nouveaufichier.png" alt="" /><figcaption>Créer un fichier index.html dans VS Code</figcaption>
+</figure>
+<p>Éditez le fichier pour ajouter ceci</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>Bonjours tout le monde!<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">&lt;p&gt;</span>Je m&#39;appelle XYZ<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Vous pouvez visualiser le résultat dans un navigateur ou depuis VS Code. Et voilà votre première page HTML!</p>
+<p>Notes écrites par Godefroy Borduas, modifiées par Denis Rinfret et Pierre-Luc Boulanger.</p>
+</body>
+</html>

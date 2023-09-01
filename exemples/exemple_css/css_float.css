@@ -1,0 +1,10 @@
+#floating-div {
+	background-color: #44ff44;
+	float: right;
+	width: 20vw;
+	min-width: 100px;
+}
+
+div {
+	background-color: #ff4444;
+}

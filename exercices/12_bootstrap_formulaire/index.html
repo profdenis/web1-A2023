@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Exercice Bootstrap formulaire</title>
+</head>
+
+<body>
+    <nav class="navbar bg-light">
+        <a class="navbar-brand ps-3" href="./index.html">[Maison]</a>
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./produits.html">Produits</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="dropdown-item" href="./ordinateur-1.html">Ordinateur 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Désactivé</a>
+                </li>
+            </ul>
+            <h1 class="me-auto ms-auto">Mon formulaire</h1>
+        </div>
+        <span>Utilisateur X</span>
+        [Personne]
+    </nav>
+
+    <div class="container">
+        <h2 class="my-2">J'aimerais en connaitre plus! [Cercle d'information]</h2>
+        <form>
+            <div class="row my-3">
+              <label for="text">Prénom :</label>
+            </div>
+            <div class="row my-3">
+              <label for="textarea">Nom :</label>
+            </div>
+            <div class="row my-3">
+              <label for="select">Couleur préférée :</label>
+              <select id="select2">
+                <option>Bleu</option>
+                <option>Vert</option>
+                <option>Jaune</option>
+                <option>La mienne!</option>
+              </select>
+            </div>
+            <div class="row my-3">
+                <label>
+                    Je veux me faire déranger pour au moins...
+                </label>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-2">
+                <button type="submit">Envoyer [envoie]</button>
+              </div>
+              <div class="col-md-2">
+                <button>Annuler [fâché]</button>
+              </div>
+            </div>
+          </form>
+    </div>
+</body>
+
+</html>

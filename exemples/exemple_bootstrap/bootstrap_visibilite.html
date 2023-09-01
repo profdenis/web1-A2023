@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap visibilité</title>
+
+    <style>
+        .row {
+            background-color: #eaf5fa;
+            text-align: center;
+            min-height: 100px;
+        }
+
+        [class*="col"] { 
+            border: 2px solid blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="text-center m-2">Visibilité des éléments</h1>
+    <div class="container">
+        <header class="row">
+            <div class="col">
+                Entete
+            </div>
+        </header>
+        <div class="row">
+            <div class="col">
+                Section
+            </div>
+        </div>
+        <div class="row">
+            <article class="col-md-10">
+                Article
+            </article>
+            <aside class="col d-none d-md-block">
+                Aside
+            </aside>
+        </div>
+        <footer class="row">
+            <div class="col">
+                Pied de page
+            </div>
+        </footer>
+    </div>
+
+
+    <h2 class="text-center m-4">Exemple de mise en page</h2>
+    <div class="container">
+
+        <header class="row">
+          <div class="col">
+            Entete
+          </div>
+        </header>
+      
+        <div class="row">
+      
+          <div class="col-md-2">
+            <div class="row">
+              <aside class="col-12">
+                Aside
+              </aside>
+              <aside class="col-12">
+                Aside
+              </aside>
+            </div>
+          </div>
+      
+          <section class="col-md-10 col-lg-8">
+            Section
+          </section>
+      
+          <div class="col-lg-2 d-none d-md-block">
+            <div class="row">
+              <aside class="col-12">
+                Aside
+              </aside>
+              <aside class="col-12">
+                Aside
+              </aside>
+            </div>
+          </div>
+      
+        </div>
+      
+        <footer class="row">
+          <div class="col-lg">
+            Pied de page
+          </div>
+        </footer>
+      
+      </div>
+
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

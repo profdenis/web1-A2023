@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>420-1W1-DM Web 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="github.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">420-1W1-DM Web 1</h1>
+</header>
+<h1 id="css-et-la-mise-en-page">CSS et la mise en page</h1>
+<p>Au dernier cours, nous avons vu comment lier un fichier CSS avec un document HTML avec la balise <code>&lt;link&gt;</code> qu’on ajoute dans le <code>&lt;head&gt;</code>. Nous avons appris comment appliquer du CSS sur des éléments HTML avec les sélecteurs de classes <code>.ma-classe</code>, d’identifiants <code>#mon-id</code> et d’éléments <code>p</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">/**** </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co">Ce code change la couleur du texte en bleu pour toutes les classes &#39;ma-classe&#39; ainsi que pour l&#39;élément avec l&#39;Id &#39;mon-id&#39; et pour tous les éléments &#39;&lt;p&gt;&#39; du document HTML  </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co">******/</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="fu">.ma-classe</span><span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="pp">#mon-id</span><span class="op">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="fu">.p</span> {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Nous avons appris que <strong>l’ordre</strong> de définition du CSS est important pour déterminer <strong>la priorité d’application</strong> de celle-ci sur l’élément.</p>
+<p>Nous avons vu les propriétés CSS suivantes : - <code>color</code>: pour modifier la couleur du texte. - <code>background</code>: pour modifier la couleur de fond. - <code>font-size</code> : pour modifier la grosseur des caractères du texte. - <code>font-weight</code> : pour modifier l’épaisseur des lettres (<strong>gras</strong> ou non) - <code>font-style</code> : pour modifier le texte en italique ou non. - <code>font-family</code> : pour modifier la police de caractères. - <code>text-decoration</code> : pour ajouter une décoration avec une couleur et une position. Généralement, c’est pour ajouter une ligne sous ou sur le texte. - <code>text-align</code> : pour aligner le texte horizontalement à gauche, à droite ou au centre. - <code>text-shadow</code> : pour ajouter une ombre au texte.</p>
+<p>Nous avons appris comment modifier les hyperliens <code>&lt;a&gt;</code> pour avoir un style différent avec les pseudo-classes (<code>a:link</code>, <code>a:visited</code>, <code>a:hover</code>, …). Ceux-ci permettent de changer entre autre la couleur du lien quand il est cliqué.</p>
+<p>Nous avons vu comment modifier des listes pour avoir un style différent avec la propriété <code>line-style</code> et modifier la hauteur entre chaque élément avec <code>line-height</code>.</p>
+<p>Le CSS sert aussi à positioner les éléments à l’intérieur de la page pour faciliter la lecture. C’est ce que l’on va explorer dans ce cours.</p>
+<h2 id="le-modèle-de-boîtes-du-css">Le modèle de boîtes du CSS</h2>
+<ul>
+<li>Toutes les balises HTML peuvent être considérées comme des boîtes. Dans le CSS, l’expression <em>“modèle de boîtes”</em> (<em>“box model”</em> en anglais) est utilisée en parlant de design et d’agencement</li>
+<li>Le modèle de boîtes du CSS est essentiellement une boîte qui entoure chaque balise HTML</li>
+</ul>
+<div class="w3-boxmodel">
+<div class="margin">
+<pre><code>&lt;div class=&quot;border w3-theme&quot;&gt;
+    &lt;div class=&quot;padding&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Content</strong> (Contenu) : le contenu de la boîte, dans laquelle le texte et les images apparaissent</li>
+<li><strong>Padding</strong> (Rembourrage) : espace transparent autour du contenu</li>
+<li><strong>Border</strong> (Bordure) : une bordure qui entoure le contenu et le rembourrage</li>
+<li><strong>Margin</strong> (Marge) : espace transparent qui entoure la bordure</li>
+</ul>
+<p>Donc, si on n’utilise pas de bordure, l’espacement sera similaire qu’on définisse un <code>padding</code> ou un <code>margin</code>.</p>
+<p>On modifie ces propriétés en précisant une valeur (<code>em</code>, <code>px</code>, …) ou un pourcentage. Il est possible de modifier en même temps tous les côtés ou de spécifier certains côtés de la boîte.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co">/* On applique la même valeur aux quatre côtés */</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>padding<span class="in">: 1em;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co">/* vertical (haut et bas) | horizontal (droite et gauche) */</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>padding<span class="in">: 5% 10%;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co">/* haut | horizontal | bas */</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>padding<span class="in">: 1em 2em 2em;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co">/* haut | droit | bas | gauche */</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>padding<span class="in">: 5px 1em 0 2em;</span></span></code></pre></div>
+<h4 id="exemple-6-ex6.html">Exemple 6: <code>ex6.html</code></h4>
+<ul>
+<li>La classe <code>hidden</code> peut être utilisée pour cacher certaines balises
+<ul>
+<li>elle va être expliquée plus en détails un peu plus loin</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>CSS Exemple 6<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;ex6.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>CSS Exemple 6<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a><span class="kw">&lt;dl</span><span class="ot"> class=</span><span class="st">&quot;special_box&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>    <span class="kw">&lt;dt&gt;</span>Content<span class="kw">&lt;/dt&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>    <span class="kw">&lt;dd&gt;</span>The content of the box, where text and images appear<span class="kw">&lt;/dd&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>    <span class="kw">&lt;dt&gt;</span>Padding<span class="kw">&lt;/dt&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>    <span class="kw">&lt;dd&gt;</span>Clears an area around the content. The padding is transparent<span class="kw">&lt;/dd&gt;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>    <span class="kw">&lt;dt</span><span class="ot"> class=</span><span class="st">&quot;hidden&quot;</span><span class="kw">&gt;</span>Border<span class="kw">&lt;/dt&gt;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a>    <span class="kw">&lt;dd</span><span class="ot"> class=</span><span class="st">&quot;hidden&quot;</span><span class="kw">&gt;</span>A border that goes around the padding and content<span class="kw">&lt;/dd&gt;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true"></a>    <span class="kw">&lt;dt&gt;</span>Margin<span class="kw">&lt;/dt&gt;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true"></a>    <span class="kw">&lt;dd&gt;</span>Clears an area outside the border. The margin is transparent<span class="kw">&lt;/dd&gt;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true"></a><span class="kw">&lt;/dl&gt;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h4 id="fichier-ex6.css">Fichier <code>ex6.css</code></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="fu">.special_box</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">lightgoldenrodyellow</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    <span class="kw">padding</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    <span class="kw">border</span>: <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>    <span class="kw">margin</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>}</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>dt {</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">bolder</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a><span class="co">/* uncomment either the display or visibility declaration to enable the hidden class */</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a><span class="fu">.hidden</span> {</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>    <span class="co">/*display: none;*/</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a>    <span class="co">/*visibility: hidden;*/</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex1-1 .special_box {
+            background-color: lightgoldenrodyellow;
+            padding: 25px;
+            border: 5px solid red;
+            margin: 100px;
+        }
+        .ex1-1 dt {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+<div class="ex1-1">
+<pre><code>&lt;dl class=&quot;special_box&quot;&gt;
+    &lt;dt&gt;Content&lt;/dt&gt;
+    &lt;dd&gt;The content of the box, where text and images appear&lt;/dd&gt;
+    &lt;dt&gt;Padding&lt;/dt&gt;
+    &lt;dd&gt;Clears an area around the content. The padding is transparent&lt;/dd&gt;
+    &lt;dt class=&quot;hidden&quot;&gt;Border&lt;/dt&gt;
+    &lt;dd class=&quot;hidden&quot;&gt;A border that goes around the padding and content&lt;/dd&gt;
+    &lt;dt&gt;Margin&lt;/dt&gt;
+    &lt;dd&gt;Clears an area outside the border. The margin is transparent&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</div>
+</body>
+</html>
+<hr />
+<h3 id="la-propriété-border-référence">La propriété <code>border</code> (<a href="https://developer.mozilla.org/fr/docs/Web/CSS/border">Référence</a>)</h3>
+<p>La propriété <code>border</code> spécifie le style, la largeur et la couleur d’une bordure d’un élément HTML. On peut aussi définir tous les côtés (gauche, droite, haut et bas) ou seulement une partie. Par exemple, pour définir la bordure du bas seulement on va utiliser <code>border-bottom</code>. La syntaxe est similaire pour toutes les propriétés <code>border-*</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="co">/*** largeur est une unité de mesure comme px ***/</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>border<span class="in">: largeur</span> style couleur;</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex1-4  {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .ex1-4 div {
+            margin-top: 20px;
+        }
+        .ex1-4 .bordure-simple {
+            border: 2px solid black;
+        }
+        .ex1-4 .bordure-bas {
+             border-bottom: 2px solid red;
+        }
+        .ex1-4 .bordure-ronde {
+             border: 2px solid gray;
+             border-radius: 4px;
+        }
+        .ex1-4 .bordure-gauche {
+             border-left: 6px solid #2196F3;
+             background: #ddffff
+        }
+    </style>
+</head>
+<body>
+<div class="ex1-4">
+<pre><code>&lt;div class=&quot;bordure-simple&quot;&gt;
+    Je suis du texte avec une bordure noire simple
+&lt;/div&gt;
+&lt;div class=&quot;bordure-bas&quot;&gt;
+    Je suis du texte avec une bordure rouge dans le bas
+&lt;/div&gt;
+&lt;div class=&quot;bordure-ronde&quot;&gt;
+    Je suis du texte avec une bordure ronde grise
+&lt;/div&gt;
+&lt;div class=&quot;bordure-gauche&quot;&gt;
+    Je suis du texte avec une bordure à gauche en bleu
+&lt;/div&gt;</code></pre>
+</div>
+</body>
+</html>
+<div class="sourceCode" id="cb9"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="fu">.ex1-4</span> div {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    <span class="kw">margin-top</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a><span class="fu">.ex1-4</span> <span class="fu">.bordure-simple</span> {</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>}</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a><span class="fu">.ex1-4</span> <span class="fu">.bordure-bas</span> {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a>    <span class="kw">border-bottom</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>}</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a><span class="fu">.ex1-4</span> <span class="fu">.bordure-ronde</span> {</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true"></a>    <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">gray</span><span class="op">;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true"></a>    <span class="kw">border-radius</span>: <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true"></a>}</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true"></a><span class="fu">.ex1-4</span> <span class="fu">.bordure-gauche</span> {</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true"></a>    <span class="kw">border-left</span>: <span class="dv">6</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#2196F3</span><span class="op">;</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true"></a>    <span class="kw">background</span>: <span class="cn">#ddffff</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;ex1-4&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;bordure-simple&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>            Je suis du texte avec une bordure noire simple</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;bordure-bas&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>            Je suis du texte avec une bordure rouge dans le bas</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;bordure-ronde&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>            Je suis du texte avec une bordure ronde grise</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;bordure-gauche&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>            Je suis du texte avec une bordure à gauche en bleu</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span></code></pre></div>
+<hr />
+<h3 id="la-propriété-display">La propriété <code>display</code></h3>
+<ul>
+<li>La propriété <code>display</code> spécifie comment la balise est affichée ou non.</li>
+<li>Chaque balise HTML a une valeur de <code>display</code> par défaut selon son type de balise</li>
+<li>La valeur par défaut de la plupart des balises est <code>block</code> ou <code>inline</code></li>
+</ul>
+<h3 id="balises-de-bloc-block">Balises de bloc (<code>block</code>)</h3>
+<ul>
+<li><p>Une balise de bloc est une balise qui commence toujours sur une nouvelle ligne et qui utilise toute la largeur disponible</p></li>
+<li><p>Exemples de balise de bloc :</p>
+<ul>
+<li><code>&lt;div&gt;</code></li>
+<li><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></li>
+<li><code>&lt;p&gt;</code></li>
+<li><code>&lt;form&gt;</code></li>
+</ul></li>
+</ul>
+<h3 id="balises-en-ligne-inline">Balises en-ligne (<code>inline</code>)</h3>
+<ul>
+<li><p>Une balise en-ligne ne commence pas toujours sur une nouvelle ligne et utilise seulement la largeur nécessaire</p></li>
+<li><p>Exemples de balise en-ligne :</p>
+<ul>
+<li><code>&lt;span&gt;</code></li>
+<li><code>&lt;a&gt;</code></li>
+<li><code>&lt;img&gt;</code></li>
+</ul></li>
+</ul>
+<h3 id="cacher-une-balise">Cacher une balise</h3>
+<h4 id="display-none-ou-visibility-hidden"><code>display: none</code> ou <code>visibility: hidden</code> ?</h4>
+<ul>
+<li>Cacher une balise peut être fait en donnant la valeur <code>none</code> à la propriété <code>display</code> (<em>affichage = rien</em>)
+<ul>
+<li>La balise va être cachée et la page va être affichée comme si la balise n’existait pas</li>
+<li>modifiez le fichier <code>ex6.css</code> en <em>décommentant</em> <code>display: none</code> à l’intérieur de la déclaration de classe <code>hidden</code> ; ensuite sauvegardez les changements et rechargez le fichier <code>ex6.html</code></li>
+</ul></li>
+<li><code>visibility: hidden</code> cache aussi une balise
+<ul>
+<li>Cependant, la balise va utiliser le même espace qu’avant</li>
+<li>la balise sera cachée, mais va continuer d’affecter l’agencement et l’affichage de la page</li>
+<li>modifiez le fichier <code>ex6.css</code> en commentant <code>display: none</code> et en décommentant <code>visibility: hidden</code> à l’intérieur de la déclaration de classe <code>hidden</code> ; ensuite sauvegardez les changements et rechargez le fichier <code>ex6.html</code></li>
+<li>qu’est-ce qui a changé ?</li>
+</ul></li>
+</ul>
+<h4 id="exemple-avec-display-none">Exemple avec <code>display: none</code></h4>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex1-2 .special_box {
+            background-color: lightgoldenrodyellow;
+            padding: 25px;
+            border: 5px solid red;
+            margin: 100px;
+        }
+        .ex1-2 dt {
+            font-weight: bolder;
+        }
+        .ex1-2 .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="ex1-2">
+<pre><code>&lt;dl class=&quot;special_box&quot;&gt;
+    &lt;dt&gt;Content&lt;/dt&gt;
+    &lt;dd&gt;The content of the box, where text and images appear&lt;/dd&gt;
+    &lt;dt&gt;Padding&lt;/dt&gt;
+    &lt;dd&gt;Clears an area around the content. The padding is transparent&lt;/dd&gt;
+    &lt;dt class=&quot;hidden&quot;&gt;Border&lt;/dt&gt;
+    &lt;dd class=&quot;hidden&quot;&gt;A border that goes around the padding and content&lt;/dd&gt;
+    &lt;dt&gt;Margin&lt;/dt&gt;
+    &lt;dd&gt;Clears an area outside the border. The margin is transparent&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</div>
+</body>
+</html>
+<hr />
+<h4 id="exemple-avec-visibility-hidden">Exemple avec <code>visibility: hidden</code></h4>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex1-3 .special_box {
+            background-color: lightgoldenrodyellow;
+            padding: 25px;
+            border: 5px solid red;
+            margin: 100px;
+        }
+        .ex1-3 dt {
+            font-weight: bolder;
+        }
+        .ex1-3 .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="ex1-3">
+<pre><code>&lt;dl class=&quot;special_box&quot;&gt;
+    &lt;dt&gt;Content&lt;/dt&gt;
+    &lt;dd&gt;The content of the box, where text and images appear&lt;/dd&gt;
+    &lt;dt&gt;Padding&lt;/dt&gt;
+    &lt;dd&gt;Clears an area around the content. The padding is transparent&lt;/dd&gt;
+    &lt;dt class=&quot;hidden&quot;&gt;Border&lt;/dt&gt;
+    &lt;dd class=&quot;hidden&quot;&gt;A border that goes around the padding and content&lt;/dd&gt;
+    &lt;dt&gt;Margin&lt;/dt&gt;
+    &lt;dd&gt;Clears an area outside the border. The margin is transparent&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</div>
+</body>
+</html>
+<hr />
+<h3 id="la-propriété-height-et-width">La propriété <code>height</code> et <code>width</code></h3>
+<p>Ces deux propriétés modifient la hauteur (<code>height</code>) et la largeur (<code>width</code>) du contenu. C’est une bonne façon de forcer l’élément HTML à prendre une dimension. À noter que les propriétés <code>height</code> et <code>width</code> <strong>ne touchent pas</strong> au <code>padding</code>, aux bordures et aux marges. Seulement la partie <code>Content</code> est touchée.</p>
+<div class="w3-boxmodel">
+<div class="margin">
+<div class="border w3-theme">
+<pre><code>&lt;div class=&quot;padding&quot;&gt;
+  &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<p>Les propriétés <code>height</code> et <code>width</code> prennent les valeurs suivantes:</p>
+<ul>
+<li><code>auto</code> : c’est la valeur par défaut. C’est le navigateur qui calcule la hauteur ou la largeur.</li>
+<li><code>%</code> : La hauteur ou la largeur est calculée selon un pourcentage du block entourant l’élément.</li>
+<li><code>mesure</code> : La hauteur ou la largeur est définie selon une mesure comme <code>px</code>, <code>cm</code>, …</li>
+<li><code>inherit</code> : La hauteur ou la largeur est héritée de la valeur de l’élément parent.</li>
+</ul>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex5 {
+            margin-bottom: 30px;
+        }
+        .ex5 .div-50 {
+            height: 200px;
+            width: 50%;
+            background-color: powderblue;
+        }
+        .ex5 .div-500 {
+            height: 200px;
+            width: 500px;
+            background-color: #b1ede9;
+        }
+        .ex5 .div-auto {
+            height: auto;
+            width: auto;
+            background-color: #cae0de;
+            font-size: 24px;
+        }
+        .ex5 .div-max {
+            max-width: 600px;
+            height: 100px;
+            background-color: powderblue;
+        }
+        .ex5 .div-min-max {
+            max-width: 500px;
+            min-width: 300px;
+            background-color: #b1ede9;
+        }
+        .ex5 .div-margin-auto {
+            max-width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+            background-color: #b1ede9;
+        }
+    </style>
+</head>
+<body>
+<div class="ex5">
+<pre><code>&lt;div class=&quot;div-50&quot;&gt;
+    Je suis un élément avec une hauteur de 200 pixels et une largeur de 50% maximum de la page.
+&lt;/div&gt;
+&lt;div class=&quot;div-500&quot;&gt;
+    Je suis un élément avec une hauteur de 100 pixels et une largeur de 500 pixels pour toujours!
+&lt;/div&gt;
+&lt;div class=&quot;div-auto&quot;&gt;
+    Je suis un élément avec une hauteur et une largeur automatique selon mon contenu! Ce qui est le comportement par défaut.
+&lt;/div&gt;
+&lt;div class=&quot;div-max&quot;&gt;
+    Je suis un élément avec une largeur de 600 pixels au maximum. Alors je peux être plus petit si vous diminuer la largeur de l&#39;écran.
+&lt;/div&gt;
+&lt;div class=&quot;div-min-max&quot;&gt;
+    Je suis un élément avec une largeur de 500 pixels au maximum. Mais, je ne peux pas être plus petit que 300 pixels
+&lt;/div&gt;</code></pre>
+</div>
+</body>
+</html>
+<div class="sourceCode" id="cb15"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>CSS Height and Width Exemple<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;css_dimension.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a>    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;ex5&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;div-50&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a>            Je suis un élément avec une hauteur de 200 pixels et une largeur de 50% maximum de la page.</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;div-500&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true"></a>            Je suis un élément avec une hauteur de 100 pixels et une largeur de 500 pixels pour toujours!</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;div-auto&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true"></a>            Je suis un élément avec une hauteur et une largeur automatique selon mon contenu! Ce qui est le comportement par défaut.</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;div-max&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true"></a>            Je suis un élément avec une largeur de 600 pixels au maximum. Alors je peux être plus petit si vous diminuer la largeur de l&#39;écran.</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true"></a>        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;div-min-max&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true"></a>            Je suis un élément avec une largeur de 500 pixels au maximum. Mais, je ne peux pas être plus petit que 300 pixels</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h4 id="fichier-css_dimension.css">Fichier <code>css_dimension.css</code></h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="fu">.ex5</span> <span class="fu">.div-50</span> {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a>    <span class="kw">height</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a>    <span class="kw">width</span>: <span class="dv">50</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">powderblue</span><span class="op">;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a>}</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true"></a><span class="fu">.ex5</span> <span class="fu">.div-500</span> {</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true"></a>    <span class="kw">height</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true"></a>    <span class="kw">width</span>: <span class="dv">500</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">#b1ede9</span><span class="op">;</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true"></a>}</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true"></a><span class="fu">.ex5</span> <span class="fu">.div-auto</span> {</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true"></a>    <span class="kw">height</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true"></a>    <span class="kw">width</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">#cae0de</span><span class="op">;</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true"></a>    <span class="kw">font-size</span>: <span class="dv">24</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true"></a>}</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true"></a><span class="fu">.ex5</span> <span class="fu">.div-max</span> {</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true"></a>    <span class="kw">max-width</span>: <span class="dv">600</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true"></a>    <span class="kw">height</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">powderblue</span><span class="op">;</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true"></a>}</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true"></a></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true"></a><span class="fu">.ex5</span> <span class="fu">.div-min-max</span> {</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true"></a>    <span class="kw">max-width</span>: <span class="dv">500</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true"></a>    <span class="kw">min-width</span>: <span class="dv">300</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">#b1ede9</span><span class="op">;</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true"></a>}</span></code></pre></div>
+<p>On remarque qu’il existe d’autres propriétés comme <code>max-height</code> et <code>max-width</code> qui définissent une dimension <strong>maximale</strong> de l’élément HTML. Leur contraires <code>min-height</code> et <code>min-width</code> définissent la dimension <strong>minimale</strong> de l’élément HTML.</p>
+<p>C’est une bonne façon de définir quand la barre de défilement apparaît selon la taille de l’écran. De plus, dans certaines situations, on veut s’assurer qu’un élément HTML ne soit pas trop écrasé ou étiré. Ce qu’on peut faire en définissant le <code>max-*</code> et le <code>min-*</code> en même temps.</p>
+<p>Une autre combinaison intéressante est d’ajouter <code>margin: auto</code> à un <code>max-width</code> pour garder un élément centré et que ce soit les marges qui s’ajustent si l’écran change de dimension.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="fu">.ex5</span> <span class="fu">.div-margin-auto</span> {</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a>    <span class="kw">max-width</span>: <span class="dv">500</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a>    <span class="kw">margin</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true"></a>    <span class="kw">border</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#73AD21</span><span class="op">;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="ex5">
+<pre><code>&lt;div class=&quot;div-margin-auto&quot;&gt;
+    Je suis un élément avec une largeur de 500 pixels au maximum et avec une marge automatique. Essayez moi en changeant la dimension de l&#39;écran.
+&lt;/div&gt;</code></pre>
+</div>
+<h3 id="la-propriété-float">La propriété <code>float</code></h3>
+<ul>
+<li><p>La propriété <code>float</code> est utilisée pour positionner et formater du contenu, par exemple pour placer une image à gauche d’un texte placé dans un conteneur</p></li>
+<li><p>La propriété <code>float</code> peut avoir les valeurs suivantes :</p>
+<ul>
+<li><code>left</code>: la balise flotte à gauche de son conteneur</li>
+<li><code>right</code>: la balise flotte à droite de son conteneur</li>
+<li><code>none</code>: valeur par défaut ; la balise ne flotte pas, elle est placée où elle apparaît dans le code HTML</li>
+<li><code>inherit</code>: la balise hérite de la valeur de <code>float</code> de sa balise parente</li>
+</ul></li>
+</ul>
+<h4 id="exemple-css_float.html">Exemple: <code>css_float.html</code></h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>CSS Exemple 1<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;css_float.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true"></a><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;floating-div&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true"></a>    <span class="kw">&lt;h1&gt;</span>Hello<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span>Some Text. Some Text. Some Text. Some Text. Some Text. Some Text. Some</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true"></a>        Text.</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true"></a>        Some Text. Some Text. <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true"></a>    <span class="kw">&lt;h1&gt;</span>Goodbye<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span>Some other text. Some other text. Some other text. Some other text. Some</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true"></a>        other text. Some other text. <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true"></a>    <span class="kw">&lt;h2&gt;</span>Hi<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span>Some other text. Some other text. Some other text. Some other text. Some</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true"></a>        other text. Some other text. <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true"></a>    <span class="kw">&lt;h2&gt;</span>Bye<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true"></a>        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true"></a>        veniam,</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true"></a>        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true"></a>        consequat. Duis aute irure dolor in reprehenderit in voluptate velit</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true"></a>        esse cillum</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true"></a>        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true"></a>        proident,</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true"></a>        sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h4 id="fichier-css_float.css">Fichier : <code>css_float.css</code></h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="pp">#floating-div</span> {</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">#44ff44</span><span class="op">;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a>    <span class="kw">float</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>    <span class="kw">width</span>: <span class="dv">20</span><span class="dt">vw</span><span class="op">;</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a>    <span class="kw">min-width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true"></a>}</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true"></a>div {</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">#ff4444</span><span class="op">;</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true"></a>}</span></code></pre></div>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex2 {
+            margin-bottom: 30px;
+        }
+        .ex2 #floating-div {
+            background-color: #44ff44;
+            float: right;
+            width: 20vw;
+            min-width: 100px;
+        }
+        .ex2 div {
+            background-color: #ff4444;
+        }
+    </style>
+</head>
+<body>
+<div class="ex2">
+<pre><code>&lt;div id=&quot;floating-div&quot;&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;Some Text. Some Text. Some Text. Some Text. Some Text. Some Text. Some
+        Text.
+        Some Text. Some Text. &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;h1&gt;Goodbye&lt;/h1&gt;
+    &lt;p&gt;Some other text. Some other text. Some other text. Some other text. Some
+        other text. Some other text. &lt;/p&gt;
+    &lt;h2&gt;Hi&lt;/h2&gt;
+    &lt;p&gt;Some other text. Some other text. Some other text. Some other text. Some
+        other text. Some other text. &lt;/p&gt;
+    &lt;h2&gt;Bye&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</body>
+</html>
+<hr />
+<h2 id="exercice-3">Exercice #3</h2>
+<p>Reprenons l’exercice de La Jalousie du Barbouillé. Nous allons déplacé certains éléments pour que le contenu soit plus lisible.</p>
+<p>Modifiez l’entête de la page pour qu’elle ait une <strong>hauteur</strong> de 200 pixels fixe : - Vous pouvez appliquer cela sur l’id <code>#top</code>. - Modifiez l’image dans l’entête pour qu’elle ait une <strong>hauteur</strong> de 200 pixels et que sa <strong>largeur</strong> soit calculée automatiquement. - Créez trois colonnes dans l’entête. La première contiendra l’image et prendra 20% de la <strong>largeur</strong>. La colonne du milieu sera de 60% de <strong>largeur</strong> et contiendra le titre principal. La dernière colonne sera vide aura une <strong>largeur</strong> de 20%. Utiliser <code>float: left;</code> et <code>width: %</code> pour vous aidez.</p>
+<p>Mettez en forme le pied de page en ajoutant la même <strong>couleur de fond</strong> que l’entête. Ajoutez un <strong>padding</strong> de quelques pixels et <strong>alignez le texte</strong> au centre.</p>
+<p>Ajouter une <strong>marge</strong> pour chaque didascalie (<strong>classe didascalie</strong>) à gauche et en haut de 30 pixels : - Ajouter un <strong>padding</strong> de 10 pixels. - Ajouter une <strong>bordure</strong> à gauche de 6 pixels avec la couleur #f7a156. - Ajouter une <strong>couleur de fond</strong> plus pâle comme #fff7f0.</p>
+<p>Ajoutez <strong>une bordure grise</strong> (#e1e4e5) de 2 pixels autour des sections source, autre-exemple, representation et piece. Ajoutez aussi un <strong>padding</strong> et une <strong>marge</strong> de 20 pixels. (<strong>Truc</strong>: vous pouvez utiliser les ids comme #source et #autre-exemple)</p>
+<p>Ajoutez une <strong>bordure</strong> dans le bas de la scène 1 de 6 pixels de couleur grise (#e1e4e5).</p>
+<p>Choisissez une réplique et ajouter <code>visibility: hidden</code>. Faites la même chose pour une autre réplique mais avec <code>display: none</code>. Remarquez l’espace qui est laissée selon la propriété utilisée.</p>
+<hr />
+<h3 id="barre-de-navigation">Barre de navigation</h3>
+<p>Il existe deux types de barre de navigation. La barre de navigation horizontale qui est généralement au haut de la page. L’autre type est la barre de navigation verticale qui est soit à droite ou à gauche de l’écran. La propriété <code>position</code> est pratique pour placer cette barre de navigation. Cette propriété définit comment les propriétés <code>top</code>, <code>bottom</code>, <code>left</code> ou <code>right</code> <strong>affectent</strong> la position de l’élément HTML.</p>
+<p>Il existe 5 valeurs possibles pour la propriété <code>position</code> :</p>
+<ul>
+<li><code>static</code> : C’est la valeur et le comportement par défaut.</li>
+<li><code>relative</code> : La position est ajustée par rapport à la position de base. (déplacement)</li>
+<li><code>fixed</code> : La position de l’élément est toujours à la même place dans la page. Peut importe comme l’utilisateur défile la page.</li>
+<li><code>absolute</code> : La position de l’élément est calculé selon le point haut gauche de l’élément parent.</li>
+<li><code>sticky</code> : C’est un mélange de <code>fixed</code> et <code>relative</code>. L’élément est <code>relative</code> jusqu’à ce que une certaine hauteur est dépassée. Alors l’élément devient <code>fixed</code>.</li>
+</ul>
+<p>Les valeurs <code>top</code>, <code>right</code>, <code>bottom</code> et <code>left</code> définises le décalage des éléments.</p>
+<p>Voir l’exemple <strong>css_position</strong> pour un exemple du comportement.</p>
+<p>Important de ne pas oublier que l’axe des <code>Y</code> est positif <strong>vers le bas</strong>. C’est dans le sens de la lecture.</p>
+<figure>
+<img src="../images/Axe-transformation.png" alt="" /><figcaption>Axe de transformations en HTML</figcaption>
+</figure>
+<h3 id="barre-de-navigation-liste-de-liens">Barre de navigation = liste de liens</h3>
+<ul>
+<li>Une barre de navigation est d’abord définie dans le document HTML</li>
+<li>Dans nos exemples, la barre de navigation est construite à partir d’une liste HTML standard</li>
+<li>Une barre de navigation est essentiellement une liste de liens, donc on utilise les balises <code>&lt;ul&gt;</code> et <code>&lt;li&gt;</code> :
+<ul>
+<li>le <code>ul</code> a la classe <code>menulist</code></li>
+<li>le <code>ul</code> est à l’intérieur d’une <code>div</code> avec comme ID <code>menubar</code>
+<ul>
+<li>on pourrait aussi remplacer la <code>div</code> par <code>navbar</code> si c’est la barre de navigation principale du site</li>
+</ul></li>
+<li>chaque <code>li</code> a la class <code>menuitem</code>, et contient un lien (une balise <code>&lt;a&gt;</code>)</li>
+</ul></li>
+<li>À part cette liste, le document HTML ne contient rien de spécial
+<ul>
+<li>la <em>magie</em> s’opère dans le fichier CSS</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>CSS Exemple 2<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;css_nav.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true"></a><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;menubar&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true"></a>    <span class="kw">&lt;ul</span><span class="ot"> class=</span><span class="st">&quot;menulist&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true"></a>        <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">&quot;menuitem&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true"></a>            <span class="kw">&lt;a</span><span class="ot"> class=</span><span class="st">&quot;active&quot;</span><span class="ot"> href=</span><span class="st">&quot;&quot;</span><span class="kw">&gt;</span>Home<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true"></a>        <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true"></a>        <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">&quot;menuitem&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true"></a>            <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;download&quot;</span><span class="kw">&gt;</span>Download<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true"></a>        <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true"></a>        <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">&quot;menuitem&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true"></a>            <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;doc&quot;</span><span class="kw">&gt;</span>Documentation<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true"></a>        <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true"></a>        <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">&quot;menuitem&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true"></a>            <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;blog&quot;</span><span class="kw">&gt;</span>Blog<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true"></a>        <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true"></a>        <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">&quot;menuitem&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true"></a>            <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;contact&quot;</span><span class="kw">&gt;</span>Contact<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true"></a>        <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true"></a>    <span class="kw">&lt;/ul&gt;</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true"></a></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true"></a><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;topheader&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true"></a>    <span class="kw">&lt;h1&gt;</span>Hello<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span>Some Text. Some Text. Some Text. Some Text. Some Text. Some Text. Some</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true"></a>        Text. Some Text. Some Text. <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true"></a>    <span class="kw">&lt;h1&gt;</span>Goodbye<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span>Some other text. Some other text. Some other text. Some other text. Some</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true"></a>        other text. Some other text. <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true"></a>    <span class="kw">&lt;h2&gt;</span>Hi<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true"></a>    <span class="kw">&lt;p&gt;</span>Some other text. Some other text. Some other text. Some other text. Some</span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true"></a>        other text. Some other text. <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h4 id="fichier-css_nav.css">Fichier <code>css_nav.css</code></h4>
+<div class="sourceCode" id="cb23"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="pp">#menubar</span> {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a>    <span class="co">/* text-align: center;*/</span> <span class="co">/* for centering menu */</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a>    <span class="co">/* float: right;*/</span> <span class="co">/* uncomment for vertical menu floating on the right */</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a>    <span class="kw">display</span>: <span class="dv">block</span> <span class="co">/* block will use full width, flex will not use full width */</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true"></a>    <span class="co">/* make it sticky */</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true"></a>    <span class="co">/*position: -webkit-sticky; /* Safari */</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true"></a>    <span class="co">/*position: sticky; top: 0;*/</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true"></a>}</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true"></a>ul<span class="fu">.menulist</span> {</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true"></a>    <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true"></a>    <span class="kw">overflow</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true"></a>    <span class="kw">list-style-type</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true"></a>    <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true"></a>    <span class="kw">padding</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true"></a>    <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">limegreen</span><span class="op">;</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true"></a>    <span class="kw">font-family</span>: <span class="dv">monospace</span><span class="op">;</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true"></a>    <span class="kw">font-size</span>: <span class="dv">1.2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true"></a>    <span class="co">/*width: auto;*/</span> <span class="co">/* for centering menu */</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true"></a>    <span class="co">/*display: inline-block;*/</span> <span class="co">/* for centering menu */</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true"></a>}</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true"></a></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true"></a>li<span class="fu">.menuitem</span> {</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true"></a>    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true"></a>    <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="co">/* comment out to make a vertical menu */</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true"></a>}</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true"></a></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true"></a>li<span class="fu">.menuitem</span> a {</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true"></a>    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">limegreen</span><span class="op">;</span></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true"></a>    <span class="kw">font-weight</span>: <span class="dv">bolder</span><span class="op">;</span></span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true"></a>    <span class="kw">padding</span>: <span class="dv">8</span><span class="dt">px</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true"></a>    <span class="kw">text-decoration</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true"></a>}</span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true"></a></span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true"></a>li<span class="fu">.menuitem</span> a<span class="fu">.active</span> {</span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">limegreen</span><span class="op">;</span></span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb23-40"><a href="#cb23-40" aria-hidden="true"></a>}</span>
+<span id="cb23-41"><a href="#cb23-41" aria-hidden="true"></a></span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true"></a>li<span class="fu">.menuitem</span> a<span class="in">:hover:not(</span><span class="fu">.active</span><span class="in">)</span> {</span>
+<span id="cb23-43"><a href="#cb23-43" aria-hidden="true"></a>    <span class="kw">background-color</span>: <span class="cn">limegreen</span><span class="op">;</span></span>
+<span id="cb23-44"><a href="#cb23-44" aria-hidden="true"></a>    <span class="kw">color</span>: <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb23-45"><a href="#cb23-45" aria-hidden="true"></a>}</span></code></pre></div>
+<h4 id="exemple-css_nav.html">Exemple: <code>css_nav.html</code></h4>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        .ex4 {
+            border: solid black;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .ex4 #menubar {
+            /* text-align: center;*/ /* for centering menu */
+            /* float: right;*/ /* uncomment for vertical menu floating on the right */
+            display: block /* block will use full width, flex will not use full width */
+            /* make it sticky */
+            /*position: -webkit-sticky; /* Safari */
+            /*position: sticky; top: 0;*/
+        }
+        .ex4 ul.menulist {
+            position: relative;
+            overflow: auto;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            border: 2px solid limegreen;
+            font-family: monospace;
+            font-size: 1.2em;
+            /*width: auto;*/ /* for centering menu */
+            /*display: inline-block;*/ /* for centering menu */
+        }
+        .ex4 li.menuitem {
+            text-align: center;
+            float: left; /* comment out to make a vertical menu */
+        }
+        .ex4 li.menuitem a {
+            display: block;
+            color: limegreen;
+            font-weight: bolder;
+            padding: 8px 8px;
+            text-decoration: none;
+        }
+        .ex4 li.menuitem a.active {
+            background-color: limegreen;
+            color: white;
+        }
+        .ex4 li.menuitem a:hover:not(.active) {
+            background-color: limegreen;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="ex4">
+<pre><code>&lt;div id=&quot;menubar&quot;&gt;
+    &lt;ul class=&quot;menulist&quot;&gt;
+        &lt;li class=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;active&quot; href=&quot;&quot;&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menuitem&quot;&gt;
+            &lt;a href=&quot;download&quot;&gt;Download&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menuitem&quot;&gt;
+            &lt;a href=&quot;doc&quot;&gt;Documentation&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menuitem&quot;&gt;
+            &lt;a href=&quot;blog&quot;&gt;Blog&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menuitem&quot;&gt;
+            &lt;a href=&quot;contact&quot;&gt;Contact&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&quot;topheader&quot;&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;Some Text. Some Text. Some Text. Some Text. Some Text. Some Text. Some
+        Text. Some Text. Some Text. &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;h1&gt;Goodbye&lt;/h1&gt;
+    &lt;p&gt;Some other text. Some other text. Some other text. Some other text. Some
+        other text. Some other text. &lt;/p&gt;
+    &lt;h2&gt;Hi&lt;/h2&gt;
+    &lt;p&gt;Some other text. Some other text. Some other text. Some other text. Some
+        other text. Some other text. &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</body>
+</html>
+<hr />
+<h3 id="référence">Référence</h3>
+<ul>
+<li>W3Schools CSS Tutorial: <a href="https://www.w3schools.com/css/css_navbar.asp">https://www.w3schools.com/css/css_navbar.asp</a></li>
+</ul>
+<h2 id="exercice-4">Exercice #4</h2>
+<p>Finalisons certains changements sur la page de la Jalousie du Barbouillé.</p>
+<p>Déplacez la liste des personnages pour qu’elle prenne toute la page à droite en dessous de l’entête : - Entourez toutes les sections (la pièce, représentation, sources et autres exemples) dans une nouvelle balise <code>&lt;div&gt;</code>. Définissez une marge à droite de <code>25%</code>; - Pour que <strong>la liste des personnages</strong> prennent ce <code>25%</code>, forcez la largeur de la liste des personnages à <code>25%</code>. - Forcez la liste des personnages à droite avec une position fixe <code>position: fixed;</code> à droite <code>right: 0;</code> - Vous pouvez ajouter <code>height: 100%;</code> Si vous voulez que la liste des personnages prennent toute la section de droite.</p>
+<p>Créer un menu avec la table des matières : - Placer le menu en dessous de l’entête principale. - Inspirez-vous de l’exemple plus haut. Vous pouvez utiliser <code>#table-matieres</code> au lieu de <code>menuitem</code>. - Vous pouvez utiliser la couleur de fond (#f0fff0) et la couleur du texte rgb(25, 155, 25) à la place des autres valeurs pour votre table des matières.</p>
+<h2 id="tableaux-en-css-et-html">Tableaux en CSS et HTML</h2>
+<p>Voir l’autre page de note de cours <code>06_tableau</code> sur LÉA.</p>
+<h2 id="exercice-5">Exercice #5</h2>
+<p>Ajoutez une nouvelle section dans la page de la Jalousie du Barbouillé entre <strong>Source</strong> et <strong>Représentation</strong> qui s’appelle <strong>Statistiques des plus gros films au box-office</strong>. Ajouter la section à la table des matières.</p>
+<p>Prenez les 5 premiers films de la liste -&gt; https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_du_box-office_mondial et créez un tableau avec le titre, le réalisateur, l’année, le budget et les recettes.</p>
+<p>Par défaut, la couleur de fond peut être <code>aliceblue</code> pour l’entête et pour chaque ligne paire <code>tr:nth-child(even)</code>. Ajoutez une couleur de fond grise (rgb(197, 209, 219)) pour le <code>tr:hover</code> de chaque ligne.</p>
+<p>Mettez le tableau à la pleine largeur (<code>100%</code>) de la section. Vous pouvez mettre <code>border-collapse: collapse;</code>.</p>
+<p>Alignez le texte du tableau à gauche.</p>
+<p>Ajoutez un <strong>padding</strong> de 10 pixels entre chaque ligne.</p>
+<h3 id="voici-un-exemple-du-résultat">Voici un exemple du résultat</h3>
+&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+        #statistiques table {
+            border-collapse: collapse;
+            color: black;
+            width: 100%;
+        }
+        #statistiques th, #statistiques td {
+            padding: 10px;
+            border-bottom: 2px solid black;
+            text-align: left;
+        }
+        #statistiques th {
+            background-color: aliceblue;
+        }
+        #statistiques caption {
+            caption-side: bottom;
+            font-style: oblique;
+            font-size: 75%;
+            margin-top: 5px;
+        }
+        #statistiques tr:nth-child(even) {
+            background-color: aliceblue;
+        }
+        #statistiques tr:hover {
+            background-color: rgb(197, 209, 219);
+        }
+    </style>
+</head>
+<body>
+<div id="statistiques">
+<pre><code>&lt;table class=&quot;&quot;&gt;
+    &lt;caption&gt;Liste des 5 plus gros succès du box-office mondial&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;headerSort&quot; tabindex=&quot;0&quot; role=&quot;columnheader button&quot;
+                title=&quot;Tri croissant&quot;&gt;Rang
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;headerSort&quot; tabindex=&quot;0&quot; role=&quot;columnheader button&quot;
+                title=&quot;Tri croissant&quot;&gt;Titre
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;headerSort&quot; tabindex=&quot;0&quot; role=&quot;columnheader button&quot;
+                title=&quot;Tri croissant&quot;&gt;Réalisateur
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;headerSort&quot; tabindex=&quot;0&quot; role=&quot;columnheader button&quot;
+                title=&quot;Tri croissant&quot;&gt;Année
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;headerSort&quot; tabindex=&quot;0&quot; role=&quot;columnheader button&quot;
+                title=&quot;Tri croissant&quot;&gt;Budget
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;headerSort&quot; tabindex=&quot;0&quot; role=&quot;columnheader button&quot;
+                title=&quot;Tri croissant&quot;&gt;Recettes
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;&lt;i&gt;Avatar&lt;/i&gt;
+            &lt;/td&gt;
+            &lt;td&gt;James Cameron&lt;/td&gt;
+            &lt;td align=&quot;center&quot;&gt;2009&lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;237&amp;nbsp;000&amp;nbsp;000&amp;nbsp;$&lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;2&amp;nbsp;847&amp;nbsp;397&amp;nbsp;339&amp;nbsp;$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2
+            &lt;/td&gt;
+            &lt;td&gt;&lt;i&gt;Avengers: Endgame&lt;/i&gt;
+            &lt;/td&gt;
+            &lt;td&gt;Anthony et&lt;br&gt;Joe
+                    Russo
+            &lt;/td&gt;
+            &lt;td align=&quot;center&quot;&gt;2019
+            &lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;356&amp;nbsp;000&amp;nbsp;000&amp;nbsp;&lt;abbr class=&quot;abbr&quot; title=&quot;dollar&quot;&gt;$&lt;/abbr&gt;
+            &lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;2&amp;nbsp;797&amp;nbsp;501&amp;nbsp;328&amp;nbsp;&lt;abbr class=&quot;abbr&quot;
+                    title=&quot;dollar&quot;&gt;$&lt;/abbr&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;3
+            &lt;/td&gt;
+            &lt;td&gt;&lt;i&gt;Titanic&lt;/i&gt;
+            &lt;/td&gt;
+            &lt;td&gt;James Cameron
+            &lt;/td&gt;
+            &lt;td align=&quot;center&quot;&gt;1997
+            &lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;200&amp;nbsp;000&amp;nbsp;000&amp;nbsp;&lt;abbr class=&quot;abbr&quot; title=&quot;dollar&quot;&gt;$&lt;/abbr&gt;
+            &lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;2&amp;nbsp;201&amp;nbsp;647&amp;nbsp;264&amp;nbsp;&lt;abbr class=&quot;abbr&quot;
+                    title=&quot;dollar&quot;&gt;$&lt;/abbr&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;4
+            &lt;/td&gt;
+            &lt;td&gt;&lt;i&gt;Star Wars, épisode VII&amp;nbsp;:
+                        Le Réveil de la Force&lt;/i&gt;
+            &lt;/td&gt;
+            &lt;td&gt;J. J. Abrams&lt;/td&gt;
+            &lt;td align=&quot;center&quot;&gt;2015&lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;245&amp;nbsp;000&amp;nbsp;000&amp;nbsp;&lt;abbr class=&quot;abbr&quot; title=&quot;dollar&quot;&gt;$&lt;/abbr&gt;
+            &lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;2&amp;nbsp;069&amp;nbsp;521&amp;nbsp;700&amp;nbsp;&lt;abbr class=&quot;abbr&quot;
+                    title=&quot;dollar&quot;&gt;$&lt;/abbr&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;&lt;i&gt;Avengers: Infinity War&lt;/i&gt;&lt;/td&gt;
+            &lt;td&gt;Anthony et&lt;br&gt;Joe Russo
+            &lt;/td&gt;
+            &lt;td align=&quot;center&quot;&gt;2018&lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;316 000 000 $&lt;/td&gt;
+            &lt;td align=&quot;right&quot;&gt;2&amp;nbsp;048&amp;nbsp;359&amp;nbsp;754&amp;nbsp;$&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</body>
+</html>
+<hr />
+<p>Notes écrites par Pierre-Luc Boulanger d’après des exemples et exercices créés par Denis Rinfret.</p>
+</body>
+</html>

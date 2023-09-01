@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>420-1W1-DM Web 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="github.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">420-1W1-DM Web 1</h1>
+</header>
+<h1 id="html-exercices-1">HTML: exercices 1</h1>
+<p>Cette série d’exercices couvre la matière vue durant le cours sur <strong>Les base du HTML</strong>. Chaque section correspond à un exercice. Vous y trouverez, en premier lieu, la question. En dessous, vous trouverez la solution à l’exercice. Il suffit de déplier la section pour obtenir la solution [<strong>après avoir essayé</strong>].</p>
+<h2 id="questions-courtes">Questions courtes</h2>
+<h3 id="balise-de-déclaration-doctype">1. Balise de déclaration <em>DOCTYPE</em></h3>
+<p>Répondez aux questions suivantes :</p>
+<ul>
+<li><p>Est-il obligatoire d’écrire la déclaration DOCTYPE dans une page web et pourquoi ?</p></li>
+<li><p>Quel est l’emplacement de la déclaration DOCTYPE dans une page web ?</p></li>
+<li><p>Quelle est la déclaration (balise) DOCTYPE pour une page web écrite en <strong>HTML5</strong> ?</p>
+<details>
+<p><summary>Réponse</summary></p>
+<ul>
+<li>Oui, la déclaration DOCTYPE est obligatoire pour toutes les pages Web. Elle précise au navigateur comment lire la page Web(savoir quelle version de HTML utilisée).</li>
+<li>La déclaration DOCTYPE doit être placée en début de fichier et avant la balise <code>&lt;html&gt;&lt;/html&gt;</code></li>
+<li>La déclaration DOCTYPE pour HTML5 est très simple : <code>&lt;!DOCTYPE html&gt;</code></li>
+</ul>
+</details></li>
+</ul>
+<h3 id="titre-dune-page-web">2. Titre d’une page web</h3>
+<p>Parmi les balises suivantes, laquelle est utilisée pour donner à un site web le titre <strong>Mon site web</strong> ?</p>
+<ol type="1">
+<li><code>&lt;html&gt;Mon site web&lt;/html&gt;</code></li>
+<li><code>&lt;head&gt;Mon site web&lt;/head&gt;</code></li>
+<li><code>&lt;title&gt;Mon site web&lt;/title&gt;</code></li>
+<li><code>&lt;body&gt;Mon site web&lt;/body&gt;</code>
+<details>
+<summary>Réponse</summary> La bonne balise est le choix 3. Le titre qui sera affiché est le texte contenu entre la balise ouvrante et la balise fermante.
+</details></li>
+</ol>
+<h3 id="configurer-le-jeu-de-caractères-encodage-dune-page-web">3. Configurer le jeu de caractères (encodage) d’une page web</h3>
+Comment pouvons-nous définir le jeu de caractères (encodage) d’une page web ?
+<details>
+<summary>Réponse</summary> Il faut utiliser la balise suivante :
+<pre>&lt;meta charset="utf-8"></pre>
+</details>
+<h3 id="balise-pour-les-éléments-à-afficher">4. Balise pour les éléments à afficher</h3>
+Dans quelle balise devons-nous ajouter les éléments à afficher (paragraphe, image, vidéo, etc.) ?
+<details>
+<summary>Réponse</summary> Il faut utiliser la balise <code>body</code> comme ceci :
+<pre>&lt;body>
+&lt;p>Ceci est un élément à afficher.&lt;/p>
+&lt;/body></pre>
+<strong>Note</strong> : La balise <code>p</code> utilisée est placée ici pour l’exemple. Vous pouvez ajouter beaucoup plus de balises.
+</details>
+<h3 id="balise-pour-les-sauts-de-ligne">5. Balise pour les sauts de ligne</h3>
+Quelle est la balise pour ajouter un saut de ligne dans un paragraphe ou un texte
+<details>
+<summary>Réponse</summary> Il faut utiliser la balise <code>br</code> comme ceci :
+<pre>&lt;body>
+&lt;p>Ceci est un élément à afficher.&lt;br>
+Ceci est un élément à afficher sur une autre ligne.&lt;/p>
+&lt;/body></pre>
+</details>
+<h3 id="métadonnée-du-site-web">6. Métadonnée du site web</h3>
+Dans quelle balise ajoute-t-on les métadonnées du site web ?
+<details>
+<p><summary>Réponse</summary></p>
+Nous ajoutons les métadonnées dans la balise <code>head</code> comme ceci :
+<pre>
+&lt;head>
+    &lt;meta charset="utf-8">
+    &lt;title>Mon site web&lt;/title>
+&lt;/head></pre>
+</details>
+<hr />
+<p>Notes écrites par Godefroy Borduas, modifiées par Denis Rinfret et Pierre-Luc Boulanger.</p>
+</body>
+</html>

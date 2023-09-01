@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Badges Bootstrap</title>
+</head>
+<body>
+    <h1>Badges Boostrap</h1>
+    <p>
+        Un Badge permet d'ajouter un libellé ou un compteur d'élément à côté d'un texte ou d'un bouton.
+        Le badge suit la grosseur de la police de caractères et ait facile à attirer l'attention avec la classe bg-* ou text-bg-* comme bg-danger.
+    </p>
+
+    <div class="m-4">
+        <h2>Example d'entête <span class="badge text-bg-secondary">Nouveau</span></h2>
+        <h3>Example d'entête <span class="badge text-bg-warning">Attention!</span></h3>
+        <h4>Example d'entête <span class="badge text-bg-primary">Information</span></h4>
+        <h5>Example d'entête <span class="badge text-bg-danger">Danger!</span></h5>
+        <h6>Example d'entête <span class="badge text-bg-secondary">Cool</span></h6>
+    </div>
+
+    <h2>Badges Boostrap avec un bouton</h2>
+    <p>
+        Pour la version où l'on ajout un compteur d'élément ou même une icône, on utilise toujours la classe badge.
+        Par contre, l'effet est intéressant dans un bouton en le positionant avec la classe position-absolute et top-*
+    </p>
+
+    <div class="m-4">
+        <button type="button" class="btn btn-primary">
+            Boutons avec notifications <span class="badge text-bg-secondary">2</span>
+        </button>
+        <button type="button" class="btn btn-primary position-relative mx-3">
+            Messages
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger">
+                4
+                <span class="visually-hidden">messages à lire</span>
+            </span>
+        </button>
+        <button type="button" class="btn btn-primary position-relative mx-3">
+            Messages
+            <span class="position-absolute top-0 start-100 translate-middle rounded-circle badge text-bg-danger">
+                <i class="bi bi-bell"></i>
+            </span>
+        </button>
+    </div>
+
+</body>
+</html>
