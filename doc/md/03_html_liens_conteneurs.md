@@ -55,7 +55,8 @@ est :
     ./media/images/logo.png
 ````
 
-**Les liens *absolues*** représente un chemin d'accès depuis la racine d'un site
+**Les liens *absolus*** représentent un chemin d'accès depuis la racine d'un 
+site
 web. C'est-à-dire son nom de domaine.
 Prenons l'exemple que la page `index.html` souhaite accéder à la
 page `moncv.html` sur le site `exemple.com` et que
@@ -73,7 +74,7 @@ l'autre. Il ne s'agit pas du seul moyen d'utiliser les liens. Nous pouvons
 avoir un lien entre les éléments (titre, paragraphe, image, etc.) au sein
 d'une même page. Aujourd'hui, nous étudierons comment créer des liens vers
 une section ou un élément de notre site web, des courriels, les fichiers,
-les téléphones, etc. En premier lieu, nous allons nous intéressé à lier des
+les téléphones, etc. En premier lieu, nous allons nous intéresser à lier des
 sections.
 
 Vous pouvez imaginer plusieurs utilisations :
@@ -96,7 +97,7 @@ Identification des éléments
 
 Pourquoi est-ce important de distinguer des éléments d'un site ? Pour la même
 manière qui est importante de retrouver
-facilement des employés dans une entreprise. Imaginez que vous travailler pour
+facilement des employés dans une entreprise. Imaginez que vous travaillez pour
 Exemple Inc. Vous souhaitez retrouver
 l'employé Luc. Votre recherche risque d'être difficile. Luc est un prénom assez
 populaire et donc il y a plusieurs Luc.
@@ -367,13 +368,13 @@ Un site web sans image est un site web triste. La plupart des sites utilisent au
 moins une image pour illustrer d'une manière ou d'une autre. Néanmoins, il
 existe plusieurs formats différents.
 
- Format | Extension(s)      | Description                                                                                                                                                                     | Utilisation recommandée                                                         |
---------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
- PNG    | `.png`            | Gère les fonds transparents. Compression sans perte. N'altère pas les couleurs. Affiche jusqu'à 16 millions de couleurs.                                                        | Les images de bonnes qualité                                                    
- GIF    | `.gif`            | Image peu compressée. Gère le transparent. Permets l'animation des images en un seul fichier. Limité à 256 couleurs.                                                            | Les images animées                                                              
- Jpeg   | `.jpg` ou `.jpeg` | Grande compression des images (taille) et conserve une bonne qualité des images. Affiche jusqu'à 16 millions de couleurs.                                                       | Le reste                                                                        
- SVG    | `.svg`            | Image vectorielle. Facilement manipulable avec JavaScript. Possibilité d'ajouter du style avec le CSS.                                                                          | Les images "responsives" (quoi que Bootstrap supporte bien PNG)                 
- WebP   | `.webp`           | Permets une qualité similaire à PNG. Le  chargement des pages est plus rapide. Créer par Google en 2010. Nécessite des outils spécialisés pour convertir les images existantes. | En cours de déploiement, le format n'est pas supporté par tous les navigateurs. 
+| Format | Extension(s)      | Description                                                                                                                                                                     | Utilisation recommandée                                                         |
+|--------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| PNG    | `.png`            | Gère les fonds transparents. Compression sans perte. N'altère pas les couleurs. Affiche jusqu'à 16 millions de couleurs.                                                        | Les images de bonnes qualité                                                    |
+| GIF    | `.gif`            | Image peu compressée. Gère le transparent. Permets l'animation des images en un seul fichier. Limité à 256 couleurs.                                                            | Les images animées                                                              |
+| Jpeg   | `.jpg` ou `.jpeg` | Grande compression des images (taille) et conserve une bonne qualité des images. Affiche jusqu'à 16 millions de couleurs.                                                       | Le reste                                                                        |
+| SVG    | `.svg`            | Image vectorielle. Facilement manipulable avec JavaScript. Possibilité d'ajouter du style avec le CSS.                                                                          | Les images "responsives" (quoi que Bootstrap supporte bien PNG)                 |
+| WebP   | `.webp`           | Permets une qualité similaire à PNG. Le  chargement des pages est plus rapide. Créer par Google en 2010. Nécessite des outils spécialisés pour convertir les images existantes. | En cours de déploiement, le format n'est pas supporté par tous les navigateurs. |
 
 ### Comparatif entre PNG, JPEG et WebP
 
@@ -387,7 +388,7 @@ Afficher des images en HTML, la balise `<img src="lien" alt="texte alternatif">`
 Pour afficher une image en HTML, il suffit d'utiliser la balise orpheline
 `<img src="lien" alt="texte alternatif">`. Cette balise est utilisée directement
 dans le corps de texte ou dans un conteneur. Elle permet d'ajouter l'image à
-l'endroit indiquez. Toutefois, les balises d'image ont besoin de deux
+l'endroit indiqué. Toutefois, les balises d'image ont besoin de deux
 attributs essentiels :
 
 - `src="lien"` : Cet attribut indique le chemin où trouver l'image. Les liens
@@ -411,7 +412,7 @@ Le code HTML pour l'afficher est le suivant :
 Si vous remarquez bien, il est possible d'utiliser une image disponible sur un
 autre site. Néanmoins, vous devez faire attention avec ceci. Vous êtes, à ce
 moment, dépendant du site. Advenant que le site supprime cette dernière, vous
-n'aurez plus d'image. Certain site vous bloquer cette possibilité. En effet, à
+n'aurez plus d'image. Certain site vous bloque cette possibilité. En effet, à
 chaque fois que vous appelez une image sur votre site, les navigateurs
 doivent faire une requête à l'autre site, ce qui génère du trafic et donc un
 coût au gestionnaire.
@@ -536,8 +537,8 @@ Exemple d'un entête avec le site [youtube.com](youtube.com)
 
 ![Entête 2](../images/header_2.png)
 Exemple d'un entête avec le site [cegepdrummond.ca](cegepdrummond.ca)
-En général, nous allons retrouver le logo du site, le slogan, le nom du site (
-s'il n'est pas dans le logo). Il est parfois possible de trouver des boutons
+En général, nous allons retrouver le logo du site, le slogan, le nom du site
+(s'il n'est pas dans le logo). Il est parfois possible de trouver des boutons
 d'actions comme un lien vers Facebook, Omnivox ou autre. Parfois, les entêtes
 contiendront même le menu de navigation (voir la prochaine section).
 
@@ -551,7 +552,7 @@ créer un bloc avec tous les éléments de l'entête. Cette balise indique au
 navigateur qu'il s'agit d'un entête, mais vous pouvez la placer où vous
 souhaitez. Toutefois, elle est généralement placée en premier du body.
 Créons un fichier d'entête pour notre pièce, la *Jalousie du Barbouillé*.
-Dans ce entête, nous allons mettre le titre de la pièce, le logo ci-bas et le
+Dans cet entête, nous allons mettre le titre de la pièce, le logo ci-bas et le
 slogan suivant : *Une farce du XVIIe siècle*.
 ![École Laberge \| Pièce de théâtre](https://laberge.csdgs.qc.ca/wp-content/uploads/sites/71/2019/04/hotmeini-en-gros-20-pcs-lot-th-tre-masques.jpg)
 Pour ajouter ces trois éléments dans l'entête, il suffit de les placer dans une
@@ -679,7 +680,7 @@ dans une section propre.
             <em>
                 Le Barbouillé entre sur la scène par le côté jardins. Il avance
                 songeux vers le centre de la scène. Il
-                garde ces yeux vers le base. Il se place devant le public.
+                garde ces yeux vers le bas. Il se place devant le public.
                 Lentement, il relève tête et il regarde le
                 public dans les yeux.
             </em>
@@ -694,7 +695,7 @@ dans une section propre.
                 Le Barbouillé se tourne vers le côté cours songeux. Le Docteur
                 entre d'un pied ferme et décidé du côté
                 cours. Sérieux et hautain, comme à son habitude, ce dernier se
-                dirige sans ce soucier du Barbouillé vers
+                dirige sans se soucier du Barbouillé vers
                 l'autre côté de la scène.
             </em>
         </p>
@@ -758,7 +759,7 @@ Exemple complet
 
 Je vous laisse un exemple complet de notre site sur la *Jalousie du Barbouillé*.
 Vous trouverez le dossier complet sur LÉA après le cours. Cette version contient
-la page tel que nous l'avons modifié dans
+la page telle que nous l'avons modifiée dans
 ce cours. Nous continuerons à modifier cette pièce grâce au CSS.
 
 La balise `<details></details>`
@@ -842,7 +843,7 @@ cette balise pour contenir une réplique ou une didascalie.
         <em>
             Le Barbouillé entre sur la scène par le côté jardin. Il avance
             soigneux vers le centre de la scène. Il garde
-            ces yeux vers le base. Il se place devant le public. Lentement, il
+            ces yeux vers le bas. Il se place devant le public. Lentement, il
             relève tête et il regarde le public dans
             les yeux.
         </em>
@@ -893,13 +894,13 @@ de la semaine dernière. Nous allons ajouter différents éléments à cette pag
     - L'identifiant pour le **CHAPITRE X** de la **PARTIE X** est
       `ga:l_x-gb:l_x`
     - L'identifiant pour l'**ARTICLE 0** est `se:0`
-- Les historiques de chaque article doivent être placées dans une infobulle sur
+- Les historiques de chaque article doivent être placés dans une infobulle sur
   un lien historique
 - Chaque chapitre doit être dans un conteneur comme `<div></div>`.
 - Chaque partie doit être dans une section.
 - Le préambule est un article et il est sa propre section.
 - Chaque article, chapitre et section doivent avoir un identifiant.
-- Ajouter une section contactez-nous avec un titre, une zone de texte ainsi
+- Ajouter une section *contactez-nous* avec un titre, une zone de texte ainsi
   qu'un bouton soumettre qui ne fait rien.
 - Ajouter un article dans une balise `<details></details>` et ajouter le titre
   dans le sommaire.

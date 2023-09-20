@@ -1,0 +1,10 @@
+h1 {
+    border-color: blue;
+    border-width: 10px;
+    border-style: dotted;
+}
+
+p {
+    color: red;
+    background-color: yellow;
+}

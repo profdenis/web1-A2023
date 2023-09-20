@@ -1,0 +1,13 @@
+p {
+    color: red;
+    background-color: yellow;
+}
+
+.important {
+    background-color: lightgreen;
+}
+
+p.important {
+    border-width: 5px;
+    border-style: solid;
+}
