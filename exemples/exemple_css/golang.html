@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="golang.css" rel="stylesheet">
+    <title>Go (programming language)</title>
+</head>
+
+<body>
+<header>
+    <h1>Go (programming language)</h1>
+
+    <p><span class="go">Go</span> is a statically typed, compiled high-level programming language designed at <span>Google</span>
+        <sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-techcrunch-11">[11]</a></sup>
+        by Robert Griesemer, Rob Pike, and Ken Thompson.<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-langfaq-12">[12]</a></sup>
+        It is syntactically similar to C, but also has memory safety, garbage collection, structural
+        typing,<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-structural_typing-6">[6]</a></sup>
+        and CSP-style concurrency.<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-boldly-13">[13]</a></sup>
+        It is often referred to as Golang because of its former domain name, <code>golang.org</code>, but its proper
+        name is <span class="go">Go</span>.<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-14">[14]</a></sup>
+    </p>
+
+    <p class="go">There are two major implementations:</p>
+    <ul>
+        <li>Google's self-hosting<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-15">[15]</a></sup>
+            "gc" compiler toolchain, targeting multiple operating systems and WebAssembly.
+            <sup><a href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-16">[16]</a></sup>
+        </li>
+        <li>gofrontend, a frontend to other compilers, with the <span>libgo</span> library. With GCC the combination is
+            gccgo;
+            <sup><a href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-17">[17]</a></sup>
+            with
+            LLVM the combination is gollvm.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-18">[18]</a></sup>
+            <sup><a href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-20">[a]</a></sup>
+        </li>
+    </ul>
+    <p>A third-party source-to-source compiler, GopherJS,<sup><a
+            href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-21">[20]</a></sup>
+        compiles
+        <span class="go">Go</span> to JavaScript for front-end web development.
+    </p>
+</header>
+
+<section>
+    <h2>History</h2>
+    <p><span class="go">Go</span> was designed at <a href="https://en.wikipedia.org/wiki/Google"
+                                                     title="Google"><span>Google</span></a> in 2007 to improve
+        <a href="https://en.wikipedia.org/wiki/Programming_productivity"
+           title="Programming productivity">programming
+            productivity</a> in an era of <a href="https://en.wikipedia.org/wiki/Multi-core_processor"
+                                             title="Multi-core processor">multicore</a>,
+        <a href="https://en.wikipedia.org/wiki/Computer_network" title="Computer network">networked</a>
+        <a href="https://en.wikipedia.org/wiki/Computer" title="Computer">machines</a>
+        and large <a href="https://en.wikipedia.org/wiki/Codebase" title="Codebase">codebases</a>.<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-22">&#91;21&#93;</a></sup>
+        The designers wanted to address criticism of other languages in use at Google, but keep their useful
+        characteristics:<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-23">&#91;22&#93;</a></sup>
+    </p>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Static_typing" class="mw-redirect" title="Static typing">Static
+            typing</a> and <a href="https://en.wikipedia.org/wiki/Run_time_(program_lifecycle_phase)"
+                              title="Run time (program lifecycle phase)">run-time</a> efficiency (like <a
+                href="https://en.wikipedia.org/wiki/C_(programming_language)"
+                title="C (programming language)">C</a>)
+        </li>
+        <li><a href="https://en.wikipedia.org/wiki/Readability" title="Readability">Readability</a> and <a
+                href="https://en.wikipedia.org/wiki/Usability" title="Usability">usability</a> (like
+            <a href="https://en.wikipedia.org/wiki/Python_(programming_language)"
+               title="Python (programming language)">Python</a>)<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-24">&#91;23&#93;</a></sup>
+        </li>
+        <li>High-performance <a href="https://en.wikipedia.org/wiki/Computer_network"
+                                title="Computer network">networking</a>
+            and <a href="https://en.wikipedia.org/wiki/Multiprocessing" title="Multiprocessing">multiprocessing</a>
+        </li>
+    </ul>
+    <p>Its designers were primarily motivated by their shared <a
+            href="https://en.wikipedia.org/wiki/Criticism_of_C%2B%2B" title="Criticism of C++">dislike of
+        C++</a>.<sup><a
+            href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-25">&#91;24&#93;</a></sup><sup><a
+            href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-26">&#91;25&#93;</a></sup><sup><a
+            href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-27">&#91;26&#93;</a></sup>
+    </p>
+    <p><span class="go">Go</span> was publicly announced in November 2009,<sup><a
+            href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-28">&#91;27&#93;</a></sup>
+        and version 1.0 was released in March 2012.<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-29">&#91;28&#93;</a></sup><sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-30">&#91;29&#93;</a></sup>
+        <span class="go">Go</span> is widely used in production at Google<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-faq-31">&#91;30&#93;</a></sup>
+        and in many other organizations and open-source projects.
+    </p>
+    <div>
+        <h3>Branding and styling</h3>
+        <figure>
+            <a href="https://en.wikipedia.org/wiki/File:Golang.png">
+                <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/220px-Golang.png"></a>
+            <figcaption>Mascot of <span class="go">Go</span> programming language is a <a
+                    href="https://en.wikipedia.org/wiki/Gopher" title="Gopher">Gopher</a> shown above.
+            </figcaption>
+        </figure>
+
+        <p>The <a href="https://en.wikipedia.org/wiki/Gopher" title="Gopher">Gopher</a> <a
+                href="https://en.wikipedia.org/wiki/Mascot" title="Mascot">mascot</a> was
+            introduced in 2009 for the <a href="https://en.wikipedia.org/wiki/Open_source" title="Open source">open
+                source</a> launch of the language. The design, by <a
+                    href="https://en.wikipedia.org/wiki/Ren%C3%A9e_French" title="Renée French">Renée French</a>,
+            borrowed from a c. 2000 <a href="https://en.wikipedia.org/wiki/WFMU" title="WFMU">WFMU</a>
+            promotion.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-32">&#91;31&#93;</a></sup>
+        </p>
+        <p>In November 2016, the <span class="go">Go</span> and <span class="go">Go</span> Mono fonts were released
+            by type designers <a href="https://en.wikipedia.org/wiki/Charles_Bigelow_(type_designer)"
+                                 title="Charles Bigelow (type designer)">Charles Bigelow</a> and
+            <a href="https://en.wikipedia.org/wiki/Kris_Holmes" title="Kris Holmes">Kris Holmes</a> specifically for
+            use
+            by
+            the Go project. <span class="go">Go</span> is a
+            <a href="https://en.wikipedia.org/wiki/Humanist_sans-serif" title="Humanist sans-serif">humanist
+                sans-serif</a>
+            resembling <a href="https://en.wikipedia.org/wiki/Lucida_Grande" title="Lucida Grande">Lucida
+                Grande</a>, and <span class="go">Go</span> Mono is <a
+                    href="https://en.wikipedia.org/wiki/Monospaced" title="Monospaced">monospaced</a>. Both fonts
+            adhere to the <a href="https://en.wikipedia.org/wiki/WGL4" title="WGL4">WGL4</a> character set and were
+            designed to be legible with a large <a href="https://en.wikipedia.org/wiki/X-height"
+                                                   title="X-height">x-height</a> and distinct <a
+                    href="https://en.wikipedia.org/wiki/Letterform"
+                    title="Letterform">letterforms</a>. Both <span class="go">Go</span> and <span class="go">Go</span>
+            Mono adhere to the <a href="https://en.wikipedia.org/wiki/DIN" title="DIN">DIN</a> 1450 standard by
+            having a slashed zero, lowercase <code>l</code> with a tail, and an uppercase <code>I</code> with
+            serifs.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-33">&#91;32&#93;</a></sup><sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-34">&#91;33&#93;</a></sup>
+        </p>
+        <p>In April 2018, the original logo was replaced with a stylized GO slanting right with trailing
+            streamlines. (The
+            <a href="https://en.wikipedia.org/wiki/Gopher" title="Gopher">Gopher</a> <a
+                    href="https://en.wikipedia.org/wiki/Mascot" title="Mascot">mascot</a> remained the same.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-35">&#91;34&#93;</a></sup>)
+        </p>
+    </div>
+    <div>
+        <h3>Generics</h3>
+        <p>The lack of support for <a href="https://en.wikipedia.org/wiki/Generic_programming"
+                                      title="Generic programming">generic programming</a> in initial versions of <span
+                class="go">Go</span> drew considerable criticism.<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-36">&#91;35&#93;</a></sup>
+            The designers expressed an openness to generic programming and noted that built-in functions <i>were</i>
+            in fact type-generic, but are treated as special cases; Pike called this a weakness that might be
+            changed at some point.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-append-37">&#91;36&#93;</a></sup>
+            The Google team built at least one compiler for an
+            experimental <span class="go">Go</span> dialect with generics, but did not release it.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-38">&#91;37&#93;</a></sup>
+        </p>
+        <p>In August 2018, the <span class="go">Go</span> principal contributors published draft designs for generic
+            programming and <a href="https://en.wikipedia.org/wiki/Exception_handling"
+                               title="Exception handling">error handling</a> and asked users to submit feedback.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-39">&#91;38&#93;</a></sup><sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-40">&#91;39&#93;</a></sup>
+            However, the error handling proposal was eventually abandoned.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-41">&#91;40&#93;</a></sup>
+        </p>
+        <p>In June 2020, a new draft design document<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-42">&#91;41&#93;</a></sup>
+            was published that would add the necessary syntax to <span class="go">Go</span> for declaring generic
+            functions and types. A code
+            translation tool, <em>go2go</em>, was provided to allow users to try the new syntax, along with a
+            generics-enabled version of the online <span class="go">Go</span> Playground.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-43">&#91;42&#93;</a></sup>
+        </p>
+        <p>Generics were finally added to <span class="go">Go</span> in version 1.18.<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-44">&#91;43&#93;</a></sup>
+        </p>
+    </div>
+    <div>
+        <h3>Versioning</h3>
+        <p><span class="go">Go</span> guarantees compatibility<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-45">&#91;44&#93;</a></sup>
+            for the language specification and major parts of the standard library. All versions up to the current
+            <span class="go">Go</span> 1.21 release<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-46">&#91;45&#93;</a></sup>
+            have maintained this promise.
+        </p>
+        <p>Each major <span class="go">Go</span> release is supported until there are two newer major
+            releases.<sup><a
+                    href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-47">&#91;46&#93;</a></sup>
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Design</h2>
+    <p>Go is influenced by <a href="https://en.wikipedia.org/wiki/C_(programming_language)"
+                              title="C (programming language)">C</a> (especially
+        the <a href="https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs" title="Plan 9 from Bell Labs">Plan 9</a>
+        <a href="https://en.wikipedia.org/wiki/Dialect_(computing)" title="Dialect (computing)">dialect</a><sup><a
+                href="https://en.wikipedia.org/#cite_note-48">&#91;47&#93;</a></sup>),
+        but with an emphasis on greater simplicity and safety. It consists of:
+    </p>
+    <ol>
+        <li>A syntax and environment adopting patterns more common in <a
+                href="https://en.wikipedia.org/wiki/Dynamic_programming_language"
+                title="Dynamic programming language">dynamic
+            languages</a>:<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-go_lang_video_2009-49">&#91;48&#93;</a></sup>
+            <ol>
+                <li>Optional concise variable declaration and initialization through <a
+                        href="https://en.wikipedia.org/wiki/Type_inference" title="Type inference">type
+                    inference</a> (<code>x := 0</code> instead of <code>var x int = 0</code> or
+                    <code>var x = 0</code>)
+                </li>
+                <li>Fast compilation<sup><a
+                        href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-techtalk-compiling-50">&#91;49&#93;</a></sup>
+                </li>
+                <li>Remote package management (<code>go get</code>)<sup><a
+                        href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-51">&#91;50&#93;</a></sup>
+                    and online package documentation<sup><a
+                            href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-52">&#91;51&#93;</a></sup>
+                </li>
+            </ol>
+        </li>
+        <li>Distinctive approaches to particular problems:
+            <ol>
+                <li>Built-in concurrency primitives: <a href="https://en.wikipedia.org/wiki/Light-weight_process"
+                                                        title="Light-weight process">light-weight
+                    processes</a> (goroutines), <a href="https://en.wikipedia.org/wiki/Channel_(programming)"
+                                                   title="Channel (programming)">channels</a>,
+                    and the <code>select</code> statement
+                </li>
+                <li>An <a href="https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)"
+                          title="Protocol (object-oriented programming)">interface</a> system in place of <a
+                        href="https://en.wikipedia.org/wiki/Virtual_inheritance" title="Virtual inheritance">virtual
+                    inheritance</a>, and type embedding instead of non-virtual inheritance
+                </li>
+                <li>A toolchain that, by default, produces <a href="https://en.wikipedia.org/wiki/Static_library"
+                                                              title="Static library">statically linked</a> native
+                    binaries without external Go dependencies
+                </li>
+            </ol>
+        </li>
+        <li>A desire to keep the language specification simple enough to hold in a programmer's head,<sup><a
+                href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#cite_note-53">&#91;52&#93;</a></sup>
+            in part by <a href="https://en.wikipedia.org/wiki/Go_%28programming_language%29#Omissions">omitting
+                features that are common in similar languages</a>.
+        </li>
+    </ol>
+</section>
+
+<footer>
+    Source:
+    <a href="https://en.wikipedia.org/wiki/Go_%28programming_language%29">https://en.wikipedia.org/wiki/Go_%28programming_language%29</a>
+</footer>
+
+</body>
+
+</html>

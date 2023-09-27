@@ -1,0 +1,118 @@
+body {
+    font-size: 14px;
+}
+
+* {
+    /*font-size: 14px;*/
+}
+
+code {
+    border: 2px dotted blue;
+    border-radius: 5px;
+    padding: 1px;
+    font-family: 'Source Code Pro', Consolas, 'Courier New', Courier, monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    background-color: rgb(225, 225, 255);
+    border-radius: 15px;
+    padding: 0 10px;
+    width: fit-content;
+}
+
+h1,
+h2 {
+    margin: 10px auto;
+}
+
+span {
+    color: red;
+    text-shadow: 2px 2px rgb(255, 225, 225);
+}
+
+.go {
+    color: green;
+    text-shadow: 2px 2px rgb(225, 255, 225);
+}
+
+span.go {
+    color: rgb(50, 50, 255);
+    text-shadow: 2px 2px rgb(225, 225, 255);
+}
+
+ul {
+    list-style-type: square;
+    background-color: rgb(225, 225, 255);
+    border-radius: 15px;
+    padding: 10px 20px 10px 40px;
+    margin: 0 20px
+}
+
+ol {
+    list-style-type: upper-latin;
+    list-style-position: inside;
+}
+
+ol ol {
+    list-style-type: lower-roman;
+    /*list-style-position: inside;*/
+}
+
+ol ol li {
+    background-color: rgb(225, 225, 255);
+    border-radius: 15px;
+    padding: 2px 5px;
+    margin: 2px 0;
+}
+
+/*ol ol li {*/
+/*    text-decoration: underline dotted red;*/
+/*}*/
+
+/*p span {*/
+/*    color: orange;*/
+/*}*/
+
+a:hover {
+    background-color: rgb(225, 225, 255);
+}
+
+sup a {
+    text-decoration: none;
+}
+
+sup a:hover {
+    color: darkred;
+    font-size: 150%;
+}
+
+a > img {
+    cursor: crosshair;
+}
+
+figure > a:hover {
+    background-color: revert;
+}
+
+figure {
+    float: right;
+    width: 25%;
+    min-width: 225px;
+    border: 1px dotted blue;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* les ol ol li ont une couleur de fonds identique à la couleur de fond dans a:hover, 
+   donc quand on survole les liens dans les ol ol li, il n'y a aucun changement;
+   comment peut-on changer la couleur quand on survole les liens dans les ol ol li
+*/
+
+/* ajouter un style pour le footer /*
